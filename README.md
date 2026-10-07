@@ -1,5 +1,7 @@
 # PlayerSells Open Data
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23201221.svg)](https://doi.org/10.5281/zenodo.23201221)
+
 Aggregate measurements of social and streaming platforms, collected by [PlayerSells](https://playersells.com) with its own crawlers and published here under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
 Every number in this repository is also published on playersells.com, on the page linked from each dataset. The files hold totals, shares and percentiles only: no account lists, no channel names, no personal data.
@@ -23,6 +25,8 @@ Each dataset folder has the CSV files, a README with every column, the method an
 > Source: PlayerSells (https://playersells.com)
 
 with a link, and say if you changed the numbers. To cite a specific dataset, use the line under "How to cite" in its README, or [`CITATION.cff`](CITATION.cff) for the whole collection.
+
+The collection is archived on Zenodo. [10.5281/zenodo.23201221](https://doi.org/10.5281/zenodo.23201221) always resolves to the latest edition; this edition (2026.10) is [10.5281/zenodo.23201222](https://doi.org/10.5281/zenodo.23201222).
 
 ## What these numbers are and are not
 

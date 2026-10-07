@@ -12,6 +12,12 @@ authors:
   - name: PlayerSells
     website: "https://playersells.com"
     email: info@playersells.com
+doi: 10.5281/zenodo.23201221
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.23201222
+    description: "Edition 2026.10"
+repository-code: "https://github.com/playersells/open-data"
 url: "https://playersells.com"
 license: CC-BY-4.0
 date-released: "2026-10-07"
