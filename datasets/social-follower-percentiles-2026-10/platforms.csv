@@ -1,0 +1,8 @@
+platform,label,unit,metric,framing,sample_size,indexed_total,measured_on,coverage_note,method_url
+x,X (Twitter),account,followers,population,459415,22837969,2026-10-05,A sample of the X accounts in the PlayerSells index. The index has a long tail of small accounts but is not a census of X.,https://playersells.com/tools/twitter-follower-rank
+bluesky,Bluesky,account,followers,population,970889,4173274,2026-10-05,"A sample of the Bluesky accounts in the PlayerSells index, which is built from Bluesky's public firehose and follow graph.",https://playersells.com/tools/bluesky-follower-rank
+telegram,Telegram,channel,subscribers,population,1020191,3384503,2026-10-05,A sample of the public Telegram channels in the PlayerSells index. Private channels are missing.,https://playersells.com/tools/telegram-channel-rank
+tiktok,TikTok,creator,followers,tracked,22481,22481,2026-10-05,"Every creator in the PlayerSells TikTok catalog, which was seeded from creators that other creators reference. Not representative of TikTok as a whole.",https://playersells.com/tools/tiktok-follower-rank
+youtube,YouTube,channel,subscribers,tracked,35149,35149,2026-10-05,"Every channel in the PlayerSells YouTube catalog, which was seeded from larger channels. Not representative of YouTube as a whole.",https://playersells.com/tools/youtube-subscriber-rank
+kick,Kick,channel,followers,tracked,328559,458657,2026-10-05,Kick channels PlayerSells has recorded going live whose follower count has been read. Not every registered account.,https://playersells.com/tools/kick-follower-rank
+twitch,Twitch,channel,followers,tracked,945513,945513,2026-10-05,Twitch channels PlayerSells has recorded going live. Not every registered account.,https://playersells.com/tools/twitch-follower-rank

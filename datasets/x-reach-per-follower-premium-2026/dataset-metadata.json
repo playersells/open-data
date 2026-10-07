@@ -1,0 +1,151 @@
+{
+ "title": "X Views per Follower and Premium Badge 2026",
+ "subtitle": "Post views per follower for 60,892 X accounts, Premium vs no badge",
+ "id": "playersells/x-reach-per-follower-premium-2026",
+ "licenses": [
+  {
+   "name": "CC-BY-4.0"
+  }
+ ],
+ "keywords": [
+  "twitter",
+  "x",
+  "premium",
+  "reach",
+  "views",
+  "engagement",
+  "verification"
+ ],
+ "description": "How many views an X account's typical post gets relative to its follower count, by account size, and how accounts with the blue Premium badge compare with no-badge accounts of the same size. Premium accounts drew 1.6x to 1.8x the views per follower between 5,000 and 1 million followers. This is a correlation, not proof that Premium causes it.\n\nPlayerSells' X engine reads the recent public posts of accounts in its index and keeps one engagement record per account, covering the 30 days before it was computed. Records computed between 19 August and 3 October 2026 are used.\n\nAccounts with at least 10 original posts in the window and at most 10% retweets are kept: 60,892 accounts. Reach is the median view count of the account's original posts divided by its follower count when the record was computed.\n\nPremium means the blue badge and no organisation badge. 6,955 accounts with gold or grey organisation badges are left out of the comparison, leaving 53,937. The badge is read at the most recent crawl, a median of 7.2 days after the engagement record.\n\nEvery figure is a median.\n\nLimitations:\n- Correlation only. People who pay for Premium may differ in ways the data cannot see.\n- Not a random sample of X: the engine reads accounts in size tiers, largest first, so each band is dense near its top. Use the median follower count of each band.\n- Views are X's own impression counter and include people who do not follow the account.\n- Badge status is current, not historical, and Premium and Premium+ cannot be told apart.\n- PlayerSells collects these numbers with its own crawlers. They describe what those crawlers read, not a census of any platform.\n- Counts shown by the platforms (followers, subscribers, views, viewers) are taken as displayed. PlayerSells cannot separate real people from bots, embedded players or inflated counts.\n\nPublished at https://playersells.com/learn/does-x-premium-increase-reach-60000-accounts-compared\n\nSource: PlayerSells (https://playersells.com). License CC BY 4.0.",
+ "resources": [
+  {
+   "path": "reach_by_follower_band.csv",
+   "description": "Median post views and engagement as a share of followers, by follower band.",
+   "schema": {
+    "fields": [
+     {
+      "name": "follower_band",
+      "type": "string",
+      "description": "Follower band"
+     },
+     {
+      "name": "accounts",
+      "type": "integer",
+      "description": "Accounts in the band"
+     },
+     {
+      "name": "median_followers",
+      "type": "integer",
+      "description": "Median follower count inside the band"
+     },
+     {
+      "name": "median_views_per_post",
+      "type": "integer",
+      "description": "Median of the accounts' median original-post views"
+     },
+     {
+      "name": "views_per_follower_pct",
+      "type": "number",
+      "description": "Median views as a share of followers"
+     },
+     {
+      "name": "views_per_follower_p25_pct",
+      "type": "number",
+      "description": "25th percentile"
+     },
+     {
+      "name": "views_per_follower_p75_pct",
+      "type": "number",
+      "description": "75th percentile"
+     },
+     {
+      "name": "engagement_per_follower_pct",
+      "type": "number",
+      "description": "Median likes, replies, reposts and quotes on the median post, as a share of followers"
+     }
+    ]
+   }
+  },
+  {
+   "path": "premium_vs_no_badge.csv",
+   "description": "Views per follower for Premium and no-badge accounts of the same size.",
+   "schema": {
+    "fields": [
+     {
+      "name": "follower_band",
+      "type": "string",
+      "description": "Follower band"
+     },
+     {
+      "name": "band_note",
+      "type": "string",
+      "description": "Median follower counts of the two groups, as published"
+     },
+     {
+      "name": "premium_accounts",
+      "type": "integer",
+      "description": "Accounts with the blue badge and no organisation badge"
+     },
+     {
+      "name": "no_badge_accounts",
+      "type": "integer",
+      "description": "Accounts with no badge"
+     },
+     {
+      "name": "premium_views_per_follower_pct",
+      "type": "number",
+      "description": "Median for Premium accounts"
+     },
+     {
+      "name": "no_badge_views_per_follower_pct",
+      "type": "number",
+      "description": "Median for no-badge accounts"
+     },
+     {
+      "name": "ratio",
+      "type": "number",
+      "description": "Premium divided by no badge; empty where there are too few accounts to compare"
+     }
+    ]
+   }
+  },
+  {
+   "path": "premium_by_posting_rate.csv",
+   "description": "The Premium comparison split by how often accounts post.",
+   "schema": {
+    "fields": [
+     {
+      "name": "follower_band",
+      "type": "string",
+      "description": "Follower band"
+     },
+     {
+      "name": "posts_per_day",
+      "type": "string",
+      "description": "Posting-rate group"
+     },
+     {
+      "name": "premium_accounts",
+      "type": "integer",
+      "description": "Premium accounts in the group"
+     },
+     {
+      "name": "no_badge_accounts",
+      "type": "integer",
+      "description": "No-badge accounts in the group"
+     },
+     {
+      "name": "premium_views_per_follower_pct",
+      "type": "number",
+      "description": "Median for Premium accounts"
+     },
+     {
+      "name": "no_badge_views_per_follower_pct",
+      "type": "number",
+      "description": "Median for no-badge accounts"
+     }
+    ]
+   }
+  }
+ ]
+}

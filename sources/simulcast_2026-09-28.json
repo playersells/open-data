@@ -1,0 +1,1285 @@
+{
+ "handles_on_both_platforms": 11782,
+ "handles_overlap_ge_4_slots": 6736,
+ "of_those_category_agree_ge_50pct": 5063,
+ "twitch_channels_observed": 388927,
+ "twitch_channels_observed_ge_2h": 212211,
+ "twitch_ge_2h_simulcasters": 4814,
+ "twitch_ge_2h_simulcaster_pct": 2.27,
+ "twitch_viewing_share_simulcast_pct": 7.19,
+ "twitch_top10_simulcasters": 2,
+ "twitch_top50_simulcasters": 7,
+ "twitch_top100_simulcasters": 13,
+ "twitch_top500_simulcasters": 50,
+ "twitch_top1000_simulcasters": 101,
+ "kick_channels_observed": 201145,
+ "kick_channels_ge_2h": 108510,
+ "kick_ge_2h_simulcasters": 4792,
+ "kick_ge_2h_simulcaster_pct": 4.42,
+ "kick_viewing_share_simulcast_pct": 2.49,
+ "kick_top10_simulcasters_lower_bound": 0,
+ "kick_top50_simulcasters_lower_bound": 4,
+ "kick_top100_simulcasters_lower_bound": 6,
+ "kick_top500_simulcasters_lower_bound": 22,
+ "kick_top1000_simulcasters_lower_bound": 45,
+ "simulcasters": 5063,
+ "split_kick_share_of_combined_pct": 16.69,
+ "split_median_kick_share_pct": 21.7,
+ "split_majority_on_kick": 1028,
+ "split_majority_on_twitch": 3949,
+ "overlap_share_of_twitch_time_median_pct": 50.0,
+ "overlap_hours_total": 32066,
+ "overlap_hours_median": 3.25,
+ "by_category": [
+  {
+   "category": "Grand Theft Auto V",
+   "simulcasters": 49,
+   "kick_share_pct": 23.4,
+   "rank": 1
+  },
+  {
+   "category": "Minecraft",
+   "simulcasters": 28,
+   "kick_share_pct": 20.2,
+   "rank": 2
+  },
+  {
+   "category": "VALORANT",
+   "simulcasters": 24,
+   "kick_share_pct": 7.4,
+   "rank": 3
+  },
+  {
+   "category": "Counter-Strike",
+   "simulcasters": 40,
+   "kick_share_pct": 8.3,
+   "rank": 4
+  },
+  {
+   "category": "Dota 2",
+   "simulcasters": 23,
+   "kick_share_pct": 7.9,
+   "rank": 5
+  },
+  {
+   "category": "Rust",
+   "simulcasters": 35,
+   "kick_share_pct": 18.4,
+   "rank": 6
+  },
+  {
+   "category": "World of Warcraft",
+   "simulcasters": 24,
+   "kick_share_pct": 6.4,
+   "rank": 7
+  },
+  {
+   "category": "League of Legends",
+   "simulcasters": 29,
+   "kick_share_pct": 5.9,
+   "rank": 8
+  },
+  {
+   "category": "AION 2",
+   "simulcasters": 37,
+   "kick_share_pct": 22.2,
+   "rank": 9
+  },
+  {
+   "category": "Escape from Tarkov",
+   "simulcasters": 20,
+   "kick_share_pct": 5.9,
+   "rank": 10
+  },
+  {
+   "category": "IRL",
+   "simulcasters": 39,
+   "kick_share_pct": 12.3,
+   "rank": 11
+  },
+  {
+   "category": "EA Sports FC 27",
+   "simulcasters": 22,
+   "kick_share_pct": 12.5,
+   "rank": 12
+  },
+  {
+   "category": "Fortnite",
+   "simulcasters": 23,
+   "kick_share_pct": 11.7,
+   "rank": 13
+  },
+  {
+   "category": "WARDOGS",
+   "simulcasters": 22,
+   "kick_share_pct": 12.2,
+   "rank": 14
+  },
+  {
+   "category": "Slots",
+   "simulcasters": 26,
+   "kick_share_pct": 26.5,
+   "rank": 15
+  },
+  {
+   "category": "Just Chatting",
+   "simulcasters": 11,
+   "kick_share_pct": 24.4,
+   "rank": 16
+  },
+  {
+   "category": "Old School RuneScape",
+   "simulcasters": 65,
+   "kick_share_pct": 22.3,
+   "rank": 17
+  },
+  {
+   "category": "ASMR",
+   "simulcasters": 50,
+   "kick_share_pct": 14.3,
+   "rank": 18
+  },
+  {
+   "category": "Tibia",
+   "simulcasters": 33,
+   "kick_share_pct": 22.1,
+   "rank": 19
+  },
+  {
+   "category": "PUBG: BATTLEGROUNDS",
+   "simulcasters": 42,
+   "kick_share_pct": 15.8,
+   "rank": 20
+  },
+  {
+   "category": "Call of Duty: Warzone",
+   "simulcasters": 44,
+   "kick_share_pct": 17.7,
+   "rank": 21
+  },
+  {
+   "category": "Teamfight Tactics",
+   "simulcasters": 16,
+   "kick_share_pct": 39.1,
+   "rank": 22
+  },
+  {
+   "category": "ARC Raiders",
+   "simulcasters": 27,
+   "kick_share_pct": 7.9,
+   "rank": 23
+  },
+  {
+   "category": "Black Desert",
+   "simulcasters": 31,
+   "kick_share_pct": 6.0,
+   "rank": 24
+  },
+  {
+   "category": "Poker",
+   "simulcasters": 67,
+   "kick_share_pct": 26.6,
+   "rank": 25
+  },
+  {
+   "category": "VRChat",
+   "simulcasters": 38,
+   "kick_share_pct": 24.9,
+   "rank": 26
+  },
+  {
+   "category": "RuneScape",
+   "simulcasters": 11,
+   "kick_share_pct": 11.2,
+   "rank": 27
+  },
+  {
+   "category": "Crypto",
+   "simulcasters": 17,
+   "kick_share_pct": 10.1,
+   "rank": 28
+  },
+  {
+   "category": "Madden NFL 27",
+   "simulcasters": 12,
+   "kick_share_pct": 5.8,
+   "rank": 29
+  },
+  {
+   "category": "Apex Legends",
+   "simulcasters": 11,
+   "kick_share_pct": 1.1,
+   "rank": 30
+  },
+  {
+   "category": "The Witcher 3: Wild Hunt Remastered",
+   "simulcasters": 18,
+   "kick_share_pct": 6.4,
+   "rank": 31
+  },
+  {
+   "category": "Tom Clancy's The Division 2",
+   "simulcasters": 22,
+   "kick_share_pct": 2.9,
+   "rank": 32
+  },
+  {
+   "category": "NBA 2K27",
+   "simulcasters": 11,
+   "kick_share_pct": 4.0,
+   "rank": 33
+  },
+  {
+   "category": "Valheim",
+   "simulcasters": 14,
+   "kick_share_pct": 11.7,
+   "rank": 34
+  },
+  {
+   "category": "Age of Empires II",
+   "simulcasters": 19,
+   "kick_share_pct": 16.0,
+   "rank": 35
+  },
+  {
+   "category": "Sports",
+   "simulcasters": 19,
+   "kick_share_pct": 39.6,
+   "rank": 36
+  },
+  {
+   "category": "Aniimo",
+   "simulcasters": 23,
+   "kick_share_pct": 22.9,
+   "rank": 37
+  },
+  {
+   "category": "Marvel Rivals",
+   "simulcasters": 14,
+   "kick_share_pct": 4.4,
+   "rank": 38
+  },
+  {
+   "category": "GeoGuessr",
+   "simulcasters": 16,
+   "kick_share_pct": 60.0,
+   "rank": 39
+  },
+  {
+   "category": "Arena Breakout: Infinite",
+   "simulcasters": 17,
+   "kick_share_pct": 14.6,
+   "rank": 40
+  },
+  {
+   "category": "Halloween: The Game",
+   "simulcasters": 12,
+   "kick_share_pct": 13.7,
+   "rank": 41
+  },
+  {
+   "category": "Dead by Daylight",
+   "simulcasters": 13,
+   "kick_share_pct": 12.7,
+   "rank": 42
+  },
+  {
+   "category": "EVE Online",
+   "simulcasters": 17,
+   "kick_share_pct": 4.6,
+   "rank": 43
+  },
+  {
+   "category": "World of Tanks",
+   "simulcasters": 10,
+   "kick_share_pct": 9.2,
+   "rank": 44
+  },
+  {
+   "category": "Chess",
+   "simulcasters": 40,
+   "kick_share_pct": 4.3,
+   "rank": 45
+  },
+  {
+   "category": "ARK: Survival Ascended",
+   "simulcasters": 26,
+   "kick_share_pct": 34.0,
+   "rank": 46
+  },
+  {
+   "category": "Clash Royale",
+   "simulcasters": 23,
+   "kick_share_pct": 6.8,
+   "rank": 47
+  },
+  {
+   "category": "Minecraft Dungeons II",
+   "simulcasters": 12,
+   "kick_share_pct": 26.3,
+   "rank": 48
+  },
+  {
+   "category": "Grand Theft Auto IV",
+   "simulcasters": 33,
+   "kick_share_pct": 2.7,
+   "rank": 49
+  },
+  {
+   "category": "Albion Online",
+   "simulcasters": 17,
+   "kick_share_pct": 3.0,
+   "rank": 50
+  },
+  {
+   "category": "Hunt: Showdown 1896",
+   "simulcasters": 10,
+   "kick_share_pct": 3.2,
+   "rank": 51
+  },
+  {
+   "category": "Warframe",
+   "simulcasters": 13,
+   "kick_share_pct": 3.8,
+   "rank": 52
+  },
+  {
+   "category": "SILENT HILL: townfall",
+   "simulcasters": 20,
+   "kick_share_pct": 8.5,
+   "rank": 53
+  },
+  {
+   "category": "DayZ",
+   "simulcasters": 18,
+   "kick_share_pct": 7.3,
+   "rank": 54
+  },
+  {
+   "category": "CONTROL Resonant",
+   "simulcasters": 19,
+   "kick_share_pct": 14.1,
+   "rank": 55
+  },
+  {
+   "category": "Phasmophobia",
+   "simulcasters": 15,
+   "kick_share_pct": 4.9,
+   "rank": 56
+  },
+  {
+   "category": "Genshin Impact",
+   "simulcasters": 14,
+   "kick_share_pct": 5.5,
+   "rank": 57
+  },
+  {
+   "category": "Honkai: Star Rail",
+   "simulcasters": 16,
+   "kick_share_pct": 7.6,
+   "rank": 58
+  },
+  {
+   "category": "Project Zomboid",
+   "simulcasters": 19,
+   "kick_share_pct": 11.9,
+   "rank": 59
+  },
+  {
+   "category": "EA Sports FC 26",
+   "simulcasters": 14,
+   "kick_share_pct": 53.6,
+   "rank": 60
+  },
+  {
+   "category": "Diablo IV",
+   "simulcasters": 22,
+   "kick_share_pct": 5.3,
+   "rank": 61
+  },
+  {
+   "category": "Gears of War: E-Day",
+   "simulcasters": 12,
+   "kick_share_pct": 12.4,
+   "rank": 62
+  },
+  {
+   "category": "Sea of Thieves",
+   "simulcasters": 25,
+   "kick_share_pct": 4.5,
+   "rank": 63
+  },
+  {
+   "category": "Battlefield 6",
+   "simulcasters": 22,
+   "kick_share_pct": 13.8,
+   "rank": 64
+  },
+  {
+   "category": "The Blood of Dawnwalker",
+   "simulcasters": 20,
+   "kick_share_pct": 9.5,
+   "rank": 65
+  },
+  {
+   "category": "Retro",
+   "simulcasters": 12,
+   "kick_share_pct": 3.0,
+   "rank": 66
+  },
+  {
+   "category": "iRacing",
+   "simulcasters": 30,
+   "kick_share_pct": 20.2,
+   "rank": 67
+  },
+  {
+   "category": "Destiny 2",
+   "simulcasters": 20,
+   "kick_share_pct": 16.1,
+   "rank": 68
+  },
+  {
+   "category": "Diablo II: Resurrected",
+   "simulcasters": 16,
+   "kick_share_pct": 3.8,
+   "rank": 69
+  },
+  {
+   "category": "Games + Demos",
+   "simulcasters": 10,
+   "kick_share_pct": 24.7,
+   "rank": 70
+  },
+  {
+   "category": "Warcraft III",
+   "simulcasters": 18,
+   "kick_share_pct": 5.8,
+   "rank": 71
+  },
+  {
+   "category": "Graveyard Keeper II",
+   "simulcasters": 18,
+   "kick_share_pct": 21.3,
+   "rank": 72
+  },
+  {
+   "category": "Star Citizen",
+   "simulcasters": 27,
+   "kick_share_pct": 6.5,
+   "rank": 73
+  },
+  {
+   "category": "Call of Duty: Black Ops 6",
+   "simulcasters": 15,
+   "kick_share_pct": 4.5,
+   "rank": 74
+  },
+  {
+   "category": "RuneScape: Dragonwilds",
+   "simulcasters": 29,
+   "kick_share_pct": 18.3,
+   "rank": 75
+  },
+  {
+   "category": "eFootball",
+   "simulcasters": 14,
+   "kick_share_pct": 8.7,
+   "rank": 76
+  },
+  {
+   "category": "Call of Duty: Black Ops 7",
+   "simulcasters": 15,
+   "kick_share_pct": 11.9,
+   "rank": 77
+  },
+  {
+   "category": "Red Dead Redemption II",
+   "simulcasters": 21,
+   "kick_share_pct": 36.9,
+   "rank": 78
+  },
+  {
+   "category": "The Sims 4",
+   "simulcasters": 14,
+   "kick_share_pct": 1.3,
+   "rank": 79
+  },
+  {
+   "category": "The Witcher 3: Wild Hunt",
+   "simulcasters": 18,
+   "kick_share_pct": 26.9,
+   "rank": 80
+  },
+  {
+   "category": "Among Us",
+   "simulcasters": 25,
+   "kick_share_pct": 32.2,
+   "rank": 81
+  },
+  {
+   "category": "F1 25",
+   "simulcasters": 21,
+   "kick_share_pct": 11.0,
+   "rank": 82
+  },
+  {
+   "category": "Dune: Awakening",
+   "simulcasters": 16,
+   "kick_share_pct": 15.2,
+   "rank": 83
+  },
+  {
+   "category": "ROBLOX",
+   "simulcasters": 16,
+   "kick_share_pct": 42.5,
+   "rank": 84
+  },
+  {
+   "category": "The Isle",
+   "simulcasters": 13,
+   "kick_share_pct": 5.0,
+   "rank": 85
+  },
+  {
+   "category": "Euro Truck Simulator 2",
+   "simulcasters": 24,
+   "kick_share_pct": 11.1,
+   "rank": 86
+  },
+  {
+   "category": "The Elder Scrolls Online",
+   "simulcasters": 17,
+   "kick_share_pct": 7.2,
+   "rank": 87
+  },
+  {
+   "category": "Grand Theft Auto: San Andreas",
+   "simulcasters": 20,
+   "kick_share_pct": 14.6,
+   "rank": 88
+  },
+  {
+   "category": "Once Human",
+   "simulcasters": 14,
+   "kick_share_pct": 61.6,
+   "rank": 89
+  },
+  {
+   "category": "Active Matter",
+   "simulcasters": 10,
+   "kick_share_pct": 7.3,
+   "rank": 90
+  },
+  {
+   "category": "Rocket League",
+   "simulcasters": 11,
+   "kick_share_pct": 20.7,
+   "rank": 91
+  },
+  {
+   "category": "ELDEN RING",
+   "simulcasters": 10,
+   "kick_share_pct": 10.5,
+   "rank": 92
+  },
+  {
+   "category": "Brawl Stars",
+   "simulcasters": 12,
+   "kick_share_pct": 6.7,
+   "rank": 93
+  },
+  {
+   "category": "Marathon",
+   "simulcasters": 10,
+   "kick_share_pct": 2.5,
+   "rank": 94
+  },
+  {
+   "category": "American Truck Simulator",
+   "simulcasters": 27,
+   "kick_share_pct": 54.0,
+   "rank": 95
+  },
+  {
+   "category": "Knight Online",
+   "simulcasters": 10,
+   "kick_share_pct": 32.6,
+   "rank": 96
+  },
+  {
+   "category": "Marvel's Spider-Man Remastered",
+   "simulcasters": 13,
+   "kick_share_pct": 23.9,
+   "rank": 97
+  },
+  {
+   "category": "Graveyard Keeper",
+   "simulcasters": 15,
+   "kick_share_pct": 87.9,
+   "rank": 98
+  },
+  {
+   "category": "League of Legends: Wild Rift",
+   "simulcasters": 14,
+   "kick_share_pct": 34.4,
+   "rank": 99
+  },
+  {
+   "category": "Super Mario Maker 2",
+   "simulcasters": 11,
+   "kick_share_pct": 3.0,
+   "rank": 100
+  },
+  {
+   "category": "MLB The Show 26",
+   "simulcasters": 15,
+   "kick_share_pct": 7.3,
+   "rank": 101
+  },
+  {
+   "category": "DARK SOULS II: Scholar of the First Sin",
+   "simulcasters": 10,
+   "kick_share_pct": 15.3,
+   "rank": 102
+  },
+  {
+   "category": "Assassin's Creed Black Flag Resynced",
+   "simulcasters": 21,
+   "kick_share_pct": 55.2,
+   "rank": 103
+  },
+  {
+   "category": "Halo Infinite",
+   "simulcasters": 13,
+   "kick_share_pct": 4.8,
+   "rank": 104
+  },
+  {
+   "category": "Dark Souls: Remastered",
+   "simulcasters": 10,
+   "kick_share_pct": 10.6,
+   "rank": 105
+  },
+  {
+   "category": "Path of Exile 2",
+   "simulcasters": 11,
+   "kick_share_pct": 7.3,
+   "rank": 106
+  },
+  {
+   "category": "Mobile Legends: Bang Bang",
+   "simulcasters": 14,
+   "kick_share_pct": 15.7,
+   "rank": 107
+  },
+  {
+   "category": "Where Winds Meet",
+   "simulcasters": 10,
+   "kick_share_pct": 2.9,
+   "rank": 108
+  },
+  {
+   "category": "Microsoft Flight Simulator 2024",
+   "simulcasters": 11,
+   "kick_share_pct": 42.2,
+   "rank": 109
+  },
+  {
+   "category": "Resident Evil 4",
+   "simulcasters": 11,
+   "kick_share_pct": 47.7,
+   "rank": 110
+  },
+  {
+   "category": "Baldur's Gate 3",
+   "simulcasters": 14,
+   "kick_share_pct": 14.3,
+   "rank": 111
+  },
+  {
+   "category": "The Elder Scrolls V: Skyrim - Special Edition",
+   "simulcasters": 11,
+   "kick_share_pct": 7.7,
+   "rank": 112
+  },
+  {
+   "category": "War Thunder",
+   "simulcasters": 21,
+   "kick_share_pct": 8.9,
+   "rank": 113
+  },
+  {
+   "category": "Guild Wars 2",
+   "simulcasters": 15,
+   "kick_share_pct": 42.1,
+   "rank": 114
+  },
+  {
+   "category": "Fallout 76",
+   "simulcasters": 20,
+   "kick_share_pct": 13.7,
+   "rank": 115
+  },
+  {
+   "category": "ARK: Survival Evolved",
+   "simulcasters": 17,
+   "kick_share_pct": 47.8,
+   "rank": 116
+  },
+  {
+   "category": "Palworld",
+   "simulcasters": 12,
+   "kick_share_pct": 10.3,
+   "rank": 117
+  },
+  {
+   "category": "The Last of Us Part I",
+   "simulcasters": 13,
+   "kick_share_pct": 53.1,
+   "rank": 118
+  },
+  {
+   "category": "Halo: The Master Chief Collection",
+   "simulcasters": 12,
+   "kick_share_pct": 10.9,
+   "rank": 119
+  },
+  {
+   "category": "WWE 2K26",
+   "simulcasters": 13,
+   "kick_share_pct": 20.8,
+   "rank": 120
+  },
+  {
+   "category": "How to Fish",
+   "simulcasters": 11,
+   "kick_share_pct": 31.6,
+   "rank": 121
+  },
+  {
+   "category": "Politics",
+   "simulcasters": 13,
+   "kick_share_pct": 31.8,
+   "rank": 122
+  },
+  {
+   "category": "No Man's Sky",
+   "simulcasters": 17,
+   "kick_share_pct": 23.0,
+   "rank": 123
+  },
+  {
+   "category": "God of War",
+   "simulcasters": 15,
+   "kick_share_pct": 37.7,
+   "rank": 124
+  },
+  {
+   "category": "Warhammer 40,000: Space Marine II",
+   "simulcasters": 10,
+   "kick_share_pct": 29.3,
+   "rank": 125
+  },
+  {
+   "category": "Call of Duty: Mobile",
+   "simulcasters": 26,
+   "kick_share_pct": 37.1,
+   "rank": 126
+  },
+  {
+   "category": "Fallout 4",
+   "simulcasters": 11,
+   "kick_share_pct": 7.2,
+   "rank": 127
+  },
+  {
+   "category": "Control",
+   "simulcasters": 10,
+   "kick_share_pct": 25.5,
+   "rank": 128
+  },
+  {
+   "category": "Call of Duty: Modern Warfare 4",
+   "simulcasters": 10,
+   "kick_share_pct": 7.8,
+   "rank": 129
+  },
+  {
+   "category": "Left 4 Dead 2",
+   "simulcasters": 18,
+   "kick_share_pct": 67.9,
+   "rank": 130
+  },
+  {
+   "category": "Escape the Backrooms",
+   "simulcasters": 17,
+   "kick_share_pct": 50.6,
+   "rank": 131
+  },
+  {
+   "category": "TCG Card Shop Simulator",
+   "simulcasters": 13,
+   "kick_share_pct": 42.1,
+   "rank": 132
+  },
+  {
+   "category": "Schedule I",
+   "simulcasters": 19,
+   "kick_share_pct": 26.8,
+   "rank": 133
+  },
+  {
+   "category": "Science & Technology",
+   "simulcasters": 11,
+   "kick_share_pct": 21.3,
+   "rank": 134
+  },
+  {
+   "category": "FINAL FANTASY VII REMAKE",
+   "simulcasters": 14,
+   "kick_share_pct": 8.3,
+   "rank": 135
+  },
+  {
+   "category": "Red Dead Redemption",
+   "simulcasters": 11,
+   "kick_share_pct": 64.0,
+   "rank": 136
+  },
+  {
+   "category": "The Last of Us Part II Remastered",
+   "simulcasters": 16,
+   "kick_share_pct": 15.4,
+   "rank": 137
+  },
+  {
+   "category": "RESIDENT EVIL: requiem",
+   "simulcasters": 10,
+   "kick_share_pct": 44.2,
+   "rank": 138
+  },
+  {
+   "category": "LEGO Batman: Legacy of the Dark Knight",
+   "simulcasters": 13,
+   "kick_share_pct": 13.5,
+   "rank": 139
+  },
+  {
+   "category": "Cyberpunk 2077",
+   "simulcasters": 12,
+   "kick_share_pct": 16.4,
+   "rank": 140
+  },
+  {
+   "category": "RESIDENT EVIL 7 biohazard",
+   "simulcasters": 14,
+   "kick_share_pct": 12.8,
+   "rank": 141
+  },
+  {
+   "category": "R.E.P.O.",
+   "simulcasters": 11,
+   "kick_share_pct": 11.3,
+   "rank": 142
+  },
+  {
+   "category": "Mistfall Hunter",
+   "simulcasters": 15,
+   "kick_share_pct": 27.0,
+   "rank": 143
+  },
+  {
+   "category": "The Outlast Trials",
+   "simulcasters": 10,
+   "kick_share_pct": 12.4,
+   "rank": 144
+  },
+  {
+   "category": "God of War II",
+   "simulcasters": 10,
+   "kick_share_pct": 15.3,
+   "rank": 145
+  },
+  {
+   "category": "FINAL FANTASY VII REBIRTH",
+   "simulcasters": 13,
+   "kick_share_pct": 26.3,
+   "rank": 146
+  },
+  {
+   "category": "Call of Duty: Modern Warfare III",
+   "simulcasters": 10,
+   "kick_share_pct": 65.0,
+   "rank": 147
+  },
+  {
+   "category": "Forza Horizon 6",
+   "simulcasters": 14,
+   "kick_share_pct": 24.6,
+   "rank": 148
+  },
+  {
+   "category": "REMATCH",
+   "simulcasters": 13,
+   "kick_share_pct": 10.4,
+   "rank": 149
+  },
+  {
+   "category": "Mortal Shell II",
+   "simulcasters": 18,
+   "kick_share_pct": 25.5,
+   "rank": 150
+  },
+  {
+   "category": "Football Manager 26",
+   "simulcasters": 14,
+   "kick_share_pct": 30.4,
+   "rank": 151
+  },
+  {
+   "category": "Clash of Clans",
+   "simulcasters": 11,
+   "kick_share_pct": 25.4,
+   "rank": 152
+  },
+  {
+   "category": "Resonance: A Plague Tale Legacy",
+   "simulcasters": 12,
+   "kick_share_pct": 28.8,
+   "rank": 153
+  },
+  {
+   "category": "Resident Evil Village",
+   "simulcasters": 11,
+   "kick_share_pct": 12.8,
+   "rank": 154
+  },
+  {
+   "category": "Mimic Party",
+   "simulcasters": 18,
+   "kick_share_pct": 21.3,
+   "rank": 155
+  },
+  {
+   "category": "The Binding of Isaac: Repentance",
+   "simulcasters": 10,
+   "kick_share_pct": 19.5,
+   "rank": 156
+  },
+  {
+   "category": "Crimson Desert",
+   "simulcasters": 26,
+   "kick_share_pct": 49.8,
+   "rank": 157
+  },
+  {
+   "category": "Lies of P",
+   "simulcasters": 13,
+   "kick_share_pct": 18.9,
+   "rank": 158
+  },
+  {
+   "category": "Yu-Gi-Oh! Master Duel",
+   "simulcasters": 11,
+   "kick_share_pct": 16.0,
+   "rank": 159
+  },
+  {
+   "category": "Poppy Playtime",
+   "simulcasters": 10,
+   "kick_share_pct": 36.5,
+   "rank": 160
+  },
+  {
+   "category": "Days Gone",
+   "simulcasters": 10,
+   "kick_share_pct": 55.7,
+   "rank": 161
+  },
+  {
+   "category": "Assetto Corsa",
+   "simulcasters": 20,
+   "kick_share_pct": 30.8,
+   "rank": 162
+  },
+  {
+   "category": "The Legend of Zelda: Breath of the Wild",
+   "simulcasters": 14,
+   "kick_share_pct": 30.9,
+   "rank": 163
+  },
+  {
+   "category": "Party Animals",
+   "simulcasters": 10,
+   "kick_share_pct": 13.8,
+   "rank": 164
+  },
+  {
+   "category": "Fallout: New Vegas",
+   "simulcasters": 11,
+   "kick_share_pct": 16.5,
+   "rank": 165
+  },
+  {
+   "category": "Beyond: Two Souls",
+   "simulcasters": 10,
+   "kick_share_pct": 13.5,
+   "rank": 166
+  },
+  {
+   "category": "Hollow Knight",
+   "simulcasters": 12,
+   "kick_share_pct": 28.9,
+   "rank": 167
+  },
+  {
+   "category": "Grand Theft Auto: Vice City - The Definitive Edition",
+   "simulcasters": 14,
+   "kick_share_pct": 54.3,
+   "rank": 168
+  },
+  {
+   "category": "Honor of Kings",
+   "simulcasters": 14,
+   "kick_share_pct": 33.7,
+   "rank": 169
+  },
+  {
+   "category": "Star Wars Jedi: Survivor",
+   "simulcasters": 10,
+   "kick_share_pct": 43.4,
+   "rank": 170
+  },
+  {
+   "category": "Clair Obscur: Expedition 33",
+   "simulcasters": 11,
+   "kick_share_pct": 14.9,
+   "rank": 171
+  },
+  {
+   "category": "For Honor",
+   "simulcasters": 12,
+   "kick_share_pct": 28.1,
+   "rank": 172
+  },
+  {
+   "category": "Assassin's Creed Valhalla",
+   "simulcasters": 13,
+   "kick_share_pct": 69.5,
+   "rank": 173
+  },
+  {
+   "category": "Halo: Campaign Evolved",
+   "simulcasters": 15,
+   "kick_share_pct": 26.3,
+   "rank": 174
+  },
+  {
+   "category": "Subnautica",
+   "simulcasters": 11,
+   "kick_share_pct": 33.3,
+   "rank": 175
+  },
+  {
+   "category": "Dying Light",
+   "simulcasters": 15,
+   "kick_share_pct": 53.3,
+   "rank": 176
+  },
+  {
+   "category": "Call of Duty: Black Ops",
+   "simulcasters": 12,
+   "kick_share_pct": 42.3,
+   "rank": 177
+  },
+  {
+   "category": "Mario Kart World",
+   "simulcasters": 11,
+   "kick_share_pct": 36.5,
+   "rank": 178
+  },
+  {
+   "category": "Resident Evil 5",
+   "simulcasters": 13,
+   "kick_share_pct": 37.2,
+   "rank": 179
+  },
+  {
+   "category": "The Quarry",
+   "simulcasters": 13,
+   "kick_share_pct": 24.0,
+   "rank": 180
+  },
+  {
+   "category": "Resident Evil 3",
+   "simulcasters": 10,
+   "kick_share_pct": 24.8,
+   "rank": 181
+  },
+  {
+   "category": "Gears 5",
+   "simulcasters": 16,
+   "kick_share_pct": 41.6,
+   "rank": 182
+  },
+  {
+   "category": "Raft",
+   "simulcasters": 12,
+   "kick_share_pct": 44.7,
+   "rank": 183
+  },
+  {
+   "category": "Grand Theft Auto: Vice City",
+   "simulcasters": 15,
+   "kick_share_pct": 38.6,
+   "rank": 184
+  },
+  {
+   "category": "No More Room in Hell 2",
+   "simulcasters": 11,
+   "kick_share_pct": 36.3,
+   "rank": 185
+  },
+  {
+   "category": "Stumble Guys",
+   "simulcasters": 10,
+   "kick_share_pct": 36.3,
+   "rank": 186
+  },
+  {
+   "category": "World War Z: Aftermath",
+   "simulcasters": 10,
+   "kick_share_pct": 33.3,
+   "rank": 187
+  },
+  {
+   "category": "Ready or Not",
+   "simulcasters": 13,
+   "kick_share_pct": 38.7,
+   "rank": 188
+  },
+  {
+   "category": "Planet Crafter",
+   "simulcasters": 10,
+   "kick_share_pct": 45.8,
+   "rank": 189
+  },
+  {
+   "category": "Gears of War: Reloaded",
+   "simulcasters": 11,
+   "kick_share_pct": 46.5,
+   "rank": 190
+  }
+ ],
+ "kick_category_simulcast_share": [
+  {
+   "kick_category": "just-chatting",
+   "simulcast_share_pct": 0.3,
+   "rank": 1
+  },
+  {
+   "kick_category": "irl",
+   "simulcast_share_pct": 0.2,
+   "rank": 2
+  },
+  {
+   "kick_category": "grand-theft-auto-v",
+   "simulcast_share_pct": 5.7,
+   "rank": 3
+  },
+  {
+   "kick_category": "minecraft",
+   "simulcast_share_pct": 4.8,
+   "rank": 4
+  },
+  {
+   "kick_category": "slots",
+   "simulcast_share_pct": 1.4,
+   "rank": 5
+  },
+  {
+   "kick_category": "ea-sports-fc-27",
+   "simulcast_share_pct": 0.9,
+   "rank": 6
+  },
+  {
+   "kick_category": "counter-strike-2",
+   "simulcast_share_pct": 3.3,
+   "rank": 7
+  },
+  {
+   "kick_category": "league-of-legends",
+   "simulcast_share_pct": 1.5,
+   "rank": 8
+  },
+  {
+   "kick_category": "valorant",
+   "simulcast_share_pct": 4.9,
+   "rank": 9
+  },
+  {
+   "kick_category": "pubg-mobile",
+   "simulcast_share_pct": 0.0,
+   "rank": 10
+  },
+  {
+   "kick_category": "dota-2",
+   "simulcast_share_pct": 4.3,
+   "rank": 11
+  },
+  {
+   "kick_category": "kings-league",
+   "simulcast_share_pct": 2.3,
+   "rank": 12
+  }
+ ],
+ "sens_ov_pm1_ge4_any_category": 8132,
+ "sens_strict_ov_ge8_agree_ge75": 3325,
+ "kick_share_distribution": [
+  {
+   "kick_share": "under 10%",
+   "simulcasters": 1620
+  },
+  {
+   "kick_share": "10% to 25%",
+   "simulcasters": 1110
+  },
+  {
+   "kick_share": "25% to 50%",
+   "simulcasters": 1219
+  },
+  {
+   "kick_share": "50% or more",
+   "simulcasters": 1107
+  }
+ ],
+ "split_by_size": [
+  {
+   "avg_combined_viewers": "under 100",
+   "simulcasters": 4033,
+   "kick_share_pct": 19.3
+  },
+  {
+   "avg_combined_viewers": "100 to 999",
+   "simulcasters": 865,
+   "kick_share_pct": 14.4
+  },
+  {
+   "avg_combined_viewers": "1,000 to 9,999",
+   "simulcasters": 158,
+   "kick_share_pct": 14.8
+  },
+  {
+   "avg_combined_viewers": "10,000 or more",
+   "simulcasters": 7,
+   "kick_share_pct": 19.9
+  }
+ ],
+ "unc_simulcasters_with_ge4_uncapped_slots": 4033,
+ "unc_split_kick_share_of_combined_pct": 16.59,
+ "unc_split_median_kick_share_pct": 22.2,
+ "unc_split_majority_on_kick": 866,
+ "unc_split_majority_on_twitch": 3092,
+ "unc_share_of_simulcast_slots_uncapped_pct": 60.0
+}

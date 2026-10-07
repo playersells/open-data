@@ -1,0 +1,108 @@
+[
+ {
+  "slug": "social-follower-percentiles-2026-10",
+  "title": "Follower count percentiles on seven social platforms (October 2026)",
+  "summary": "How many followers or subscribers an account needs to reach each percentile on X (Twitter), Bluesky, Telegram, TikTok, YouTube, Kick and Twitch, measured on 5 October 2026 over the accounts in the PlayerSells index.",
+  "measured": "5 October 2026",
+  "files": {
+   "follower_percentiles.csv": 731,
+   "platforms.csv": 7
+  },
+  "published_at": [
+   "https://playersells.com/tools/twitter-follower-rank",
+   "https://playersells.com/tools/bluesky-follower-rank",
+   "https://playersells.com/tools/telegram-channel-rank",
+   "https://playersells.com/tools/tiktok-follower-rank",
+   "https://playersells.com/tools/youtube-subscriber-rank",
+   "https://playersells.com/tools/kick-follower-rank",
+   "https://playersells.com/tools/twitch-follower-rank"
+  ]
+ },
+ {
+  "slug": "kick-twitch-category-viewing-2026-09-26",
+  "title": "Kick and Twitch share of viewing by category, week of 26 September 2026",
+  "summary": "Share of concurrent viewing that each streaming category took on Kick and on Twitch from 26 September to 2 October 2026, daily and for the whole week, measured with one method on both platforms. Gambling took 7.2% of Kick viewing and 1.7% of Twitch viewing on these readings.",
+  "measured": "26 September 2026 00:00 UTC to 3 October 2026 00:00 UTC",
+  "files": {
+   "category_viewing_share.csv": 18181,
+   "gambling_share_week.csv": 5,
+   "rank_comparison_30d.csv": 6
+  },
+  "published_at": [
+   "https://playersells.com/learn/how-much-of-kick-is-gambling-one-week-measured-against-twitch"
+  ]
+ },
+ {
+  "slug": "kick-twitch-simulcasting-2026-09-28",
+  "title": "Kick and Twitch simulcasting, week of 28 September 2026",
+  "summary": "Streamers who broadcast on Kick and Twitch at the same time from 28 September to 4 October 2026, and how their concurrent viewers split between the two platforms. Twitch drew 83.3% of the combined viewers and Kick 16.7%.",
+  "measured": "28 September 2026 00:00 UTC to 5 October 2026 00:00 UTC",
+  "files": {
+   "summary.csv": 24,
+   "kick_share_distribution.csv": 4,
+   "split_by_audience_size.csv": 4,
+   "top_channels_simulcasting.csv": 5,
+   "twitch_category_split.csv": 190,
+   "kick_category_simulcast_share.csv": 12
+  },
+  "published_at": [
+   "https://playersells.com/learn/kick-and-twitch-simulcasting-measured-where-viewers-watch"
+  ]
+ },
+ {
+  "slug": "telegram-subscriber-change-2026-08-to-10",
+  "title": "Telegram channel subscriber change by topic, August to October 2026",
+  "summary": "Which Telegram channels gained or lost subscribers between early August and early October 2026, by topic and starting size. 85.6% of 814 crypto channels lost subscribers, against 64.6% of all 14,874 channels in the panel.",
+  "measured": "First reading 1 to 7 August 2026, last reading 26 September to 2 October 2026",
+  "files": {
+   "subscriber_change_by_category.csv": 7,
+   "shrink_rate_by_size.csv": 12
+  },
+  "published_at": [
+   "https://playersells.com/learn/crypto-telegram-channels-are-losing-subscribers-measured"
+  ]
+ },
+ {
+  "slug": "telegram-reach-benchmarks-2026-10",
+  "title": "Telegram channel reach per post by size and niche, October 2026 edition",
+  "summary": "How many views a Telegram channel's average post gets per subscriber, for every public broadcast channel with at least 1,000 subscribers whose page PlayerSells read in the 60 days to 3 October 2026. The typical channel with 1,000 to 5,000 subscribers reaches 27.5% of its subscribers per post; above 500,000 it is 3.1%.",
+  "measured": "3 October 2026 (pages read 4 August to 3 October 2026)",
+  "files": {
+   "reach_by_size.csv": 6,
+   "reach_by_niche.csv": 18
+  },
+  "published_at": [
+   "https://playersells.com/telegram-engagement-rate"
+  ]
+ },
+ {
+  "slug": "x-reach-per-follower-premium-2026",
+  "title": "X (Twitter) views per follower by account size and Premium badge, 2026",
+  "summary": "How many views an X account's typical post gets relative to its follower count, by account size, and how accounts with the blue Premium badge compare with no-badge accounts of the same size. Premium accounts drew 1.6x to 1.8x the views per follower between 5,000 and 1 million followers. This is a correlation, not proof that Premium causes it.",
+  "measured": "Engagement records computed 19 August to 3 October 2026, each covering 30 days of posts",
+  "files": {
+   "reach_by_follower_band.csv": 5,
+   "premium_vs_no_badge.csv": 5,
+   "premium_by_posting_rate.csv": 9
+  },
+  "published_at": [
+   "https://playersells.com/learn/does-x-premium-increase-reach-60000-accounts-compared"
+  ]
+ },
+ {
+  "slug": "x-engagement-benchmarks-2026-10",
+  "title": "X (Twitter) engagement rate benchmarks and posting pattern effects, October 2026",
+  "summary": "Engagement rate percentiles for 152,187 measured X accounts, broken down by follower band, and 45 posting pattern effects (hour, weekday, length, hashtags, links, media) measured within accounts with 95% intervals.",
+  "measured": "Trailing 30-day windows ending 6 and 7 October 2026 (see the files)",
+  "files": {
+   "engagement_rate_percentiles.csv": 6,
+   "engagement_rate_by_follower_band.csv": 8,
+   "posting_pattern_effects.csv": 45
+  },
+  "published_at": [
+   "https://playersells.com/insights/engagement-rate-benchmarks",
+   "https://playersells.com/insights",
+   "https://playersells.com/insights/data.json"
+  ]
+ }
+]

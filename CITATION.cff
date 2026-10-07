@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use these data, please cite them as below and credit: Source: PlayerSells (https://playersells.com)"
+type: dataset
+title: "PlayerSells Open Data: aggregate measurements of social and streaming platforms"
+abstract: >-
+  Aggregate measurements collected by PlayerSells with its own crawlers:
+  follower count percentiles on seven platforms, Kick and Twitch category
+  viewing shares and simulcasting, Telegram subscriber change and reach
+  benchmarks, and X (Twitter) reach and engagement benchmarks. Every figure is
+  also published on playersells.com.
+authors:
+  - name: PlayerSells
+    website: "https://playersells.com"
+    email: info@playersells.com
+url: "https://playersells.com"
+license: CC-BY-4.0
+date-released: "2026-10-07"
+version: "2026.10"
+keywords:
+  - social media
+  - creator economy
+  - live streaming
+  - telegram
+  - twitter
+  - kick
+  - twitch
+  - benchmarks

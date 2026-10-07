@@ -1,0 +1,81 @@
+{
+ "title": "Telegram Channel Subscriber Change 2026",
+ "subtitle": "Share of 14,874 Telegram channels that lost subscribers, by topic and size",
+ "id": "playersells/telegram-subscriber-change-2026-08-to-10",
+ "licenses": [
+  {
+   "name": "CC-BY-4.0"
+  }
+ ],
+ "keywords": [
+  "telegram",
+  "channels",
+  "subscribers",
+  "crypto",
+  "audience growth"
+ ],
+ "description": "Which Telegram channels gained or lost subscribers between early August and early October 2026, by topic and starting size. 85.6% of 814 crypto channels lost subscribers, against 64.6% of all 14,874 channels in the panel.\n\nPlayerSells' crawler stores a daily subscriber reading for the Telegram channels it tracks closely. For each channel the first reading between 1 and 7 August 2026 was compared with the last reading between 26 September and 2 October 2026, a median of 62 days later.\n\nOnly broadcast channels with at least 1,000 subscribers at the first reading are included; groups are excluded. That leaves 14,874 channels.\n\nTopic labels come from a keyword classifier over each channel's name and description. 3,471 of the 14,874 channels carry a label; the rest are Not classified. Topics with fewer than 150 channels are not shown.\n\nEvery central figure is a median.\n\nLimitations:\n- The panel is made of large channels: only 27 of the 14,874 started below 10,000 subscribers and the median channel started with 121,871.\n- The panel is not a random sample of Telegram. Private channels and channels nobody links to are missing.\n- Topic labels are approximate and about three quarters of the panel has none.\n- Nine weeks is short, and the data does not say why channels lost subscribers.\n- PlayerSells collects these numbers with its own crawlers. They describe what those crawlers read, not a census of any platform.\n- Counts shown by the platforms (followers, subscribers, views, viewers) are taken as displayed. PlayerSells cannot separate real people from bots, embedded players or inflated counts.\n\nPublished at https://playersells.com/learn/crypto-telegram-channels-are-losing-subscribers-measured\n\nSource: PlayerSells (https://playersells.com). License CC BY 4.0.",
+ "resources": [
+  {
+   "path": "subscriber_change_by_category.csv",
+   "description": "Share of channels that lost or gained subscribers, and the median change, by topic.",
+   "schema": {
+    "fields": [
+     {
+      "name": "category",
+      "type": "string",
+      "description": "Topic label from a keyword classifier, or Not classified, or All channels"
+     },
+     {
+      "name": "channels",
+      "type": "integer",
+      "description": "Channels in the panel with that label"
+     },
+     {
+      "name": "lost_subscribers_pct",
+      "type": "number",
+      "description": "Share of those channels whose last reading was lower than their first"
+     },
+     {
+      "name": "gained_subscribers_pct",
+      "type": "number",
+      "description": "Share whose last reading was higher"
+     },
+     {
+      "name": "median_change_pct",
+      "type": "number",
+      "description": "Median percentage change in subscribers between the two readings"
+     }
+    ]
+   }
+  },
+  {
+   "path": "shrink_rate_by_size.csv",
+   "description": "Share of channels that lost subscribers, by starting size and topic.",
+   "schema": {
+    "fields": [
+     {
+      "name": "starting_size_band",
+      "type": "string",
+      "description": "Subscribers at the first reading"
+     },
+     {
+      "name": "category",
+      "type": "string",
+      "description": "Topic label"
+     },
+     {
+      "name": "channels",
+      "type": "integer",
+      "description": "Channels in the cell; empty when too few to publish"
+     },
+     {
+      "name": "lost_subscribers_pct",
+      "type": "number",
+      "description": "Share that lost subscribers; empty when too few to publish"
+     }
+    ]
+   }
+  }
+ ]
+}

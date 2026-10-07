@@ -1,0 +1,114 @@
+{
+ "url": "https://playersells.com/insights/engagement-rate-benchmarks",
+ "retrieved_at": "2026-10-07T01:27:54Z",
+ "window_end_text": "7 October 2026",
+ "population_text": "Across 152,187 measured X accounts (985 to 242M followers, median 78K)",
+ "tables": [
+  {
+   "header": [
+    "Percentile",
+    "Engagement rate",
+    "Reading"
+   ],
+   "rows": [
+    [
+     "10th percentile",
+     "0.003%",
+     "Bottom tenth of measured accounts"
+    ],
+    [
+     "25th percentile",
+     "0.021%",
+     "Lower quartile"
+    ],
+    [
+     "50th percentile (median)",
+     "0.126%",
+     "The typical measured account"
+    ],
+    [
+     "75th percentile",
+     "0.601%",
+     "Better than three quarters of measured accounts"
+    ],
+    [
+     "90th percentile",
+     "2.30%",
+     "Top tenth of measured accounts"
+    ],
+    [
+     "Mean",
+     "5.10%",
+     "Pulled up by the long tail, not a typical value"
+    ]
+   ]
+  },
+  {
+   "header": [
+    "Follower band",
+    "Accounts",
+    "Lower quartile",
+    "Median",
+    "Upper quartile"
+   ],
+   "rows": [
+    [
+     "1K to 10K followers",
+     "31,857",
+     "0.067%",
+     "0.327%",
+     "1.34%"
+    ],
+    [
+     "10K to 50K followers",
+     "3,355",
+     "0.205%",
+     "0.677%",
+     "1.97%"
+    ],
+    [
+     "50K to 100K followers",
+     "44,897",
+     "0.022%",
+     "0.107%",
+     "0.431%"
+    ],
+    [
+     "100K to 500K followers",
+     "45,549",
+     "0.012%",
+     "0.065%",
+     "0.27%"
+    ],
+    [
+     "500K to 1M followers",
+     "7,014",
+     "0.005%",
+     "0.033%",
+     "0.14%"
+    ],
+    [
+     "1M to 5M followers",
+     "5,209",
+     "0.003%",
+     "0.019%",
+     "0.08%"
+    ],
+    [
+     "5M to 20M followers",
+     "633",
+     "0.002%",
+     "0.011%",
+     "0.04%"
+    ],
+    [
+     "20M to 50M followers",
+     "66",
+     "0.002%",
+     "0.009%",
+     "0.027%"
+    ]
+   ]
+  }
+ ]
+}

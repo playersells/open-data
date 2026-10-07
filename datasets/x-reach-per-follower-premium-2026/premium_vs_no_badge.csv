@@ -1,0 +1,6 @@
+follower_band,band_note,premium_accounts,no_badge_accounts,premium_views_per_follower_pct,no_badge_views_per_follower_pct,ratio
+"Under 5,000",median 993,1013,2555,28.33,27.43,1.03
+"5,000 to 20,000","medians 9,620 and 9,632",5290,7111,16.18,10.21,1.58
+"20,000 to 100,000","medians about 74,000",10117,6829,6.8,3.69,1.84
+"100,000 to 1 million","medians 204,339 and 229,445",13304,5567,3.89,2.42,1.61
+Over 1 million,,2092,59,1.11,1.28,

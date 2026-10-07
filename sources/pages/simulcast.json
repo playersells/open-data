@@ -1,0 +1,218 @@
+{
+ "url": "https://playersells.com/learn/kick-and-twitch-simulcasting-measured-where-viewers-watch",
+ "retrieved_at": "2026-10-07T01:27:54Z",
+ "tables": [
+  {
+   "header": [
+    "Measure, September 28 to October 4, 2026",
+    "Value"
+   ],
+   "rows": [
+    [
+     "Streamers live on both platforms at once for 1 hour or more",
+     "5,063"
+    ],
+    [
+     "Hours observed live on both at once, all simulcasters",
+     "32,066"
+    ],
+    [
+     "Median hours live on both at once, per simulcaster",
+     "3.25"
+    ],
+    [
+     "Twitch channels observed live 2 hours or more that simulcast on Kick",
+     "2.3% (4,814 of 212,211)"
+    ],
+    [
+     "Share of observed Twitch viewing that was simulcast",
+     "7.2%"
+    ],
+    [
+     "Kick channels live 2 hours or more that simulcast on Twitch",
+     "at least 4.4% (4,792 of 108,510)"
+    ],
+    [
+     "Share of Kick viewing that was simulcast",
+     "at least 2.5%"
+    ]
+   ]
+  },
+  {
+   "header": [
+    "Share of the streamer's combined viewers on Kick",
+    "Simulcasters"
+   ],
+   "rows": [
+    [
+     "Under 10%",
+     "1,620"
+    ],
+    [
+     "10% to 25%",
+     "1,110"
+    ],
+    [
+     "25% to 50%",
+     "1,219"
+    ],
+    [
+     "50% or more",
+     "1,107"
+    ]
+   ]
+  },
+  {
+   "header": [
+    "Average combined viewers while simulcasting",
+    "Simulcasters",
+    "Kick share of combined viewers"
+   ],
+   "rows": [
+    [
+     "Under 100",
+     "4,033",
+     "19.3%"
+    ],
+    [
+     "100 to 999",
+     "865",
+     "14.4%"
+    ],
+    [
+     "1,000 to 9,999",
+     "158",
+     "14.8%"
+    ],
+    [
+     "10,000 or more",
+     "7",
+     "19.9%"
+    ]
+   ]
+  },
+  {
+   "header": [
+    "Most watched channels in the week",
+    "Twitch: simulcast on Kick",
+    "Kick: simulcast on Twitch"
+   ],
+   "rows": [
+    [
+     "Top 10",
+     "2",
+     "0"
+    ],
+    [
+     "Top 50",
+     "7",
+     "at least 4"
+    ],
+    [
+     "Top 100",
+     "13",
+     "at least 6"
+    ],
+    [
+     "Top 500",
+     "50",
+     "at least 22"
+    ],
+    [
+     "Top 1,000",
+     "101",
+     "at least 45"
+    ]
+   ]
+  },
+  {
+   "header": [
+    "Category (simulcaster's main Twitch category)",
+    "Simulcasters",
+    "Kick share of combined viewers"
+   ],
+   "rows": [
+    [
+     "Grand Theft Auto V",
+     "49",
+     "23.4%"
+    ],
+    [
+     "Minecraft",
+     "28",
+     "20.2%"
+    ],
+    [
+     "VALORANT",
+     "24",
+     "7.4%"
+    ],
+    [
+     "Counter-Strike",
+     "40",
+     "8.3%"
+    ],
+    [
+     "Dota 2",
+     "23",
+     "7.9%"
+    ],
+    [
+     "Rust",
+     "35",
+     "18.4%"
+    ],
+    [
+     "World of Warcraft",
+     "24",
+     "6.4%"
+    ],
+    [
+     "League of Legends",
+     "29",
+     "5.9%"
+    ],
+    [
+     "AION 2",
+     "37",
+     "22.2%"
+    ],
+    [
+     "Escape from Tarkov",
+     "20",
+     "5.9%"
+    ],
+    [
+     "IRL",
+     "39",
+     "12.3%"
+    ],
+    [
+     "EA Sports FC 27",
+     "22",
+     "12.5%"
+    ],
+    [
+     "Fortnite",
+     "23",
+     "11.7%"
+    ],
+    [
+     "WARDOGS",
+     "22",
+     "12.2%"
+    ],
+    [
+     "Slots",
+     "26",
+     "26.5%"
+    ],
+    [
+     "Just Chatting",
+     "11",
+     "24.4%"
+    ]
+   ]
+  }
+ ]
+}

@@ -1,0 +1,143 @@
+{
+ "url": "https://playersells.com/learn/how-much-of-kick-is-gambling-one-week-measured-against-twitch",
+ "retrieved_at": "2026-10-07T01:27:54Z",
+ "tables": [
+  {
+   "header": [
+    "Category",
+    "Kick share of viewing",
+    "Twitch share of viewing"
+   ],
+   "rows": [
+    [
+     "Slots (Kick: Slots & Casino)",
+     "7.10%",
+     "1.18%"
+    ],
+    [
+     "Poker",
+     "0.09%",
+     "0.28%"
+    ],
+    [
+     "Virtual Casino",
+     "no such category",
+     "0.24%"
+    ],
+    [
+     "Sports Betting",
+     "0.004%",
+     "no such category"
+    ],
+    [
+     "Gambling total",
+     "7.20%",
+     "1.70%"
+    ],
+    [
+     "Channels live during the week",
+     "201,070",
+     "385,643"
+    ]
+   ]
+  },
+  {
+   "header": [
+    "Kick category",
+    "Share of viewing",
+    "Channels in the week"
+   ],
+   "rows": [
+    [
+     "Just Chatting",
+     "19.8%",
+     "64,561"
+    ],
+    [
+     "IRL",
+     "14.9%",
+     "6,781"
+    ],
+    [
+     "Grand Theft Auto V",
+     "14.6%",
+     "15,649"
+    ],
+    [
+     "Minecraft",
+     "8.4%",
+     "10,343"
+    ],
+    [
+     "Slots & Casino",
+     "7.1%",
+     "5,902"
+    ],
+    [
+     "EA Sports FC 27",
+     "4.2%",
+     "5,429"
+    ],
+    [
+     "Kings League",
+     "2.4%",
+     "169"
+    ],
+    [
+     "Counter-Strike 2",
+     "2.3%",
+     "12,527"
+    ],
+    [
+     "League of Legends",
+     "1.9%",
+     "10,012"
+    ],
+    [
+     "Valorant",
+     "1.8%",
+     "12,579"
+    ]
+   ]
+  },
+  {
+   "header": [
+    "Measure (30 days to October 3, 2026)",
+    "Twitch",
+    "Kick"
+   ],
+   "rows": [
+    [
+     "Channels averaging 100+ viewers",
+     "19,937",
+     "10,835"
+    ],
+    [
+     "Channels averaging 1,000+ viewers",
+     "2,286",
+     "1,284"
+    ],
+    [
+     "Average viewers, 100th largest channel",
+     "10,773",
+     "8,042"
+    ],
+    [
+     "Average viewers, 1,000th largest channel",
+     "1,894",
+     "1,252"
+    ],
+    [
+     "Average viewers, 10,000th largest channel",
+     "234",
+     "112"
+    ],
+    [
+     "Average viewers, 20,000th largest channel",
+     "99",
+     "28"
+    ]
+   ]
+  }
+ ]
+}

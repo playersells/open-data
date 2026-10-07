@@ -1,0 +1,101 @@
+{
+ "title": "Telegram Reach Benchmarks, October 2026",
+ "subtitle": "Views per subscriber for 139,115 Telegram channels, by size and niche",
+ "id": "playersells/telegram-reach-benchmarks-2026-10",
+ "licenses": [
+  {
+   "name": "CC-BY-4.0"
+  }
+ ],
+ "keywords": [
+  "telegram",
+  "engagement rate",
+  "reach",
+  "benchmarks",
+  "views per subscriber"
+ ],
+ "description": "How many views a Telegram channel's average post gets per subscriber, for every public broadcast channel with at least 1,000 subscribers whose page PlayerSells read in the 60 days to 3 October 2026. The typical channel with 1,000 to 5,000 subscribers reaches 27.5% of its subscribers per post; above 500,000 it is 3.1%.\n\nFor every public channel it tracks, PlayerSells reads the subscriber count and the view counts of the most recent posts from the channel's public t.me preview. Reach per post is the average view count divided by the subscriber count.\n\nThe table counts every qualifying channel with no sampling: broadcast channels with at least 1,000 subscribers, a view count above zero and a public page read between 4 August and 3 October 2026. 139,115 channels, measured on 3 October 2026 at 14:29 UTC.\n\nAcross all of them the median is 14.5%, and 10.1% of channels average more views per post than they have subscribers.\n\nThe niche table holds channels with 5,000 to 100,000 subscribers that the classifier assigned a niche, in niches with at least 200 such channels.\n\nLimitations:\n- Private and invite-only channels, and groups, cannot be measured this way.\n- Average views include posts that are still collecting views, so channels that post many times a day can read lower than their settled reach.\n- Views per subscriber above 100% come from forwards, cross-posts or paid promotion.\n- This is a dated edition, re-measured once a quarter.\n- PlayerSells collects these numbers with its own crawlers. They describe what those crawlers read, not a census of any platform.\n- Counts shown by the platforms (followers, subscribers, views, viewers) are taken as displayed. PlayerSells cannot separate real people from bots, embedded players or inflated counts.\n\nPublished at https://playersells.com/telegram-engagement-rate\n\nSource: PlayerSells (https://playersells.com). License CC BY 4.0.",
+ "resources": [
+  {
+   "path": "reach_by_size.csv",
+   "description": "Distribution of views per subscriber in each subscriber band, plus an all-channels row.",
+   "schema": {
+    "fields": [
+     {
+      "name": "band",
+      "type": "string",
+      "description": "Subscriber band, or all"
+     },
+     {
+      "name": "min_subscribers",
+      "type": "integer",
+      "description": "Lower bound of the band (inclusive)"
+     },
+     {
+      "name": "max_subscribers",
+      "type": "integer",
+      "description": "Upper bound of the band (exclusive); empty for the top band"
+     },
+     {
+      "name": "channels",
+      "type": "integer",
+      "description": "Channels measured in the band"
+     },
+     {
+      "name": "p10_reach_pct",
+      "type": "number",
+      "description": "10th percentile of average views per post divided by subscribers, in percent"
+     },
+     {
+      "name": "p25_reach_pct",
+      "type": "number",
+      "description": "25th percentile"
+     },
+     {
+      "name": "median_reach_pct",
+      "type": "number",
+      "description": "Median"
+     },
+     {
+      "name": "p75_reach_pct",
+      "type": "number",
+      "description": "75th percentile"
+     },
+     {
+      "name": "p90_reach_pct",
+      "type": "number",
+      "description": "90th percentile"
+     },
+     {
+      "name": "median_views_per_post",
+      "type": "integer",
+      "description": "Median average views per post"
+     }
+    ]
+   }
+  },
+  {
+   "path": "reach_by_niche.csv",
+   "description": "Median views per subscriber by niche, channels with 5,000 to 100,000 subscribers.",
+   "schema": {
+    "fields": [
+     {
+      "name": "niche",
+      "type": "string",
+      "description": "Topic label from a keyword classifier"
+     },
+     {
+      "name": "channels",
+      "type": "integer",
+      "description": "Channels measured"
+     },
+     {
+      "name": "median_reach_pct",
+      "type": "number",
+      "description": "Median average views per post divided by subscribers, in percent"
+     }
+    ]
+   }
+  }
+ ]
+}

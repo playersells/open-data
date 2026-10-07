@@ -1,0 +1,25 @@
+measure,value,unit,note
+names_live_on_both_platforms,11782,count,Same name live on Kick and on Twitch at some point in the week
+names_overlapping_one_hour_or_more,6736,count,Live in the same 15-minute block for at least four blocks
+simulcasters,5063,count,"Of those, in matching categories in at least half of the blocks"
+hours_live_on_both_all_simulcasters,32066,hours,
+median_hours_live_on_both_per_simulcaster,3.25,hours,
+median_share_of_twitch_time_also_live_on_kick,50.0,percent,Per streamer
+kick_share_of_combined_viewers,16.69,percent,All simulcasters pooled
+median_streamer_kick_share,21.7,percent,Per streamer
+simulcasters_with_most_viewers_on_twitch,3949,count,
+simulcasters_with_most_viewers_on_kick,1028,count,
+twitch_channels_observed,388927,count,Streams that reached the top 30 of their category
+twitch_channels_observed_2h_or_more,212211,count,
+twitch_channels_2h_or_more_that_simulcast,4814,count,
+share_of_observed_twitch_viewing_that_was_simulcast,7.19,percent,
+kick_channels_observed,201145,count,
+kick_channels_live_2h_or_more,108510,count,
+kick_channels_2h_or_more_that_simulcast_min,4792,count,Minimum
+share_of_kick_viewing_that_was_simulcast_min,2.49,percent,Minimum
+check_full_read_blocks_share_of_simulcast_blocks,60.0,percent,Blocks where the Twitch category had under 30 live streams
+check_full_read_simulcasters,4033,count,
+check_full_read_kick_share_of_combined_viewers,16.59,percent,
+check_full_read_median_streamer_kick_share,22.2,percent,
+check_loose_rules_simulcasters,8132,count,"15-minute timing tolerance, any category"
+check_strict_rules_simulcasters,3325,count,"Two hours of overlap, categories matching in three quarters"

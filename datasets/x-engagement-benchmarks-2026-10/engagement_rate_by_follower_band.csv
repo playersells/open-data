@@ -1,0 +1,9 @@
+follower_band,accounts,p25_engagement_rate_pct,median_engagement_rate_pct,p75_engagement_rate_pct,window_end
+1K to 10K followers,31857,0.067,0.327,1.34,2026-10-07
+10K to 50K followers,3355,0.205,0.677,1.97,2026-10-07
+50K to 100K followers,44897,0.022,0.107,0.431,2026-10-07
+100K to 500K followers,45549,0.012,0.065,0.27,2026-10-07
+500K to 1M followers,7014,0.005,0.033,0.14,2026-10-07
+1M to 5M followers,5209,0.003,0.019,0.08,2026-10-07
+5M to 20M followers,633,0.002,0.011,0.04,2026-10-07
+20M to 50M followers,66,0.002,0.009,0.027,2026-10-07

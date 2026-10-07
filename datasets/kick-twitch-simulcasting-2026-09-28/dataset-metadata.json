@@ -1,0 +1,164 @@
+{
+ "title": "Kick and Twitch Simulcasting, Sep-Oct 2026",
+ "subtitle": "5,063 streamers live on both at once and where their viewers watched",
+ "id": "playersells/kick-twitch-simulcasting-2026-09-28",
+ "licenses": [
+  {
+   "name": "CC-BY-4.0"
+  }
+ ],
+ "keywords": [
+  "kick",
+  "twitch",
+  "simulcasting",
+  "multistreaming",
+  "live streaming",
+  "viewership"
+ ],
+ "description": "Streamers who broadcast on Kick and Twitch at the same time from 28 September to 4 October 2026, and how their concurrent viewers split between the two platforms. Twitch drew 83.3% of the combined viewers and Kick 16.7%.\n\nBoth samplers read every 15 minutes: the Kick sampler walks Kick's whole public live directory (201,145 channels in the week), the Twitch sampler reads every category and records up to 30 streams per category, the most watched first (388,927 channels in the week).\n\nA simulcaster is a Kick channel and a Twitch channel with the same name (compared in lower case with hyphens and underscores removed) that were both live in the same 15-minute block for at least four blocks (one hour) in the week, in matching categories in at least half of those blocks. 11,782 names were live on both platforms at some point; 6,736 overlapped for an hour or more; 5,063 of those also matched on category.\n\nAudience split: for each simulcaster, viewer counts on each platform summed over the blocks in which both streams were read, and Kick's sum divided by the total. Platform totals are sums over all simulcasters; the median is taken per streamer.\n\nRobustness: repeating the split only in blocks where the Twitch category had fewer than 30 live streams (so every stream in it was read) gives Kick 16.6% of combined viewers against 16.7% overall.\n\nLimitations:\n- One week. Simulcasting follows events, contracts and individual streamers.\n- Matching is by name, time and category. A streamer who uses different names on the two platforms is missed; a third party rebroadcasting under the same name would be counted.\n- A Twitch stream is visible only while it is in the top 30 of its category, so every Kick-side figure is a minimum and Twitch figures describe streams that reached that level.\n- Channel names are not published here; the files hold totals only.\n- PlayerSells collects these numbers with its own crawlers. They describe what those crawlers read, not a census of any platform.\n- Counts shown by the platforms (followers, subscribers, views, viewers) are taken as displayed. PlayerSells cannot separate real people from bots, embedded players or inflated counts.\n\nPublished at https://playersells.com/learn/kick-and-twitch-simulcasting-measured-where-viewers-watch\n\nSource: PlayerSells (https://playersells.com). License CC BY 4.0.",
+ "resources": [
+  {
+   "path": "summary.csv",
+   "description": "Headline measures of the week, including the sensitivity checks.",
+   "schema": {
+    "fields": [
+     {
+      "name": "measure",
+      "type": "string",
+      "description": "What is measured"
+     },
+     {
+      "name": "value",
+      "type": "number",
+      "description": "The value"
+     },
+     {
+      "name": "unit",
+      "type": "string",
+      "description": "count, hours or percent"
+     },
+     {
+      "name": "note",
+      "type": "string",
+      "description": "How to read it"
+     }
+    ]
+   }
+  },
+  {
+   "path": "kick_share_distribution.csv",
+   "description": "Simulcasters grouped by the share of their combined viewers that watched on Kick.",
+   "schema": {
+    "fields": [
+     {
+      "name": "kick_share_band",
+      "type": "string",
+      "description": "Share of the streamer's combined viewers on Kick"
+     },
+     {
+      "name": "simulcasters",
+      "type": "integer",
+      "description": "Streamers in the band"
+     }
+    ]
+   }
+  },
+  {
+   "path": "split_by_audience_size.csv",
+   "description": "Kick's share of combined viewers by the simulcaster's average combined audience.",
+   "schema": {
+    "fields": [
+     {
+      "name": "avg_combined_viewers_band",
+      "type": "string",
+      "description": "Average combined viewers while simulcasting"
+     },
+     {
+      "name": "simulcasters",
+      "type": "integer",
+      "description": "Streamers in the band"
+     },
+     {
+      "name": "kick_share_of_combined_viewers_pct",
+      "type": "number",
+      "description": "Kick's share of the band's combined viewers"
+     }
+    ]
+   }
+  },
+  {
+   "path": "top_channels_simulcasting.csv",
+   "description": "How many of each platform's most watched channels of the week simulcast on the other.",
+   "schema": {
+    "fields": [
+     {
+      "name": "top_n",
+      "type": "integer",
+      "description": "The N most watched channels on the platform in the week"
+     },
+     {
+      "name": "twitch_channels_simulcasting_on_kick",
+      "type": "integer",
+      "description": "Of Twitch's top N"
+     },
+     {
+      "name": "kick_channels_simulcasting_on_twitch_min",
+      "type": "integer",
+      "description": "Of Kick's top N, a minimum (see limits)"
+     }
+    ]
+   }
+  },
+  {
+   "path": "twitch_category_split.csv",
+   "description": "Every Twitch category with 10 or more simulcasters, ranked by combined viewing during simulcasts.",
+   "schema": {
+    "fields": [
+     {
+      "name": "rank_by_simulcast_viewing",
+      "type": "integer",
+      "description": "1 = the category with the most combined viewing during simulcasts"
+     },
+     {
+      "name": "twitch_category",
+      "type": "string",
+      "description": "The simulcaster's main Twitch category"
+     },
+     {
+      "name": "simulcasters",
+      "type": "integer",
+      "description": "Streamers whose main Twitch category this was"
+     },
+     {
+      "name": "kick_share_of_combined_viewers_pct",
+      "type": "number",
+      "description": "Kick's share of those streamers' combined viewers"
+     }
+    ]
+   }
+  },
+  {
+   "path": "kick_category_simulcast_share.csv",
+   "description": "For Kick's largest categories, the share of Kick viewing that came from simulcasts.",
+   "schema": {
+    "fields": [
+     {
+      "name": "rank_by_kick_viewing",
+      "type": "integer",
+      "description": "1 = the most watched Kick category of the week"
+     },
+     {
+      "name": "kick_category",
+      "type": "string",
+      "description": "Kick category slug"
+     },
+     {
+      "name": "simulcast_share_of_category_viewing_min_pct",
+      "type": "number",
+      "description": "Minimum share of the category's Kick viewing that came from simulcasting channels"
+     }
+    ]
+   }
+  }
+ ]
+}

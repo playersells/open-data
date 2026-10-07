@@ -1,0 +1,30 @@
+{
+  "title": "PlayerSells Open Data: aggregate measurements of social and streaming platforms",
+  "upload_type": "dataset",
+  "description": "<p>Aggregate measurements collected by PlayerSells (https://playersells.com) with its own crawlers: follower count percentiles on X, Bluesky, Telegram, TikTok, YouTube, Kick and Twitch; share of viewing by category on Kick and Twitch, gambling included; Kick and Twitch simulcasting; Telegram channel subscriber change by topic and reach per post by size and niche; X (Twitter) views per follower by account size and Premium badge, and engagement rate benchmarks.</p><p>Every figure is also published on playersells.com, on the page linked from each dataset README. The files hold totals, shares and percentiles only, with no account lists and no personal data.</p><p>Source: PlayerSells (https://playersells.com). License CC BY 4.0.</p>",
+  "creators": [
+    {"name": "PlayerSells"}
+  ],
+  "license": "cc-by-4.0",
+  "access_right": "open",
+  "language": "eng",
+  "version": "2026.10",
+  "keywords": [
+    "social media",
+    "creator economy",
+    "live streaming",
+    "telegram",
+    "twitter",
+    "kick",
+    "twitch",
+    "benchmarks"
+  ],
+  "related_identifiers": [
+    {"identifier": "https://playersells.com/learn/how-much-of-kick-is-gambling-one-week-measured-against-twitch", "relation": "isSupplementTo", "resource_type": "publication-article"},
+    {"identifier": "https://playersells.com/learn/kick-and-twitch-simulcasting-measured-where-viewers-watch", "relation": "isSupplementTo", "resource_type": "publication-article"},
+    {"identifier": "https://playersells.com/learn/crypto-telegram-channels-are-losing-subscribers-measured", "relation": "isSupplementTo", "resource_type": "publication-article"},
+    {"identifier": "https://playersells.com/learn/does-x-premium-increase-reach-60000-accounts-compared", "relation": "isSupplementTo", "resource_type": "publication-article"},
+    {"identifier": "https://playersells.com/telegram-engagement-rate", "relation": "isSupplementTo", "resource_type": "other"},
+    {"identifier": "https://playersells.com/insights/engagement-rate-benchmarks", "relation": "isSupplementTo", "resource_type": "other"}
+  ]
+}

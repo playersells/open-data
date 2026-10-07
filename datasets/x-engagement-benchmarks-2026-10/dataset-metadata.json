@@ -1,0 +1,160 @@
+{
+ "title": "X Engagement Rate Benchmarks, October 2026",
+ "subtitle": "Engagement rate by follower band, plus timing, media and link effects",
+ "id": "playersells/x-engagement-benchmarks-2026-10",
+ "licenses": [
+  {
+   "name": "CC-BY-4.0"
+  }
+ ],
+ "keywords": [
+  "twitter",
+  "x",
+  "engagement rate",
+  "benchmarks",
+  "best time to post",
+  "hashtags"
+ ],
+ "description": "Engagement rate percentiles for 152,187 measured X accounts, broken down by follower band, and 45 posting pattern effects (hour, weekday, length, hashtags, links, media) measured within accounts with 95% intervals.\n\nEngagement rate is the median number of interactions (likes, reposts, replies and quotes) on an account's original posts over a 30-day window, divided by the account's follower count. Replies and reposts by the account are excluded.\n\nPercentiles are computed in the database over every account with at least 8 original posts in the window, with linear interpolation. The measured population held 152,187 accounts, from 985 to 242M followers with a median of 78K.\n\nPosting pattern effects compare, within each account, the median engagement of posts in a bucket with the same account's other posts, giving one ratio per account. The effect is the median of those ratios with a distribution-free 95% interval, so account size cancels out and the unit of evidence is the account, not the post. A finding is marked significant only after a Benjamini-Hochberg correction for testing many buckets at once, so a few rows have a raw interval that excludes zero and are still reported as no measurable difference.\n\nThese figures are recomputed daily on playersells.com. This file is a snapshot; build.py --refresh takes a new one.\n\nLimitations:\n- The accounts are the ones the catalog has scanned deeply enough to produce a stable median. The catalog is scanned largest first, so this is not a random sample of X.\n- Pooled percentiles mix very different account sizes. Compare an account with its own band.\n- Effects are observational associations, not causal estimates.\n- Interaction counts are read at collection time, not live.\n- PlayerSells collects these numbers with its own crawlers. They describe what those crawlers read, not a census of any platform.\n- Counts shown by the platforms (followers, subscribers, views, viewers) are taken as displayed. PlayerSells cannot separate real people from bots, embedded players or inflated counts.\n\nPublished at https://playersells.com/insights/engagement-rate-benchmarks, https://playersells.com/insights, https://playersells.com/insights/data.json\n\nSource: PlayerSells (https://playersells.com). License CC BY 4.0.",
+ "resources": [
+  {
+   "path": "engagement_rate_percentiles.csv",
+   "description": "Engagement rate percentiles across all measured accounts.",
+   "schema": {
+    "fields": [
+     {
+      "name": "statistic",
+      "type": "string",
+      "description": "p10, p25, p50, p75, p90 or mean"
+     },
+     {
+      "name": "engagement_rate_pct",
+      "type": "number",
+      "description": "Median interactions per original post divided by followers, in percent"
+     },
+     {
+      "name": "accounts",
+      "type": "integer",
+      "description": "Accounts in the measured population"
+     },
+     {
+      "name": "window_end",
+      "type": "datetime",
+      "description": "Last day of the 30-day window"
+     }
+    ]
+   }
+  },
+  {
+   "path": "engagement_rate_by_follower_band.csv",
+   "description": "Engagement rate quartiles by follower band. Bands with fewer than 30 accounts are not shown.",
+   "schema": {
+    "fields": [
+     {
+      "name": "follower_band",
+      "type": "string",
+      "description": "Follower band"
+     },
+     {
+      "name": "accounts",
+      "type": "integer",
+      "description": "Accounts in the band"
+     },
+     {
+      "name": "p25_engagement_rate_pct",
+      "type": "number",
+      "description": "Lower quartile"
+     },
+     {
+      "name": "median_engagement_rate_pct",
+      "type": "number",
+      "description": "Median"
+     },
+     {
+      "name": "p75_engagement_rate_pct",
+      "type": "number",
+      "description": "Upper quartile"
+     },
+     {
+      "name": "window_end",
+      "type": "datetime",
+      "description": "Last day of the 30-day window"
+     }
+    ]
+   }
+  },
+  {
+   "path": "posting_pattern_effects.csv",
+   "description": "Within-account effect of a posting choice on engagement, with a distribution-free 95% interval.",
+   "schema": {
+    "fields": [
+     {
+      "name": "dimension",
+      "type": "string",
+      "description": "hour_utc, dow, length_bucket, hashtag_count, link, media or video"
+     },
+     {
+      "name": "bucket",
+      "type": "string",
+      "description": "The value of the dimension"
+     },
+     {
+      "name": "label",
+      "type": "string",
+      "description": "Readable label"
+     },
+     {
+      "name": "effect_pct",
+      "type": "number",
+      "description": "Median per-account change in engagement on posts in the bucket against the same accounts' other posts"
+     },
+     {
+      "name": "effect_lo_pct",
+      "type": "number",
+      "description": "Lower end of the 95% interval"
+     },
+     {
+      "name": "effect_hi_pct",
+      "type": "number",
+      "description": "Upper end of the 95% interval"
+     },
+     {
+      "name": "significant",
+      "type": "boolean",
+      "description": "true when the effect survives a Benjamini-Hochberg multiple-testing correction across all findings and at least 30 accounts contribute. A raw 95% interval that excludes zero is not enough on its own"
+     },
+     {
+      "name": "accounts",
+      "type": "integer",
+      "description": "Accounts contributing"
+     },
+     {
+      "name": "accounts_agreeing",
+      "type": "integer",
+      "description": "Accounts whose own effect points the same way as the median"
+     },
+     {
+      "name": "posts",
+      "type": "integer",
+      "description": "Posts in the bucket"
+     },
+     {
+      "name": "median_multiple",
+      "type": "number",
+      "description": "Median of the per-account engagement multiples"
+     },
+     {
+      "name": "p90_multiple",
+      "type": "number",
+      "description": "90th percentile of the per-account multiples"
+     },
+     {
+      "name": "window_end",
+      "type": "datetime",
+      "description": "Last day of the 30-day window"
+     }
+    ]
+   }
+  }
+ ]
+}

@@ -1,0 +1,106 @@
+{
+ "title": "Kick vs Twitch Viewing by Category, Sep 2026",
+ "subtitle": "Share of concurrent viewers per category, gambling included, same week",
+ "id": "playersells/kick-twitch-category-viewing-2026-09-26",
+ "licenses": [
+  {
+   "name": "CC-BY-4.0"
+  }
+ ],
+ "keywords": [
+  "kick",
+  "twitch",
+  "live streaming",
+  "gambling",
+  "slots",
+  "viewership",
+  "categories"
+ ],
+ "description": "Share of concurrent viewing that each streaming category took on Kick and on Twitch from 26 September to 2 October 2026, daily and for the whole week, measured with one method on both platforms. Gambling took 7.2% of Kick viewing and 1.7% of Twitch viewing on these readings.\n\nKick: a sampler walks Kick's whole public live directory page by page and records every live channel's viewer count and category. Over the week it recorded 201,070 channels.\n\nTwitch: Twitch's public interface does not let a crawler page through the full live list, so the sampler reads every category every 15 minutes and records up to 30 streams per category, the most watched first. Over the week it recorded 385,643 channels.\n\nShare of viewing: one reading per channel per 15-minute block (the average if there were several), viewers summed by category and divided by the platform total for the period. This is the share of concurrent viewers, not of hours watched.\n\nA spot check on 3 October 2026 found the Twitch sampler holding about 62% of the viewers Twitch's own counters showed in Slots, Virtual Casino and Poker, against about 70% in other large categories. Adjusted for that, Twitch's gambling share is about 1.9%. The Kick sampler held about 95% to 97% of Kick's own counters.\n\nThe rank comparison counts channels live at least once in the 10 days to 3 October 2026, ranked by average concurrent viewers while live over the 30 days to that date.\n\nLimitations:\n- One week. Gambling viewing moves with events and individual streamers.\n- Category labels are the streamers' own. A slots stream filed under Just Chatting counts as Just Chatting.\n- The Twitch sampler sees only the top 30 streams of each category at a time, so Twitch channel counts are floors and Twitch shares in very large categories miss the long tail.\n- No absolute viewer or hours-watched totals are published, because the samplers measure shares more reliably than totals.\n- PlayerSells collects these numbers with its own crawlers. They describe what those crawlers read, not a census of any platform.\n- Counts shown by the platforms (followers, subscribers, views, viewers) are taken as displayed. PlayerSells cannot separate real people from bots, embedded players or inflated counts.\n\nPublished at https://playersells.com/learn/how-much-of-kick-is-gambling-one-week-measured-against-twitch\n\nSource: PlayerSells (https://playersells.com). License CC BY 4.0.",
+ "resources": [
+  {
+   "path": "category_viewing_share.csv",
+   "description": "Share of concurrent viewing per category, per platform, per day and for the whole week.",
+   "schema": {
+    "fields": [
+     {
+      "name": "platform",
+      "type": "string",
+      "description": "kick or twitch"
+     },
+     {
+      "name": "period",
+      "type": "string",
+      "description": "A UTC date (YYYY-MM-DD) or week for the whole seven days"
+     },
+     {
+      "name": "category",
+      "type": "string",
+      "description": "Kick category slug or Twitch category name, as the platforms publish them. One row per period groups every category with fewer than 5 channels"
+     },
+     {
+      "name": "share_of_viewing_pct",
+      "type": "number",
+      "description": "Viewers in the category as a percentage of all viewers on the platform in that period"
+     },
+     {
+      "name": "channels",
+      "type": "integer",
+      "description": "Distinct channels seen live in the category during the period. On Twitch this counts only streams that reached the top 30 of their category"
+     },
+     {
+      "name": "is_gambling",
+      "type": "boolean",
+      "description": "true for the categories counted as gambling: Kick slots, poker and sports-betting; Twitch Slots, Poker and Virtual Casino"
+     }
+    ]
+   }
+  },
+  {
+   "path": "gambling_share_week.csv",
+   "description": "The gambling comparison table as published, for the whole week.",
+   "schema": {
+    "fields": [
+     {
+      "name": "category",
+      "type": "string",
+      "description": "Gambling category or the total"
+     },
+     {
+      "name": "kick_share_of_viewing_pct",
+      "type": "number",
+      "description": "Share of Kick viewing; empty where Kick has no such category"
+     },
+     {
+      "name": "twitch_share_of_viewing_pct",
+      "type": "number",
+      "description": "Share of Twitch viewing; empty where Twitch has no such category"
+     }
+    ]
+   }
+  },
+  {
+   "path": "rank_comparison_30d.csv",
+   "description": "Channels by average concurrent viewers while live, Twitch against Kick, 30 days to 3 October 2026.",
+   "schema": {
+    "fields": [
+     {
+      "name": "measure",
+      "type": "string",
+      "description": "What is counted"
+     },
+     {
+      "name": "twitch",
+      "type": "integer",
+      "description": "Value on Twitch"
+     },
+     {
+      "name": "kick",
+      "type": "integer",
+      "description": "Value on Kick"
+     }
+    ]
+   }
+  }
+ ]
+}

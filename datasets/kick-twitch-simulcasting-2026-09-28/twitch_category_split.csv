@@ -1,0 +1,191 @@
+rank_by_simulcast_viewing,twitch_category,simulcasters,kick_share_of_combined_viewers_pct
+1,Grand Theft Auto V,49,23.4
+2,Minecraft,28,20.2
+3,VALORANT,24,7.4
+4,Counter-Strike,40,8.3
+5,Dota 2,23,7.9
+6,Rust,35,18.4
+7,World of Warcraft,24,6.4
+8,League of Legends,29,5.9
+9,AION 2,37,22.2
+10,Escape from Tarkov,20,5.9
+11,IRL,39,12.3
+12,EA Sports FC 27,22,12.5
+13,Fortnite,23,11.7
+14,WARDOGS,22,12.2
+15,Slots,26,26.5
+16,Just Chatting,11,24.4
+17,Old School RuneScape,65,22.3
+18,ASMR,50,14.3
+19,Tibia,33,22.1
+20,PUBG: BATTLEGROUNDS,42,15.8
+21,Call of Duty: Warzone,44,17.7
+22,Teamfight Tactics,16,39.1
+23,ARC Raiders,27,7.9
+24,Black Desert,31,6.0
+25,Poker,67,26.6
+26,VRChat,38,24.9
+27,RuneScape,11,11.2
+28,Crypto,17,10.1
+29,Madden NFL 27,12,5.8
+30,Apex Legends,11,1.1
+31,The Witcher 3: Wild Hunt Remastered,18,6.4
+32,Tom Clancy's The Division 2,22,2.9
+33,NBA 2K27,11,4.0
+34,Valheim,14,11.7
+35,Age of Empires II,19,16.0
+36,Sports,19,39.6
+37,Aniimo,23,22.9
+38,Marvel Rivals,14,4.4
+39,GeoGuessr,16,60.0
+40,Arena Breakout: Infinite,17,14.6
+41,Halloween: The Game,12,13.7
+42,Dead by Daylight,13,12.7
+43,EVE Online,17,4.6
+44,World of Tanks,10,9.2
+45,Chess,40,4.3
+46,ARK: Survival Ascended,26,34.0
+47,Clash Royale,23,6.8
+48,Minecraft Dungeons II,12,26.3
+49,Grand Theft Auto IV,33,2.7
+50,Albion Online,17,3.0
+51,Hunt: Showdown 1896,10,3.2
+52,Warframe,13,3.8
+53,SILENT HILL: townfall,20,8.5
+54,DayZ,18,7.3
+55,CONTROL Resonant,19,14.1
+56,Phasmophobia,15,4.9
+57,Genshin Impact,14,5.5
+58,Honkai: Star Rail,16,7.6
+59,Project Zomboid,19,11.9
+60,EA Sports FC 26,14,53.6
+61,Diablo IV,22,5.3
+62,Gears of War: E-Day,12,12.4
+63,Sea of Thieves,25,4.5
+64,Battlefield 6,22,13.8
+65,The Blood of Dawnwalker,20,9.5
+66,Retro,12,3.0
+67,iRacing,30,20.2
+68,Destiny 2,20,16.1
+69,Diablo II: Resurrected,16,3.8
+70,Games + Demos,10,24.7
+71,Warcraft III,18,5.8
+72,Graveyard Keeper II,18,21.3
+73,Star Citizen,27,6.5
+74,Call of Duty: Black Ops 6,15,4.5
+75,RuneScape: Dragonwilds,29,18.3
+76,eFootball,14,8.7
+77,Call of Duty: Black Ops 7,15,11.9
+78,Red Dead Redemption II,21,36.9
+79,The Sims 4,14,1.3
+80,The Witcher 3: Wild Hunt,18,26.9
+81,Among Us,25,32.2
+82,F1 25,21,11.0
+83,Dune: Awakening,16,15.2
+84,ROBLOX,16,42.5
+85,The Isle,13,5.0
+86,Euro Truck Simulator 2,24,11.1
+87,The Elder Scrolls Online,17,7.2
+88,Grand Theft Auto: San Andreas,20,14.6
+89,Once Human,14,61.6
+90,Active Matter,10,7.3
+91,Rocket League,11,20.7
+92,ELDEN RING,10,10.5
+93,Brawl Stars,12,6.7
+94,Marathon,10,2.5
+95,American Truck Simulator,27,54.0
+96,Knight Online,10,32.6
+97,Marvel's Spider-Man Remastered,13,23.9
+98,Graveyard Keeper,15,87.9
+99,League of Legends: Wild Rift,14,34.4
+100,Super Mario Maker 2,11,3.0
+101,MLB The Show 26,15,7.3
+102,DARK SOULS II: Scholar of the First Sin,10,15.3
+103,Assassin's Creed Black Flag Resynced,21,55.2
+104,Halo Infinite,13,4.8
+105,Dark Souls: Remastered,10,10.6
+106,Path of Exile 2,11,7.3
+107,Mobile Legends: Bang Bang,14,15.7
+108,Where Winds Meet,10,2.9
+109,Microsoft Flight Simulator 2024,11,42.2
+110,Resident Evil 4,11,47.7
+111,Baldur's Gate 3,14,14.3
+112,The Elder Scrolls V: Skyrim - Special Edition,11,7.7
+113,War Thunder,21,8.9
+114,Guild Wars 2,15,42.1
+115,Fallout 76,20,13.7
+116,ARK: Survival Evolved,17,47.8
+117,Palworld,12,10.3
+118,The Last of Us Part I,13,53.1
+119,Halo: The Master Chief Collection,12,10.9
+120,WWE 2K26,13,20.8
+121,How to Fish,11,31.6
+122,Politics,13,31.8
+123,No Man's Sky,17,23.0
+124,God of War,15,37.7
+125,"Warhammer 40,000: Space Marine II",10,29.3
+126,Call of Duty: Mobile,26,37.1
+127,Fallout 4,11,7.2
+128,Control,10,25.5
+129,Call of Duty: Modern Warfare 4,10,7.8
+130,Left 4 Dead 2,18,67.9
+131,Escape the Backrooms,17,50.6
+132,TCG Card Shop Simulator,13,42.1
+133,Schedule I,19,26.8
+134,Science & Technology,11,21.3
+135,FINAL FANTASY VII REMAKE,14,8.3
+136,Red Dead Redemption,11,64.0
+137,The Last of Us Part II Remastered,16,15.4
+138,RESIDENT EVIL: requiem,10,44.2
+139,LEGO Batman: Legacy of the Dark Knight,13,13.5
+140,Cyberpunk 2077,12,16.4
+141,RESIDENT EVIL 7 biohazard,14,12.8
+142,R.E.P.O.,11,11.3
+143,Mistfall Hunter,15,27.0
+144,The Outlast Trials,10,12.4
+145,God of War II,10,15.3
+146,FINAL FANTASY VII REBIRTH,13,26.3
+147,Call of Duty: Modern Warfare III,10,65.0
+148,Forza Horizon 6,14,24.6
+149,REMATCH,13,10.4
+150,Mortal Shell II,18,25.5
+151,Football Manager 26,14,30.4
+152,Clash of Clans,11,25.4
+153,Resonance: A Plague Tale Legacy,12,28.8
+154,Resident Evil Village,11,12.8
+155,Mimic Party,18,21.3
+156,The Binding of Isaac: Repentance,10,19.5
+157,Crimson Desert,26,49.8
+158,Lies of P,13,18.9
+159,Yu-Gi-Oh! Master Duel,11,16.0
+160,Poppy Playtime,10,36.5
+161,Days Gone,10,55.7
+162,Assetto Corsa,20,30.8
+163,The Legend of Zelda: Breath of the Wild,14,30.9
+164,Party Animals,10,13.8
+165,Fallout: New Vegas,11,16.5
+166,Beyond: Two Souls,10,13.5
+167,Hollow Knight,12,28.9
+168,Grand Theft Auto: Vice City - The Definitive Edition,14,54.3
+169,Honor of Kings,14,33.7
+170,Star Wars Jedi: Survivor,10,43.4
+171,Clair Obscur: Expedition 33,11,14.9
+172,For Honor,12,28.1
+173,Assassin's Creed Valhalla,13,69.5
+174,Halo: Campaign Evolved,15,26.3
+175,Subnautica,11,33.3
+176,Dying Light,15,53.3
+177,Call of Duty: Black Ops,12,42.3
+178,Mario Kart World,11,36.5
+179,Resident Evil 5,13,37.2
+180,The Quarry,13,24.0
+181,Resident Evil 3,10,24.8
+182,Gears 5,16,41.6
+183,Raft,12,44.7
+184,Grand Theft Auto: Vice City,15,38.6
+185,No More Room in Hell 2,11,36.3
+186,Stumble Guys,10,36.3
+187,World War Z: Aftermath,10,33.3
+188,Ready or Not,13,38.7
+189,Planet Crafter,10,45.8
+190,Gears of War: Reloaded,11,46.5

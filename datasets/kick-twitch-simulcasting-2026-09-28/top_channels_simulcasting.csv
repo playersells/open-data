@@ -1,0 +1,6 @@
+top_n,twitch_channels_simulcasting_on_kick,kick_channels_simulcasting_on_twitch_min
+10,2,0
+50,7,4
+100,13,6
+500,50,22
+1000,101,45
