@@ -49,9 +49,10 @@ HF = ROOT / "hf"
 DIST = ROOT / "dist"
 SITE = spec.SITE
 
-REPO = Path(os.environ.get("PLAYERSELLS_REPO", r"C:\xampp\htdocs\irulmediav2"))
-OUTREACH = Path(os.environ.get(
-    "PLAYERSELLS_OUTREACH", r"C:\Users\eguve\Developer\seo-motoru\veri\playersells\outreach"))
+# Private inputs for --refresh, not part of the published repo: point these at
+# the site checkout and the research folder, or link them under _local/.
+REPO = Path(os.environ.get("PLAYERSELLS_REPO", ROOT / "_local" / "repo"))
+OUTREACH = Path(os.environ.get("PLAYERSELLS_OUTREACH", ROOT / "_local" / "outreach"))
 
 PAGES = {
     "kick-gambling": "/learn/how-much-of-kick-is-gambling-one-week-measured-against-twitch",

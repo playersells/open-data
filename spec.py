@@ -485,7 +485,7 @@ DATASETS = [
         "kaggle_title": "X Engagement Rate Benchmarks, October 2026",
         "subtitle": "Engagement rate by follower band, plus timing, media and link effects",
         "summary": (
-            "Engagement rate percentiles for 152,187 measured X accounts, broken down by follower band, and "
+            "Engagement rate percentiles for 152,291 measured X accounts, broken down by follower band, and "
             "45 posting pattern effects (hour, weekday, length, hashtags, links, media) measured within "
             "accounts with 95% intervals."
         ),
@@ -544,7 +544,7 @@ DATASETS = [
             "account's original posts over a 30-day window, divided by the account's follower count. "
             "Replies and reposts by the account are excluded.",
             "Percentiles are computed in the database over every account with at least 8 original posts in "
-            "the window, with linear interpolation. The measured population held 152,187 accounts, from 985 "
+            "the window, with linear interpolation. The measured population held 152,291 accounts, from 985 "
             "to 242M followers with a median of 78K.",
             "Posting pattern effects compare, within each account, the median engagement of posts in a "
             "bucket with the same account's other posts, giving one ratio per account. The effect is the "

@@ -92,7 +92,7 @@
  {
   "slug": "x-engagement-benchmarks-2026-10",
   "title": "X (Twitter) engagement rate benchmarks and posting pattern effects, October 2026",
-  "summary": "Engagement rate percentiles for 152,187 measured X accounts, broken down by follower band, and 45 posting pattern effects (hour, weekday, length, hashtags, links, media) measured within accounts with 95% intervals.",
+  "summary": "Engagement rate percentiles for 152,291 measured X accounts, broken down by follower band, and 45 posting pattern effects (hour, weekday, length, hashtags, links, media) measured within accounts with 95% intervals.",
   "measured": "Trailing 30-day windows ending 6 and 7 October 2026 (see the files)",
   "files": {
    "engagement_rate_percentiles.csv": 6,

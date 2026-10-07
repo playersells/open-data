@@ -1,6 +1,6 @@
 # X (Twitter) engagement rate benchmarks and posting pattern effects, October 2026
 
-Engagement rate percentiles for 152,187 measured X accounts, broken down by follower band, and 45 posting pattern effects (hour, weekday, length, hashtags, links, media) measured within accounts with 95% intervals.
+Engagement rate percentiles for 152,291 measured X accounts, broken down by follower band, and 45 posting pattern effects (hour, weekday, length, hashtags, links, media) measured within accounts with 95% intervals.
 
 **Measured:** Trailing 30-day windows ending 6 and 7 October 2026 (see the files)  
 **Publisher:** PlayerSells (https://playersells.com)  
@@ -63,7 +63,7 @@ Within-account effect of a posting choice on engagement, with a distribution-fre
 
 Engagement rate is the median number of interactions (likes, reposts, replies and quotes) on an account's original posts over a 30-day window, divided by the account's follower count. Replies and reposts by the account are excluded.
 
-Percentiles are computed in the database over every account with at least 8 original posts in the window, with linear interpolation. The measured population held 152,187 accounts, from 985 to 242M followers with a median of 78K.
+Percentiles are computed in the database over every account with at least 8 original posts in the window, with linear interpolation. The measured population held 152,291 accounts, from 985 to 242M followers with a median of 78K.
 
 Posting pattern effects compare, within each account, the median engagement of posts in a bucket with the same account's other posts, giving one ratio per account. The effect is the median of those ratios with a distribution-free 95% interval, so account size cancels out and the unit of evidence is the account, not the post. A finding is marked significant only after a Benjamini-Hochberg correction for testing many buckets at once, so a few rows have a raw interval that excludes zero and are still reported as no measurable difference.
 

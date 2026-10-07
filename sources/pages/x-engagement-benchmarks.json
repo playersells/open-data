@@ -1,8 +1,8 @@
 {
  "url": "https://playersells.com/insights/engagement-rate-benchmarks",
- "retrieved_at": "2026-10-07T01:27:54Z",
+ "retrieved_at": "2026-10-07T02:12:12Z",
  "window_end_text": "7 October 2026",
- "population_text": "Across 152,187 measured X accounts (985 to 242M followers, median 78K)",
+ "population_text": "Across 152,291 measured X accounts (985 to 242M followers, median 78K)",
  "tables": [
   {
    "header": [
@@ -54,28 +54,28 @@
    "rows": [
     [
      "1K to 10K followers",
-     "31,857",
+     "31,869",
      "0.067%",
      "0.327%",
      "1.34%"
     ],
     [
      "10K to 50K followers",
-     "3,355",
-     "0.205%",
-     "0.677%",
+     "3,360",
+     "0.204%",
+     "0.676%",
      "1.97%"
     ],
     [
      "50K to 100K followers",
-     "44,897",
+     "44,919",
      "0.022%",
      "0.107%",
      "0.431%"
     ],
     [
      "100K to 500K followers",
-     "45,549",
+     "45,574",
      "0.012%",
      "0.065%",
      "0.27%"
@@ -89,9 +89,9 @@
     ],
     [
      "1M to 5M followers",
-     "5,209",
+     "5,208",
      "0.003%",
-     "0.019%",
+     "0.02%",
      "0.08%"
     ],
     [
@@ -99,7 +99,7 @@
      "633",
      "0.002%",
      "0.011%",
-     "0.04%"
+     "0.039%"
     ],
     [
      "20M to 50M followers",
