@@ -104,5 +104,22 @@
    "https://playersells.com/insights",
    "https://playersells.com/insights/data.json"
   ]
+ },
+ {
+  "slug": "x-link-post-reach-2026-10",
+  "title": "Views on X (Twitter) posts with a link against the same account's posts without one, 2026",
+  "summary": "How many views X (Twitter) posts with a link drew compared with the same account's posts without a link, measured on 6,447,046 original posts from 285,579 accounts published between 15 July and 7 October 2026. For the median account, text posts with a link drew 10.4% fewer views; for accounts with over 1 million followers, 30.4% fewer; for accounts under 1,000 followers, 16.6% more.",
+  "measured": "Original posts published 15 July to 7 October 2026, views read at least 48 hours after posting",
+  "files": {
+   "link_gap_overall.csv": 2,
+   "link_gap_by_follower_band.csv": 5,
+   "link_gap_by_category.csv": 12,
+   "link_gap_by_period.csv": 3,
+   "engagement_per_view_change.csv": 4,
+   "link_placement.csv": 4
+  },
+  "published_at": [
+   "https://playersells.com/learn/does-x-still-penalize-links-we-measured-6-million-posts"
+  ]
  }
 ]

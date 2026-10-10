@@ -563,4 +563,109 @@ DATASETS = [
             "Interaction counts are read at collection time, not live.",
         ],
     },
+    # ------------------------------------------------------------------
+    {
+        "slug": "x-link-post-reach-2026-10",
+        "title": "Views on X (Twitter) posts with a link against the same account's posts without one, 2026",
+        "kaggle_title": "X Link Posts vs Link-Free Posts, Views 2026",
+        "subtitle": "Within-account view gap for link posts on X, by size, topic and link placement",
+        "summary": (
+            "How many views X (Twitter) posts with a link drew compared with the same account's posts without "
+            "a link, measured on 6,447,046 original posts from 285,579 accounts published between 15 July and "
+            "7 October 2026. For the median account, text posts with a link drew 10.4% fewer views; for "
+            "accounts with over 1 million followers, 30.4% fewer; for accounts under 1,000 followers, 16.6% more."
+        ),
+        "measured": "Original posts published 15 July to 7 October 2026, views read at least 48 hours after posting",
+        "method_urls": [
+            ("Does X Still Penalize Links? 6.4 Million Posts Measured",
+             SITE + "/learn/does-x-still-penalize-links-we-measured-6-million-posts"),
+        ],
+        "keywords": ["twitter", "x", "links", "reach", "views", "algorithm", "engagement", "social media"],
+        "files": [
+            {
+                "name": "link_gap_overall.csv",
+                "description": "The within-account view gap for link posts, text-only posts and posts with an image or video.",
+                "columns": [
+                    ("post_type", "string", "Text only, or with image or video"),
+                    ("accounts", "integer", "Accounts with at least three link posts and three link-free posts of this type"),
+                    ("views_change_pct", "number", "Median across accounts of (median views of link posts / median views of link-free posts) minus 1, in percent"),
+                    ("accounts_with_fewer_views_pct", "number", "Share of those accounts whose link posts got fewer views"),
+                ],
+            },
+            {
+                "name": "link_gap_by_follower_band.csv",
+                "description": "The same gap by the account's follower count.",
+                "columns": [
+                    ("follower_band", "string", "Follower band, from the median follower count recorded when the account's posts were read"),
+                    ("text_accounts", "integer", "Accounts in the text-only comparison"),
+                    ("text_views_change_pct", "number", "Median view change on text posts with a link"),
+                    ("media_accounts", "integer", "Accounts in the image or video comparison"),
+                    ("media_views_change_pct", "number", "Median view change on image or video posts with a link"),
+                ],
+            },
+            {
+                "name": "link_gap_by_category.csv",
+                "description": "The same gap by account topic, for topics with at least 100 accounts in the text comparison.",
+                "columns": [
+                    ("account_category", "string", "Topic from the PlayerSells account classifier, or none assigned"),
+                    ("text_accounts", "integer", "Accounts in the text-only comparison"),
+                    ("text_views_change_pct", "number", "Median view change on text posts with a link"),
+                    ("media_accounts", "integer", "Accounts in the image or video comparison"),
+                    ("media_views_change_pct", "number", "Median view change on image or video posts with a link"),
+                ],
+            },
+            {
+                "name": "link_gap_by_period.csv",
+                "description": "The same gap in three periods of 2026: before Elon Musk's late July statement that X had not penalized links for over a year, after it, and after X's 8 September creator payout change.",
+                "columns": [
+                    ("period_2026", "string", "Publication dates of the posts"),
+                    ("text_accounts", "integer", "Accounts in the text-only comparison inside the period"),
+                    ("text_views_change_pct", "number", "Median view change on text posts with a link"),
+                    ("media_accounts", "integer", "Accounts in the image or video comparison inside the period"),
+                    ("media_views_change_pct", "number", "Median view change on image or video posts with a link"),
+                ],
+            },
+            {
+                "name": "engagement_per_view_change.csv",
+                "description": "Change in likes, replies, reposts and bookmarks per view on link posts against the same account's link-free posts.",
+                "columns": [
+                    ("measure", "string", "Engagement measure per view"),
+                    ("text_change_pct", "number", "Median change for text posts with a link, from each group's totals"),
+                    ("media_change_pct", "number", "Median change for image or video posts with a link"),
+                ],
+            },
+            {
+                "name": "link_placement.csv",
+                "description": "Views on posts with the link in the post and posts with the link only in the author's own reply, against the same account's posts with no link.",
+                "columns": [
+                    ("link_location", "string", "In the post, or in the author's own reply"),
+                    ("post_type", "string", "Text only, or with image or video"),
+                    ("accounts", "integer", "Accounts with at least three link-in-reply posts and three posts in the group"),
+                    ("views_change_vs_no_link_pct", "number", "Median view change against the same account's posts with no link"),
+                ],
+            },
+        ],
+        "method": [
+            "PlayerSells' X crawler reads public posts of the accounts in its directory. Every original post "
+            "it had read that was published between 15 July and 7 October 2026 is used: 6,447,046 posts from "
+            "285,579 accounts. Reposts, quote posts, replies and thread continuations are excluded. Only posts "
+            "whose view counter was read at least 48 hours after publication are kept.",
+            "A link post is one for which X reports at least one URL. Uploaded photos and videos are not links. "
+            "Posts are split into text only and posts with an image or video.",
+            "For each account with at least three link posts and three link-free posts of the same type, the "
+            "median views of its link posts are divided by the median views of its link-free posts. Tables "
+            "report the median of those ratios across accounts, as a percent change. 68,604 accounts had at "
+            "least three posts with a link and three without.",
+            "A link-in-reply post is an original post without a link whose author replied to it with a post "
+            "that carries a link.",
+        ],
+        "limits": [
+            "Observational: comparing an account with itself removes differences between accounts, not "
+            "differences between the posts an account chooses to link.",
+            "The figures describe outcomes. They cannot show whether X applies a rule to links.",
+            "The crawler reads the largest accounts first, so small accounts are fewer in the sample.",
+            "Views are X's own impression counter, taken as published.",
+            "No post data from before July 2026 is included.",
+        ],
+    },
 ]

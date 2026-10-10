@@ -60,6 +60,7 @@ PAGES = {
     "x-premium": "/learn/does-x-premium-increase-reach-60000-accounts-compared",
     "simulcast": "/learn/kick-and-twitch-simulcasting-measured-where-viewers-watch",
     "x-engagement-benchmarks": "/insights/engagement-rate-benchmarks",
+    "x-links": "/learn/does-x-still-penalize-links-we-measured-6-million-posts",
 }
 X_INSIGHTS_JSON = "/insights/data.json"
 # Kaggle dataset ids are <owner>/<slug>; the owner is the Kaggle username or organisation.
@@ -535,6 +536,33 @@ def build_x_engagement(d: Path) -> dict:
     return out
 
 
+def build_x_links(d: Path) -> dict:
+    """Views on X posts with a link against the same account's posts without one (published 10 Oct 2026)."""
+    out = {}
+    t = table("x-links", "Post type")
+    out["link_gap_overall.csv"] = write_csv(
+        d / "link_gap_overall.csv",
+        ["post_type", "accounts", "views_change_pct", "accounts_with_fewer_views_pct"],
+        [[r[0], num(r[1]), num(r[2]), num(r[3])] for r in t["rows"]])
+    for key, name, first in (("Followers", "link_gap_by_follower_band.csv", "follower_band"),
+                             ("Account category", "link_gap_by_category.csv", "account_category"),
+                             ("Period (2026)", "link_gap_by_period.csv", "period_2026")):
+        t = table("x-links", key)
+        out[name] = write_csv(
+            d / name,
+            [first, "text_accounts", "text_views_change_pct", "media_accounts", "media_views_change_pct"],
+            [[r[0], num(r[1]), num(r[2]), num(r[3]), num(r[4])] for r in t["rows"]])
+    t = table("x-links", "Measure per view")
+    out["engagement_per_view_change.csv"] = write_csv(
+        d / "engagement_per_view_change.csv", ["measure", "text_change_pct", "media_change_pct"],
+        [[r[0], num(r[1]), num(r[2])] for r in t["rows"]])
+    t = table("x-links", "Where the link was")
+    out["link_placement.csv"] = write_csv(
+        d / "link_placement.csv", ["link_location", "post_type", "accounts", "views_change_vs_no_link_pct"],
+        [[r[0], r[1], num(r[2]), num(r[3])] for r in t["rows"]])
+    return out
+
+
 BUILDERS = {
     "social-follower-percentiles-2026-10": build_follower_percentiles,
     "kick-twitch-category-viewing-2026-09-26": build_kick_twitch_viewing,
@@ -543,6 +571,7 @@ BUILDERS = {
     "telegram-reach-benchmarks-2026-10": build_telegram_reach,
     "x-reach-per-follower-premium-2026": build_x_premium,
     "x-engagement-benchmarks-2026-10": build_x_engagement,
+    "x-link-post-reach-2026-10": build_x_links,
 }
 
 
@@ -619,6 +648,18 @@ def checks() -> list[str]:
     xb = {r["follower_band"]: r for r in rows_of(OUT / "x-reach-per-follower-premium-2026" / "reach_by_follower_band.csv")}
     expect("X 1M+ views per follower", float(xb["Over 1 million"]["views_per_follower_pct"]), 1.20, 0.001)
     expect("X sample", sum(int(r["accounts"]) for r in xb.values()), 60892)
+
+    xl = {r["post_type"]: r for r in rows_of(OUT / "x-link-post-reach-2026-10" / "link_gap_overall.csv")}
+    expect("X link gap, text posts", float(xl["Text only"]["views_change_pct"]), -10.4, 0.001)
+    expect("X link gap, text accounts", int(xl["Text only"]["accounts"]), 18341)
+    expect("X link gap, media posts", float(xl["With image or video"]["views_change_pct"]), -7.3, 0.001)
+    xlb = {r["follower_band"]: r for r in rows_of(OUT / "x-link-post-reach-2026-10" / "link_gap_by_follower_band.csv")}
+    expect("X link gap, 1M+ text", float(xlb["1 million and over"]["text_views_change_pct"]), -30.4, 0.001)
+    expect("X link gap, under 1K text", float(xlb["Under 1,000"]["text_views_change_pct"]), 16.6, 0.001)
+    xlc = {r["account_category"]: r for r in rows_of(OUT / "x-link-post-reach-2026-10" / "link_gap_by_category.csv")}
+    expect("X link gap, news text", float(xlc["News"]["text_views_change_pct"]), -29.7, 0.001)
+    xle = {r["measure"]: r for r in rows_of(OUT / "x-link-post-reach-2026-10" / "engagement_per_view_change.csv")}
+    expect("X link likes per view, text", float(xle["Likes per view"]["text_change_pct"]), -47.8, 0.001)
 
     xp = rows_of(OUT / "x-engagement-benchmarks-2026-10" / "engagement_rate_percentiles.csv")
     if int(xp[0]["accounts"]) != 152187:

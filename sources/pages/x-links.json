@@ -1,0 +1,264 @@
+{
+ "url": "https://playersells.com/learn/does-x-still-penalize-links-we-measured-6-million-posts",
+ "retrieved_at": "2026-10-10T12:43:06Z",
+ "tables": [
+  {
+   "header": [
+    "Post type",
+    "Accounts",
+    "Link posts vs own link-free posts",
+    "Accounts with fewer views"
+   ],
+   "rows": [
+    [
+     "Text only",
+     "18,341",
+     "-10.4%",
+     "58.5%"
+    ],
+    [
+     "With image or video",
+     "41,078",
+     "-7.3%",
+     "58.3%"
+    ]
+   ]
+  },
+  {
+   "header": [
+    "Followers",
+    "Accounts, text",
+    "Text with link",
+    "Accounts, media",
+    "Image or video with link"
+   ],
+   "rows": [
+    [
+     "Under 1,000",
+     "1,392",
+     "+16.6%",
+     "1,538",
+     "+9.2%"
+    ],
+    [
+     "1,000 to 9,999",
+     "2,971",
+     "+0.7%",
+     "5,953",
+     "-2.2%"
+    ],
+    [
+     "10,000 to 99,999",
+     "5,412",
+     "-7.6%",
+     "13,001",
+     "-6.0%"
+    ],
+    [
+     "100,000 to 999,999",
+     "6,892",
+     "-15.4%",
+     "17,185",
+     "-9.1%"
+    ],
+    [
+     "1 million and over",
+     "1,674",
+     "-30.4%",
+     "3,401",
+     "-14.7%"
+    ]
+   ]
+  },
+  {
+   "header": [
+    "Account category",
+    "Accounts, text",
+    "Text with link",
+    "Accounts, media",
+    "Image or video with link"
+   ],
+   "rows": [
+    [
+     "News",
+     "1,014",
+     "-29.7%",
+     "1,840",
+     "-11.2%"
+    ],
+    [
+     "Gaming",
+     "234",
+     "-20.8%",
+     "647",
+     "-12.8%"
+    ],
+    [
+     "Politics",
+     "663",
+     "-20.3%",
+     "1,238",
+     "-9.0%"
+    ],
+    [
+     "Movies",
+     "154",
+     "-19.4%",
+     "505",
+     "-14.8%"
+    ],
+    [
+     "Business",
+     "353",
+     "-18.8%",
+     "634",
+     "-16.4%"
+    ],
+    [
+     "Finance",
+     "175",
+     "-16.8%",
+     "314",
+     "-5.3%"
+    ],
+    [
+     "Music",
+     "258",
+     "-16.8%",
+     "759",
+     "-11.5%"
+    ],
+    [
+     "Education",
+     "196",
+     "-12.7%",
+     "724",
+     "-10.5%"
+    ],
+    [
+     "Crypto",
+     "602",
+     "-11.0%",
+     "1,545",
+     "+1.4%"
+    ],
+    [
+     "Sports",
+     "574",
+     "-10.8%",
+     "1,296",
+     "-10.7%"
+    ],
+    [
+     "Tech",
+     "172",
+     "-5.1%",
+     "419",
+     "-5.0%"
+    ],
+    [
+     "No category assigned",
+     "13,373",
+     "-7.9%",
+     "29,689",
+     "-7.0%"
+    ]
+   ]
+  },
+  {
+   "header": [
+    "Measure per view",
+    "Text with link",
+    "Image or video with link"
+   ],
+   "rows": [
+    [
+     "Likes per view",
+     "-47.8%",
+     "-25.9%"
+    ],
+    [
+     "Replies per view",
+     "-59.7%",
+     "-33.0%"
+    ],
+    [
+     "Reposts per view",
+     "-16.4%",
+     "-15.1%"
+    ],
+    [
+     "Bookmarks per view",
+     "+0.3%",
+     "-15.2%"
+    ]
+   ]
+  },
+  {
+   "header": [
+    "Where the link was",
+    "Post type",
+    "Accounts",
+    "Views vs own posts with no link"
+   ],
+   "rows": [
+    [
+     "In the post",
+     "Text only",
+     "1,376",
+     "-13.2%"
+    ],
+    [
+     "In the author's own reply",
+     "Text only",
+     "596",
+     "+2.8%"
+    ],
+    [
+     "In the post",
+     "With image or video",
+     "3,672",
+     "-8.5%"
+    ],
+    [
+     "In the author's own reply",
+     "With image or video",
+     "8,313",
+     "+5.5%"
+    ]
+   ]
+  },
+  {
+   "header": [
+    "Period (2026)",
+    "Accounts, text",
+    "Text with link",
+    "Accounts, media",
+    "Image or video with link"
+   ],
+   "rows": [
+    [
+     "July 15 to July 28",
+     "446",
+     "-13.2%",
+     "2,056",
+     "-8.3%"
+    ],
+    [
+     "July 29 to September 7",
+     "9,057",
+     "-10.1%",
+     "23,546",
+     "-7.5%"
+    ],
+    [
+     "September 8 to October 7",
+     "6,595",
+     "-14.0%",
+     "17,944",
+     "-8.9%"
+    ]
+   ]
+  }
+ ]
+}
