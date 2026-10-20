@@ -852,6 +852,8 @@ def main() -> int:
     for ds in spec.DATASETS:
         slug = ds["slug"]
         d = OUT / slug
+        if not re.fullmatch(r"\d{4}-\d{2}-\d{2}(/\d{4}-\d{2}-\d{2})?", ds.get("temporal_coverage", "")):
+            raise SystemExit(f"{slug}: spec needs temporal_coverage as an ISO date or date/date interval")
         counts = BUILDERS[slug](d)
         names = [f["name"] for f in ds["files"]]
         assert sorted(counts) == sorted(names), (slug, sorted(counts), names)
@@ -865,9 +867,13 @@ def main() -> int:
         if args.stage:
             stage(slug, ds)
 
+    # datasets.json is also read by https://playersells.com/open-data, which turns
+    # each entry into schema.org Dataset markup, so keep these fields filled.
     write_json(ROOT / "datasets.json", [
         {"slug": ds["slug"], "title": ds["title"], "summary": ds["summary"], "measured": ds["measured"],
-         "files": {k: v for k, v in c.items()}, "published_at": [u for _, u in ds["method_urls"]]}
+         "temporal_coverage": ds["temporal_coverage"], "keywords": ds["keywords"],
+         "files": {k: v for k, v in c.items()}, "published_at": [u for _, u in ds["method_urls"]],
+         "cite": {"title": ds["title"], "url": ds["method_urls"][0][1]}}
         for ds, c in index])
 
     problems += checks()

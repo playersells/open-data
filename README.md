@@ -18,6 +18,8 @@ Every number in this repository is also published on playersells.com, on the pag
 | [x-link-post-reach-2026-10](datasets/x-link-post-reach-2026-10) | Views on X posts with a link against the same account's posts without one, by size, topic and link placement | 15 Jul to 7 Oct 2026 |
 | [x-account-sale-prices-2026-10](datasets/x-account-sale-prices-2026-10) | Final prices X accounts sold for in 187 completed escrow deals, by follower count, against asking prices | 21 May to 19 Oct 2026 |
 
+Browse the catalogue, with download links and a citation line for every dataset, at [playersells.com/open-data](https://playersells.com/open-data).
+
 Each dataset folder has the CSV files, a README with every column, the method and the limitations, and a `dataset-metadata.json` for Kaggle. Hugging Face dataset cards are in [`hf/`](hf).
 
 ## License and attribution

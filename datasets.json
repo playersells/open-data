@@ -4,6 +4,20 @@
   "title": "Follower count percentiles on seven social platforms (October 2026)",
   "summary": "How many followers or subscribers an account needs to reach each percentile on X (Twitter), Bluesky, Telegram, TikTok, YouTube, Kick and Twitch, measured on 5 October 2026 over the accounts in the PlayerSells index.",
   "measured": "5 October 2026",
+  "temporal_coverage": "2026-10-05",
+  "keywords": [
+   "social media",
+   "followers",
+   "percentiles",
+   "twitter",
+   "telegram",
+   "youtube",
+   "tiktok",
+   "twitch",
+   "kick",
+   "bluesky",
+   "creator economy"
+  ],
   "files": {
    "follower_percentiles.csv": 731,
    "platforms.csv": 7
@@ -16,13 +30,27 @@
    "https://playersells.com/tools/youtube-subscriber-rank",
    "https://playersells.com/tools/kick-follower-rank",
    "https://playersells.com/tools/twitch-follower-rank"
-  ]
+  ],
+  "cite": {
+   "title": "Follower count percentiles on seven social platforms (October 2026)",
+   "url": "https://playersells.com/tools/twitter-follower-rank"
+  }
  },
  {
   "slug": "kick-twitch-category-viewing-2026-09-26",
   "title": "Kick and Twitch share of viewing by category, week of 26 September 2026",
   "summary": "Share of concurrent viewing that each streaming category took on Kick and on Twitch from 26 September to 2 October 2026, daily and for the whole week, measured with one method on both platforms. Gambling took 7.2% of Kick viewing and 1.7% of Twitch viewing on these readings.",
   "measured": "26 September 2026 00:00 UTC to 3 October 2026 00:00 UTC",
+  "temporal_coverage": "2026-09-26/2026-10-02",
+  "keywords": [
+   "kick",
+   "twitch",
+   "live streaming",
+   "gambling",
+   "slots",
+   "viewership",
+   "categories"
+  ],
   "files": {
    "category_viewing_share.csv": 18181,
    "gambling_share_week.csv": 5,
@@ -30,13 +58,26 @@
   },
   "published_at": [
    "https://playersells.com/learn/how-much-of-kick-is-gambling-one-week-measured-against-twitch"
-  ]
+  ],
+  "cite": {
+   "title": "Kick and Twitch share of viewing by category, week of 26 September 2026",
+   "url": "https://playersells.com/learn/how-much-of-kick-is-gambling-one-week-measured-against-twitch"
+  }
  },
  {
   "slug": "kick-twitch-simulcasting-2026-09-28",
   "title": "Kick and Twitch simulcasting, week of 28 September 2026",
   "summary": "Streamers who broadcast on Kick and Twitch at the same time from 28 September to 4 October 2026, and how their concurrent viewers split between the two platforms. Twitch drew 83.3% of the combined viewers and Kick 16.7%.",
   "measured": "28 September 2026 00:00 UTC to 5 October 2026 00:00 UTC",
+  "temporal_coverage": "2026-09-28/2026-10-04",
+  "keywords": [
+   "kick",
+   "twitch",
+   "simulcasting",
+   "multistreaming",
+   "live streaming",
+   "viewership"
+  ],
   "files": {
    "summary.csv": 24,
    "kick_share_distribution.csv": 4,
@@ -47,39 +88,77 @@
   },
   "published_at": [
    "https://playersells.com/learn/kick-and-twitch-simulcasting-measured-where-viewers-watch"
-  ]
+  ],
+  "cite": {
+   "title": "Kick and Twitch simulcasting, week of 28 September 2026",
+   "url": "https://playersells.com/learn/kick-and-twitch-simulcasting-measured-where-viewers-watch"
+  }
  },
  {
   "slug": "telegram-subscriber-change-2026-08-to-10",
   "title": "Telegram channel subscriber change by topic, August to October 2026",
   "summary": "Which Telegram channels gained or lost subscribers between early August and early October 2026, by topic and starting size. 85.6% of 814 crypto channels lost subscribers, against 64.6% of all 14,874 channels in the panel.",
   "measured": "First reading 1 to 7 August 2026, last reading 26 September to 2 October 2026",
+  "temporal_coverage": "2026-08-01/2026-10-02",
+  "keywords": [
+   "telegram",
+   "channels",
+   "subscribers",
+   "crypto",
+   "audience growth"
+  ],
   "files": {
    "subscriber_change_by_category.csv": 7,
    "shrink_rate_by_size.csv": 12
   },
   "published_at": [
    "https://playersells.com/learn/crypto-telegram-channels-are-losing-subscribers-measured"
-  ]
+  ],
+  "cite": {
+   "title": "Telegram channel subscriber change by topic, August to October 2026",
+   "url": "https://playersells.com/learn/crypto-telegram-channels-are-losing-subscribers-measured"
+  }
  },
  {
   "slug": "telegram-reach-benchmarks-2026-10",
   "title": "Telegram channel reach per post by size and niche, October 2026 edition",
   "summary": "How many views a Telegram channel's average post gets per subscriber, for every public broadcast channel with at least 1,000 subscribers whose page PlayerSells read in the 60 days to 3 October 2026. The typical channel with 1,000 to 5,000 subscribers reaches 27.5% of its subscribers per post; above 500,000 it is 3.1%.",
   "measured": "3 October 2026 (pages read 4 August to 3 October 2026)",
+  "temporal_coverage": "2026-08-04/2026-10-03",
+  "keywords": [
+   "telegram",
+   "engagement rate",
+   "reach",
+   "benchmarks",
+   "views per subscriber"
+  ],
   "files": {
    "reach_by_size.csv": 6,
    "reach_by_niche.csv": 18
   },
   "published_at": [
    "https://playersells.com/telegram-engagement-rate"
-  ]
+  ],
+  "cite": {
+   "title": "Telegram channel reach per post by size and niche, October 2026 edition",
+   "url": "https://playersells.com/telegram-engagement-rate"
+  }
  },
  {
   "slug": "x-reach-per-follower-premium-2026",
   "title": "X (Twitter) views per follower by account size and Premium badge, 2026",
   "summary": "How many views an X account's typical post gets relative to its follower count, by account size, and how accounts with the blue Premium badge compare with no-badge accounts of the same size. Premium accounts drew 1.6x to 1.8x the views per follower between 5,000 and 1 million followers. This is a correlation, not proof that Premium causes it.",
   "measured": "Engagement records computed 19 August to 3 October 2026, each covering 30 days of posts",
+  "temporal_coverage": "2026-08-19/2026-10-03",
+  "keywords": [
+   "twitter",
+   "x",
+   "premium",
+   "reach",
+   "views",
+   "engagement",
+   "verification"
+  ],
   "files": {
    "reach_by_follower_band.csv": 5,
    "premium_vs_no_badge.csv": 5,
@@ -87,13 +166,26 @@
   },
   "published_at": [
    "https://playersells.com/learn/does-x-premium-increase-reach-60000-accounts-compared"
-  ]
+  ],
+  "cite": {
+   "title": "X (Twitter) views per follower by account size and Premium badge, 2026",
+   "url": "https://playersells.com/learn/does-x-premium-increase-reach-60000-accounts-compared"
+  }
  },
  {
   "slug": "x-engagement-benchmarks-2026-10",
   "title": "X (Twitter) engagement rate benchmarks and posting pattern effects, October 2026",
   "summary": "Engagement rate percentiles for 152,291 measured X accounts, broken down by follower band, and 45 posting pattern effects (hour, weekday, length, hashtags, links, media) measured within accounts with 95% intervals.",
   "measured": "Trailing 30-day windows ending 6 and 7 October 2026 (see the files)",
+  "temporal_coverage": "2026-09-06/2026-10-07",
+  "keywords": [
+   "twitter",
+   "x",
+   "engagement rate",
+   "benchmarks",
+   "best time to post",
+   "hashtags"
+  ],
   "files": {
    "engagement_rate_percentiles.csv": 6,
    "engagement_rate_by_follower_band.csv": 8,
@@ -103,13 +195,28 @@
    "https://playersells.com/insights/engagement-rate-benchmarks",
    "https://playersells.com/insights",
    "https://playersells.com/insights/data.json"
-  ]
+  ],
+  "cite": {
+   "title": "X (Twitter) engagement rate benchmarks and posting pattern effects, October 2026",
+   "url": "https://playersells.com/insights/engagement-rate-benchmarks"
+  }
  },
  {
   "slug": "x-link-post-reach-2026-10",
   "title": "Views on X (Twitter) posts with a link against the same account's posts without one, 2026",
   "summary": "How many views X (Twitter) posts with a link drew compared with the same account's posts without a link, measured on 6,447,046 original posts from 285,579 accounts published between 15 July and 7 October 2026. For the median account, text posts with a link drew 10.4% fewer views; for accounts with over 1 million followers, 30.4% fewer; for accounts under 1,000 followers, 16.6% more.",
   "measured": "Original posts published 15 July to 7 October 2026, views read at least 48 hours after posting",
+  "temporal_coverage": "2026-07-15/2026-10-07",
+  "keywords": [
+   "twitter",
+   "x",
+   "links",
+   "reach",
+   "views",
+   "algorithm",
+   "engagement",
+   "social media"
+  ],
   "files": {
    "link_gap_overall.csv": 2,
    "link_gap_by_follower_band.csv": 5,
@@ -120,13 +227,28 @@
   },
   "published_at": [
    "https://playersells.com/learn/does-x-still-penalize-links-we-measured-6-million-posts"
-  ]
+  ],
+  "cite": {
+   "title": "Views on X (Twitter) posts with a link against the same account's posts without one, 2026",
+   "url": "https://playersells.com/learn/does-x-still-penalize-links-we-measured-6-million-posts"
+  }
  },
  {
   "slug": "x-account-sale-prices-2026-10",
   "title": "Prices X (Twitter) accounts sold for in completed escrow deals, 2026",
   "summary": "What X (Twitter) accounts actually sold for in 187 completed PlayerSells escrow deals between 21 May and 19 October 2026: final prices paid, not asking prices. The median sale was $60 and half of all sales closed between $19 and $125. The median price per 1,000 followers fell from $35.48 at 1,000 to 2,500 followers to $6.93 at 20,000 and up. 69.5% of accounts sold at their asking price.",
   "measured": "Completed sales 21 May to 19 October 2026, read 20 October 2026",
+  "temporal_coverage": "2026-05-21/2026-10-19",
+  "keywords": [
+   "twitter",
+   "x",
+   "account prices",
+   "social media accounts",
+   "marketplace",
+   "escrow",
+   "creator economy",
+   "prices"
+  ],
   "files": {
    "sale_prices_by_follower_band.csv": 6,
    "discount_vs_asking_price.csv": 6,
@@ -139,6 +261,10 @@
   "published_at": [
    "https://playersells.com/learn/what-x-accounts-actually-sell-for-2026-escrow-data",
    "https://playersells.com/pricing/x-account-prices-2026"
-  ]
+  ],
+  "cite": {
+   "title": "Prices X (Twitter) accounts sold for in completed escrow deals, 2026",
+   "url": "https://playersells.com/learn/what-x-accounts-actually-sell-for-2026-escrow-data"
+  }
  }
 ]

@@ -35,6 +35,7 @@ DATASETS = [
             "accounts in the PlayerSells index."
         ),
         "measured": "5 October 2026",
+        "temporal_coverage": "2026-10-05",
         "method_urls": [
             ("X (Twitter) follower rank", SITE + "/tools/twitter-follower-rank"),
             ("Bluesky follower rank", SITE + "/tools/bluesky-follower-rank"),
@@ -113,6 +114,7 @@ DATASETS = [
             "both platforms. Gambling took 7.2% of Kick viewing and 1.7% of Twitch viewing on these readings."
         ),
         "measured": "26 September 2026 00:00 UTC to 3 October 2026 00:00 UTC",
+        "temporal_coverage": "2026-09-26/2026-10-02",
         "method_urls": [
             ("How Much of Kick Is Gambling? One Week vs Twitch",
              SITE + "/learn/how-much-of-kick-is-gambling-one-week-measured-against-twitch"),
@@ -188,6 +190,7 @@ DATASETS = [
             "the combined viewers and Kick 16.7%."
         ),
         "measured": "28 September 2026 00:00 UTC to 5 October 2026 00:00 UTC",
+        "temporal_coverage": "2026-09-28/2026-10-04",
         "method_urls": [
             ("Kick and Twitch Simulcasts: 83% of Viewers Watch on Twitch",
              SITE + "/learn/kick-and-twitch-simulcasting-measured-where-viewers-watch"),
@@ -287,6 +290,7 @@ DATASETS = [
             "of all 14,874 channels in the panel."
         ),
         "measured": "First reading 1 to 7 August 2026, last reading 26 September to 2 October 2026",
+        "temporal_coverage": "2026-08-01/2026-10-02",
         "method_urls": [
             ("Crypto Telegram Channels Are Shrinking: 86% Lost Subscribers",
              SITE + "/learn/crypto-telegram-channels-are-losing-subscribers-measured"),
@@ -348,6 +352,7 @@ DATASETS = [
             "subscribers per post; above 500,000 it is 3.1%."
         ),
         "measured": "3 October 2026 (pages read 4 August to 3 October 2026)",
+        "temporal_coverage": "2026-08-04/2026-10-03",
         "method_urls": [
             ("What is a good Telegram engagement rate?", SITE + "/telegram-engagement-rate"),
         ],
@@ -412,6 +417,7 @@ DATASETS = [
             "followers. This is a correlation, not proof that Premium causes it."
         ),
         "measured": "Engagement records computed 19 August to 3 October 2026, each covering 30 days of posts",
+        "temporal_coverage": "2026-08-19/2026-10-03",
         "method_urls": [
             ("X Premium Linked to 1.6x-1.8x More Reach at the Same Size",
              SITE + "/learn/does-x-premium-increase-reach-60000-accounts-compared"),
@@ -490,6 +496,7 @@ DATASETS = [
             "accounts with 95% intervals."
         ),
         "measured": "Trailing 30-day windows ending 6 and 7 October 2026 (see the files)",
+        "temporal_coverage": "2026-09-06/2026-10-07",
         "method_urls": [
             ("What Is a Good Engagement Rate on X?", SITE + "/insights/engagement-rate-benchmarks"),
             ("X Engagement Insights", SITE + "/insights"),
@@ -576,6 +583,7 @@ DATASETS = [
             "accounts with over 1 million followers, 30.4% fewer; for accounts under 1,000 followers, 16.6% more."
         ),
         "measured": "Original posts published 15 July to 7 October 2026, views read at least 48 hours after posting",
+        "temporal_coverage": "2026-07-15/2026-10-07",
         "method_urls": [
             ("Does X Still Penalize Links? 6.4 Million Posts Measured",
              SITE + "/learn/does-x-still-penalize-links-we-measured-6-million-posts"),
@@ -682,6 +690,7 @@ DATASETS = [
             "1,000 to 2,500 followers to $6.93 at 20,000 and up. 69.5% of accounts sold at their asking price."
         ),
         "measured": "Completed sales 21 May to 19 October 2026, read 20 October 2026",
+        "temporal_coverage": "2026-05-21/2026-10-19",
         "method_urls": [
             ("What X Accounts Actually Sell For: 187 Escrow Sales",
              SITE + "/learn/what-x-accounts-actually-sell-for-2026-escrow-data"),
