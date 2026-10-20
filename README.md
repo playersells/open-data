@@ -2,7 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23201221.svg)](https://doi.org/10.5281/zenodo.23201221)
 
-Aggregate measurements of social and streaming platforms, collected by [PlayerSells](https://playersells.com) with its own crawlers and published here under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+Aggregate measurements of social and streaming platforms and of account sale prices, collected by [PlayerSells](https://playersells.com) with its own crawlers and marketplace records and published here under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
 Every number in this repository is also published on playersells.com, on the page linked from each dataset. The files hold totals, shares and percentiles only: no account lists, no channel names, no personal data.
 
@@ -16,6 +16,7 @@ Every number in this repository is also published on playersells.com, on the pag
 | [x-reach-per-follower-premium-2026](datasets/x-reach-per-follower-premium-2026) | X post views per follower by account size, Premium against no badge | Aug to Oct 2026 |
 | [x-engagement-benchmarks-2026-10](datasets/x-engagement-benchmarks-2026-10) | X engagement rate percentiles by follower band, plus posting pattern effects | 30 days to 7 Oct 2026 |
 | [x-link-post-reach-2026-10](datasets/x-link-post-reach-2026-10) | Views on X posts with a link against the same account's posts without one, by size, topic and link placement | 15 Jul to 7 Oct 2026 |
+| [x-account-sale-prices-2026-10](datasets/x-account-sale-prices-2026-10) | Final prices X accounts sold for in 187 completed escrow deals, by follower count, against asking prices | 21 May to 19 Oct 2026 |
 
 Each dataset folder has the CSV files, a README with every column, the method and the limitations, and a `dataset-metadata.json` for Kaggle. Hugging Face dataset cards are in [`hf/`](hf).
 
@@ -32,6 +33,7 @@ The collection is archived on Zenodo. [10.5281/zenodo.23201221](https://doi.org/
 ## What these numbers are and are not
 
 - They come from PlayerSells' own crawlers, which read public profiles, public channel previews and public live directories. They describe what those crawlers read, not a census of any platform.
+- The exception is `x-account-sale-prices-2026-10`, which comes from completed escrow deals on the PlayerSells marketplace: aggregates only, with no account, buyer or seller in the files.
 - Counts are the ones the platforms display. Bots, embedded players and inflated counts cannot be separated out.
 - Every dataset README lists its own sampling limits. Read them before quoting a figure.
 

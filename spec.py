@@ -668,4 +668,126 @@ DATASETS = [
             "No post data from before July 2026 is included.",
         ],
     },
+    # ------------------------------------------------------------------
+    {
+        "slug": "x-account-sale-prices-2026-10",
+        "title": "Prices X (Twitter) accounts sold for in completed escrow deals, 2026",
+        "kaggle_title": "X (Twitter) Account Sale Prices, Escrow Deals 2026",
+        "subtitle": "Final sale prices of 187 X accounts by follower count, against asking prices",
+        "crawler": False,
+        "summary": (
+            "What X (Twitter) accounts actually sold for in 187 completed PlayerSells escrow deals between "
+            "21 May and 19 October 2026: final prices paid, not asking prices. The median sale was $60 and half "
+            "of all sales closed between $19 and $125. The median price per 1,000 followers fell from $35.48 at "
+            "1,000 to 2,500 followers to $6.93 at 20,000 and up. 69.5% of accounts sold at their asking price."
+        ),
+        "measured": "Completed sales 21 May to 19 October 2026, read 20 October 2026",
+        "method_urls": [
+            ("What X Accounts Actually Sell For: 187 Escrow Sales",
+             SITE + "/learn/what-x-accounts-actually-sell-for-2026-escrow-data"),
+            ("X (Twitter) account prices, updated from every completed sale",
+             SITE + "/pricing/x-account-prices-2026"),
+        ],
+        "keywords": ["twitter", "x", "account prices", "social media accounts", "marketplace", "escrow",
+                     "creator economy", "prices"],
+        "files": [
+            {
+                "name": "sale_prices_by_follower_band.csv",
+                "description": "Completed sales by the account's follower count: median and middle 50% of the sale price, and the median price per 1,000 followers.",
+                "columns": [
+                    ("follower_band", "string", "Follower count recorded on the listing when it sold"),
+                    ("sales", "integer", "Completed sales in the band"),
+                    ("median_usd", "number", "Median final sale price, US dollars"),
+                    ("p25_usd", "number", "25th percentile sale price"),
+                    ("p75_usd", "number", "75th percentile sale price"),
+                    ("median_followers", "integer", "Median follower count of the accounts sold"),
+                    ("median_usd_per_1000_followers", "number", "Median across sales of price divided by followers, times 1,000"),
+                ],
+            },
+            {
+                "name": "discount_vs_asking_price.csv",
+                "description": "Share of completed sales that closed below the listing's asking price, and the median discount of those.",
+                "columns": [
+                    ("follower_band", "string", "Follower count recorded on the listing"),
+                    ("sales", "integer", "Completed sales in the band"),
+                    ("closed_below_ask_pct", "number", "Share of sales whose final price was below the asking price"),
+                    ("median_discount_when_below_pct", "number", "Median of (1 - sale price / asking price) among those, in percent"),
+                ],
+            },
+            {
+                "name": "asking_vs_sale_price.csv",
+                "description": "Median asking price of X accounts listed on 20 October 2026 against the median completed sale price, by follower count.",
+                "columns": [
+                    ("follower_band", "string", "Follower count on the listing"),
+                    ("live_listings", "integer", "X accounts listed for sale on 20 October 2026"),
+                    ("median_ask_usd", "number", "Median asking price of those listings"),
+                    ("median_sale_usd", "number", "Median completed sale price in the band"),
+                    ("ask_divided_by_sale", "number", "Median ask divided by median sale"),
+                ],
+            },
+            {
+                "name": "sell_through_by_asking_price.csv",
+                "description": "Share of X listings that sold, by asking price, for listings live on or before 20 September 2026 (at least 30 days on the market).",
+                "columns": [
+                    ("asking_price", "string", "Current asking price of the listing"),
+                    ("listings", "integer", "Listings that went live on or before 20 September 2026"),
+                    ("sold", "integer", "Of those, listings with a completed escrow sale by 19 October 2026"),
+                    ("sold_pct", "number", "Share sold"),
+                ],
+            },
+            {
+                "name": "sales_by_price_bracket.csv",
+                "description": "Completed sales by final price bracket.",
+                "columns": [
+                    ("sale_price", "string", "Final sale price bracket, US dollars"),
+                    ("sales", "integer", "Completed sales in the bracket"),
+                    ("share_pct", "number", "Share of all 187 sales"),
+                ],
+            },
+            {
+                "name": "blue_check_by_follower_band.csv",
+                "description": "Median sale price of accounts with and without a blue check, by follower count, independent sellers only; bands with fewer than 5 verified sales are left out.",
+                "columns": [
+                    ("follower_band", "string", "Follower count on the listing"),
+                    ("verified_sales", "integer", "Sales of accounts that showed a blue check when listed"),
+                    ("verified_median_usd", "number", "Their median sale price"),
+                    ("unverified_sales", "integer", "Sales of accounts without one"),
+                    ("unverified_median_usd", "number", "Their median sale price"),
+                ],
+            },
+            {
+                "name": "price_by_account_age.csv",
+                "description": "Sale price by account age, compared inside each follower band, independent sellers only.",
+                "columns": [
+                    ("account_age", "string", "Age of the X account when listed"),
+                    ("sales", "integer", "Completed sales"),
+                    ("price_vs_band_median", "number", "Median of (sale price / median sale of the account's follower band); 1.00 = typical for its size"),
+                    ("median_usd", "number", "Median sale price, all sizes mixed"),
+                ],
+            },
+        ],
+        "method": [
+            "Every figure comes from the PlayerSells marketplace database, read on 20 October 2026. A sale is an "
+            "escrow deal for an X account that reached completed status: the account was handed over and the "
+            "payment was released to the seller. Cancelled and refunded deals never reach that status. Price is "
+            "the final amount the buyer paid, in US dollars; the seller's escrow fee comes out of it.",
+            "Follower count, blue check, account age and asking price are the listing's own fields. While a "
+            "listing is live they are refreshed from X; they stop updating when it sells.",
+            "70 internal records created to fill the seller leaderboard, between two PlayerSells staff accounts, "
+            "are excluded, and one sale whose listing had no follower count is left out: 187 sales, one per "
+            "listing, from 118 buyers and 90 sellers. The filters are the same as on the live X account prices "
+            "page. Medians and percentiles are computed without trimming or weighting.",
+            "28 of the 187 sales were accounts sold by the PlayerSells store at set prices of $80 to $400. They "
+            "are in the price, discount and bracket tables and left out of the blue check and account age tables, "
+            "which compare each sale with the median sale of its follower band among independent sellers.",
+            "No account, handle, buyer or seller is included. The files hold aggregates only.",
+        ],
+        "limits": [
+            "187 sales is a small sample; rows with 10 to 25 sales can move as more deals close.",
+            "Prices from one escrow marketplace. Private deals and other marketplaces may close at different prices.",
+            "Asking prices are read from the listing on 20 October 2026; a seller who edited the price during a "
+            "negotiation shows as sold at the ask.",
+            "Blue check and account age comparisons are observational and rest on small groups.",
+        ],
+    },
 ]

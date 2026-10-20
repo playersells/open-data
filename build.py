@@ -61,6 +61,7 @@ PAGES = {
     "simulcast": "/learn/kick-and-twitch-simulcasting-measured-where-viewers-watch",
     "x-engagement-benchmarks": "/insights/engagement-rate-benchmarks",
     "x-links": "/learn/does-x-still-penalize-links-we-measured-6-million-posts",
+    "x-prices": "/learn/what-x-accounts-actually-sell-for-2026-escrow-data",
 }
 X_INSIGHTS_JSON = "/insights/data.json"
 # Kaggle dataset ids are <owner>/<slug>; the owner is the Kaggle username or organisation.
@@ -563,6 +564,69 @@ def build_x_links(d: Path) -> dict:
     return out
 
 
+def usd(text: str):
+    """'$1,175' -> 1175, '$9.50' -> 9.5, '' -> None."""
+    return num(text.replace("$", ""))
+
+
+def usd_range(text: str):
+    """'$9.50 to $22.50' -> (9.5, 22.5)."""
+    lo, hi = text.split(" to ")
+    return usd(lo), usd(hi)
+
+
+def table_by_header(key: str, header: list[str]) -> dict:
+    """The table on a snapshotted page with exactly this header row."""
+    snap = read_json(SRC / "pages" / f"{key}.json")
+    for t in snap["tables"]:
+        if t["header"] == header:
+            return t
+    raise SystemExit(f"table {header} not found on {key}")
+
+
+def build_x_prices(d: Path) -> dict:
+    """What X accounts sold for in completed PlayerSells escrow deals (published 20 Oct 2026)."""
+    out = {}
+    t = table_by_header("x-prices", ["Followers", "Sales", "Median sale", "Middle 50%", "Median followers",
+                                     "Median per 1,000 followers"])
+    out["sale_prices_by_follower_band.csv"] = write_csv(
+        d / "sale_prices_by_follower_band.csv",
+        ["follower_band", "sales", "median_usd", "p25_usd", "p75_usd", "median_followers",
+         "median_usd_per_1000_followers"],
+        [[r[0], num(r[1]), usd(r[2]), *usd_range(r[3]), num(r[4]), usd(r[5])] for r in t["rows"]])
+    t = table_by_header("x-prices", ["Followers", "Sales", "Closed below the ask", "Median discount when below"])
+    out["discount_vs_asking_price.csv"] = write_csv(
+        d / "discount_vs_asking_price.csv",
+        ["follower_band", "sales", "closed_below_ask_pct", "median_discount_when_below_pct"],
+        [[r[0], num(r[1]), num(r[2]), num(r[3])] for r in t["rows"]])
+    t = table_by_header("x-prices", ["Followers", "Live listings", "Median asking price", "Median sale price",
+                                     "Ask divided by sale"])
+    out["asking_vs_sale_price.csv"] = write_csv(
+        d / "asking_vs_sale_price.csv",
+        ["follower_band", "live_listings", "median_ask_usd", "median_sale_usd", "ask_divided_by_sale"],
+        [[r[0], num(r[1]), usd(r[2]), usd(r[3]), num(r[4])] for r in t["rows"]])
+    t = table_by_header("x-prices", ["Asking price", "Listings", "Sold", "Share sold"])
+    out["sell_through_by_asking_price.csv"] = write_csv(
+        d / "sell_through_by_asking_price.csv", ["asking_price", "listings", "sold", "sold_pct"],
+        [[r[0], num(r[1]), num(r[2]), num(r[3])] for r in t["rows"]])
+    t = table_by_header("x-prices", ["Sale price", "Sales", "Share of sales"])
+    out["sales_by_price_bracket.csv"] = write_csv(
+        d / "sales_by_price_bracket.csv", ["sale_price", "sales", "share_pct"],
+        [[r[0], num(r[1]), num(r[2])] for r in t["rows"]])
+    t = table_by_header("x-prices", ["Followers", "Verified sales", "Verified median", "Unverified sales",
+                                     "Unverified median"])
+    out["blue_check_by_follower_band.csv"] = write_csv(
+        d / "blue_check_by_follower_band.csv",
+        ["follower_band", "verified_sales", "verified_median_usd", "unverified_sales", "unverified_median_usd"],
+        [[r[0], num(r[1]), usd(r[2]), num(r[3]), usd(r[4])] for r in t["rows"]])
+    t = table_by_header("x-prices", ["Account age", "Sales", "Price against the typical sale for its size",
+                                     "Median sale"])
+    out["price_by_account_age.csv"] = write_csv(
+        d / "price_by_account_age.csv", ["account_age", "sales", "price_vs_band_median", "median_usd"],
+        [[r[0], num(r[1]), num(r[2]), usd(r[3])] for r in t["rows"]])
+    return out
+
+
 BUILDERS = {
     "social-follower-percentiles-2026-10": build_follower_percentiles,
     "kick-twitch-category-viewing-2026-09-26": build_kick_twitch_viewing,
@@ -572,6 +636,7 @@ BUILDERS = {
     "x-reach-per-follower-premium-2026": build_x_premium,
     "x-engagement-benchmarks-2026-10": build_x_engagement,
     "x-link-post-reach-2026-10": build_x_links,
+    "x-account-sale-prices-2026-10": build_x_prices,
 }
 
 
@@ -661,6 +726,16 @@ def checks() -> list[str]:
     xle = {r["measure"]: r for r in rows_of(OUT / "x-link-post-reach-2026-10" / "engagement_per_view_change.csv")}
     expect("X link likes per view, text", float(xle["Likes per view"]["text_change_pct"]), -47.8, 0.001)
 
+    xs = {r["follower_band"]: r for r in rows_of(OUT / "x-account-sale-prices-2026-10" / "sale_prices_by_follower_band.csv")}
+    expect("X sales, total", sum(int(r["sales"]) for r in xs.values()), 187)
+    expect("X sales, 1K to 2.5K median", float(xs["1K to 2.5K"]["median_usd"]), 60, 0.001)
+    expect("X sales, 10K to 20K median", float(xs["10K to 20K"]["median_usd"]), 120, 0.001)
+    expect("X sales, per 1K at 20K and up", float(xs["20K and up"]["median_usd_per_1000_followers"]), 6.93, 0.001)
+    xd = {r["follower_band"]: r for r in rows_of(OUT / "x-account-sale-prices-2026-10" / "discount_vs_asking_price.csv")}
+    expect("X sales below ask, 10K to 20K", float(xd["10K to 20K"]["closed_below_ask_pct"]), 60.9, 0.001)
+    xb2 = {r["sale_price"]: r for r in rows_of(OUT / "x-account-sale-prices-2026-10" / "sales_by_price_bracket.csv")}
+    expect("X sales $500 and up", int(xb2["$500 and up"]["sales"]), 5)
+
     xp = rows_of(OUT / "x-engagement-benchmarks-2026-10" / "engagement_rate_percentiles.csv")
     if int(xp[0]["accounts"]) != 152187:
         log(f"  note: the X benchmark page now measures {xp[0]['accounts']} accounts; "
@@ -671,6 +746,11 @@ def checks() -> list[str]:
 # --------------------------------------------------------------------------
 # documents
 # --------------------------------------------------------------------------
+
+def limits_of(ds: dict) -> list[str]:
+    common = spec.COMMON_LIMITS if ds.get("crawler", True) else spec.COMMON_LIMITS[1:]
+    return ds["limits"] + common
+
 
 def size_category(n: int) -> str:
     return "n<1K" if n < 1000 else "1K<n<10K" if n < 10_000 else "10K<n<100K"
@@ -691,7 +771,7 @@ def readme_body(ds: dict, counts: dict) -> str:
         L += [f"| `{c}` | {t} | {desc} |" for c, t, desc in f["columns"]]
         L.append("")
     L += ["## How it was measured", ""] + [f"{p}\n" for p in ds["method"]]
-    L += ["## Limitations", ""] + [f"- {x}" for x in ds["limits"] + spec.COMMON_LIMITS]
+    L += ["## Limitations", ""] + [f"- {x}" for x in limits_of(ds)]
     L += ["", "## How to cite", "",
           f"PlayerSells (2026). *{ds['title']}*. {ds['method_urls'][0][1]}. Licensed under {spec.LICENSE_NAME}.", "",
           f"When you reuse these numbers, credit \"{spec.ATTRIBUTION}\" with a link.", "",
@@ -715,7 +795,7 @@ def hf_card(ds: dict, counts: dict) -> str:
 def kaggle_meta(ds: dict) -> dict:
     type_map = {"string": "string", "integer": "integer", "number": "number", "boolean": "boolean", "date": "datetime"}
     desc = (ds["summary"] + "\n\n" + "\n\n".join(ds["method"]) + "\n\nLimitations:\n"
-            + "\n".join(f"- {x}" for x in ds["limits"] + spec.COMMON_LIMITS)
+            + "\n".join(f"- {x}" for x in limits_of(ds))
             + "\n\nPublished at " + ", ".join(u for _, u in ds["method_urls"])
             + f"\n\n{spec.ATTRIBUTION}. License {spec.LICENSE_NAME}.")
     return {

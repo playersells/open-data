@@ -121,5 +121,24 @@
   "published_at": [
    "https://playersells.com/learn/does-x-still-penalize-links-we-measured-6-million-posts"
   ]
+ },
+ {
+  "slug": "x-account-sale-prices-2026-10",
+  "title": "Prices X (Twitter) accounts sold for in completed escrow deals, 2026",
+  "summary": "What X (Twitter) accounts actually sold for in 187 completed PlayerSells escrow deals between 21 May and 19 October 2026: final prices paid, not asking prices. The median sale was $60 and half of all sales closed between $19 and $125. The median price per 1,000 followers fell from $35.48 at 1,000 to 2,500 followers to $6.93 at 20,000 and up. 69.5% of accounts sold at their asking price.",
+  "measured": "Completed sales 21 May to 19 October 2026, read 20 October 2026",
+  "files": {
+   "sale_prices_by_follower_band.csv": 6,
+   "discount_vs_asking_price.csv": 6,
+   "asking_vs_sale_price.csv": 6,
+   "sell_through_by_asking_price.csv": 5,
+   "sales_by_price_bracket.csv": 6,
+   "blue_check_by_follower_band.csv": 4,
+   "price_by_account_age.csv": 3
+  },
+  "published_at": [
+   "https://playersells.com/learn/what-x-accounts-actually-sell-for-2026-escrow-data",
+   "https://playersells.com/pricing/x-account-prices-2026"
+  ]
  }
 ]

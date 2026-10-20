@@ -1,0 +1,239 @@
+{
+ "title": "X (Twitter) Account Sale Prices, Escrow Deals 2026",
+ "subtitle": "Final sale prices of 187 X accounts by follower count, against asking prices",
+ "id": "playersells/x-account-sale-prices-2026-10",
+ "licenses": [
+  {
+   "name": "CC-BY-4.0"
+  }
+ ],
+ "keywords": [
+  "twitter",
+  "x",
+  "account prices",
+  "social media accounts",
+  "marketplace",
+  "escrow",
+  "creator economy",
+  "prices"
+ ],
+ "description": "What X (Twitter) accounts actually sold for in 187 completed PlayerSells escrow deals between 21 May and 19 October 2026: final prices paid, not asking prices. The median sale was $60 and half of all sales closed between $19 and $125. The median price per 1,000 followers fell from $35.48 at 1,000 to 2,500 followers to $6.93 at 20,000 and up. 69.5% of accounts sold at their asking price.\n\nEvery figure comes from the PlayerSells marketplace database, read on 20 October 2026. A sale is an escrow deal for an X account that reached completed status: the account was handed over and the payment was released to the seller. Cancelled and refunded deals never reach that status. Price is the final amount the buyer paid, in US dollars; the seller's escrow fee comes out of it.\n\nFollower count, blue check, account age and asking price are the listing's own fields. While a listing is live they are refreshed from X; they stop updating when it sells.\n\n70 internal records created to fill the seller leaderboard, between two PlayerSells staff accounts, are excluded, and one sale whose listing had no follower count is left out: 187 sales, one per listing, from 118 buyers and 90 sellers. The filters are the same as on the live X account prices page. Medians and percentiles are computed without trimming or weighting.\n\n28 of the 187 sales were accounts sold by the PlayerSells store at set prices of $80 to $400. They are in the price, discount and bracket tables and left out of the blue check and account age tables, which compare each sale with the median sale of its follower band among independent sellers.\n\nNo account, handle, buyer or seller is included. The files hold aggregates only.\n\nLimitations:\n- 187 sales is a small sample; rows with 10 to 25 sales can move as more deals close.\n- Prices from one escrow marketplace. Private deals and other marketplaces may close at different prices.\n- Asking prices are read from the listing on 20 October 2026; a seller who edited the price during a negotiation shows as sold at the ask.\n- Blue check and account age comparisons are observational and rest on small groups.\n- Counts shown by the platforms (followers, subscribers, views, viewers) are taken as displayed. PlayerSells cannot separate real people from bots, embedded players or inflated counts.\n\nPublished at https://playersells.com/learn/what-x-accounts-actually-sell-for-2026-escrow-data, https://playersells.com/pricing/x-account-prices-2026\n\nSource: PlayerSells (https://playersells.com). License CC BY 4.0.",
+ "resources": [
+  {
+   "path": "sale_prices_by_follower_band.csv",
+   "description": "Completed sales by the account's follower count: median and middle 50% of the sale price, and the median price per 1,000 followers.",
+   "schema": {
+    "fields": [
+     {
+      "name": "follower_band",
+      "type": "string",
+      "description": "Follower count recorded on the listing when it sold"
+     },
+     {
+      "name": "sales",
+      "type": "integer",
+      "description": "Completed sales in the band"
+     },
+     {
+      "name": "median_usd",
+      "type": "number",
+      "description": "Median final sale price, US dollars"
+     },
+     {
+      "name": "p25_usd",
+      "type": "number",
+      "description": "25th percentile sale price"
+     },
+     {
+      "name": "p75_usd",
+      "type": "number",
+      "description": "75th percentile sale price"
+     },
+     {
+      "name": "median_followers",
+      "type": "integer",
+      "description": "Median follower count of the accounts sold"
+     },
+     {
+      "name": "median_usd_per_1000_followers",
+      "type": "number",
+      "description": "Median across sales of price divided by followers, times 1,000"
+     }
+    ]
+   }
+  },
+  {
+   "path": "discount_vs_asking_price.csv",
+   "description": "Share of completed sales that closed below the listing's asking price, and the median discount of those.",
+   "schema": {
+    "fields": [
+     {
+      "name": "follower_band",
+      "type": "string",
+      "description": "Follower count recorded on the listing"
+     },
+     {
+      "name": "sales",
+      "type": "integer",
+      "description": "Completed sales in the band"
+     },
+     {
+      "name": "closed_below_ask_pct",
+      "type": "number",
+      "description": "Share of sales whose final price was below the asking price"
+     },
+     {
+      "name": "median_discount_when_below_pct",
+      "type": "number",
+      "description": "Median of (1 - sale price / asking price) among those, in percent"
+     }
+    ]
+   }
+  },
+  {
+   "path": "asking_vs_sale_price.csv",
+   "description": "Median asking price of X accounts listed on 20 October 2026 against the median completed sale price, by follower count.",
+   "schema": {
+    "fields": [
+     {
+      "name": "follower_band",
+      "type": "string",
+      "description": "Follower count on the listing"
+     },
+     {
+      "name": "live_listings",
+      "type": "integer",
+      "description": "X accounts listed for sale on 20 October 2026"
+     },
+     {
+      "name": "median_ask_usd",
+      "type": "number",
+      "description": "Median asking price of those listings"
+     },
+     {
+      "name": "median_sale_usd",
+      "type": "number",
+      "description": "Median completed sale price in the band"
+     },
+     {
+      "name": "ask_divided_by_sale",
+      "type": "number",
+      "description": "Median ask divided by median sale"
+     }
+    ]
+   }
+  },
+  {
+   "path": "sell_through_by_asking_price.csv",
+   "description": "Share of X listings that sold, by asking price, for listings live on or before 20 September 2026 (at least 30 days on the market).",
+   "schema": {
+    "fields": [
+     {
+      "name": "asking_price",
+      "type": "string",
+      "description": "Current asking price of the listing"
+     },
+     {
+      "name": "listings",
+      "type": "integer",
+      "description": "Listings that went live on or before 20 September 2026"
+     },
+     {
+      "name": "sold",
+      "type": "integer",
+      "description": "Of those, listings with a completed escrow sale by 19 October 2026"
+     },
+     {
+      "name": "sold_pct",
+      "type": "number",
+      "description": "Share sold"
+     }
+    ]
+   }
+  },
+  {
+   "path": "sales_by_price_bracket.csv",
+   "description": "Completed sales by final price bracket.",
+   "schema": {
+    "fields": [
+     {
+      "name": "sale_price",
+      "type": "string",
+      "description": "Final sale price bracket, US dollars"
+     },
+     {
+      "name": "sales",
+      "type": "integer",
+      "description": "Completed sales in the bracket"
+     },
+     {
+      "name": "share_pct",
+      "type": "number",
+      "description": "Share of all 187 sales"
+     }
+    ]
+   }
+  },
+  {
+   "path": "blue_check_by_follower_band.csv",
+   "description": "Median sale price of accounts with and without a blue check, by follower count, independent sellers only; bands with fewer than 5 verified sales are left out.",
+   "schema": {
+    "fields": [
+     {
+      "name": "follower_band",
+      "type": "string",
+      "description": "Follower count on the listing"
+     },
+     {
+      "name": "verified_sales",
+      "type": "integer",
+      "description": "Sales of accounts that showed a blue check when listed"
+     },
+     {
+      "name": "verified_median_usd",
+      "type": "number",
+      "description": "Their median sale price"
+     },
+     {
+      "name": "unverified_sales",
+      "type": "integer",
+      "description": "Sales of accounts without one"
+     },
+     {
+      "name": "unverified_median_usd",
+      "type": "number",
+      "description": "Their median sale price"
+     }
+    ]
+   }
+  },
+  {
+   "path": "price_by_account_age.csv",
+   "description": "Sale price by account age, compared inside each follower band, independent sellers only.",
+   "schema": {
+    "fields": [
+     {
+      "name": "account_age",
+      "type": "string",
+      "description": "Age of the X account when listed"
+     },
+     {
+      "name": "sales",
+      "type": "integer",
+      "description": "Completed sales"
+     },
+     {
+      "name": "price_vs_band_median",
+      "type": "number",
+      "description": "Median of (sale price / median sale of the account's follower band); 1.00 = typical for its size"
+     },
+     {
+      "name": "median_usd",
+      "type": "number",
+      "description": "Median sale price, all sizes mixed"
+     }
+    ]
+   }
+  }
+ ]
+}

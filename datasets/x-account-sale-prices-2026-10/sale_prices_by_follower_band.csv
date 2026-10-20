@@ -1,0 +1,7 @@
+follower_band,sales,median_usd,p25_usd,p75_usd,median_followers,median_usd_per_1000_followers
+Under 1K,39,15,9.5,22.5,179,81.22
+1K to 2.5K,63,60,20,125,1896,35.48
+2.5K to 5K,31,67.5,42.5,100,3845,17.76
+5K to 10K,20,86.5,64.25,118.75,7290,11.21
+10K to 20K,23,120,55,165,13334,8.67
+20K and up,11,220,160,350,39277,6.93

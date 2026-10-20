@@ -1,0 +1,340 @@
+{
+ "url": "https://playersells.com/learn/what-x-accounts-actually-sell-for-2026-escrow-data",
+ "retrieved_at": "2026-10-20 (article source before publication)",
+ "tables": [
+  {
+   "header": [
+    "Followers",
+    "Sales",
+    "Median sale",
+    "Middle 50%",
+    "Median followers",
+    "Median per 1,000 followers"
+   ],
+   "rows": [
+    [
+     "Under 1K",
+     "39",
+     "$15",
+     "$9.50 to $22.50",
+     "179",
+     "$81.22"
+    ],
+    [
+     "1K to 2.5K",
+     "63",
+     "$60",
+     "$20 to $125",
+     "1,896",
+     "$35.48"
+    ],
+    [
+     "2.5K to 5K",
+     "31",
+     "$67.50",
+     "$42.50 to $100",
+     "3,845",
+     "$17.76"
+    ],
+    [
+     "5K to 10K",
+     "20",
+     "$86.50",
+     "$64.25 to $118.75",
+     "7,290",
+     "$11.21"
+    ],
+    [
+     "10K to 20K",
+     "23",
+     "$120",
+     "$55 to $165",
+     "13,334",
+     "$8.67"
+    ],
+    [
+     "20K and up",
+     "11",
+     "$220",
+     "$160 to $350",
+     "39,277",
+     "$6.93"
+    ]
+   ]
+  },
+  {
+   "header": [
+    "Followers",
+    "Sales",
+    "Closed below the ask",
+    "Median discount when below"
+   ],
+   "rows": [
+    [
+     "Under 1K",
+     "39",
+     "7.7%",
+     "10.7%"
+    ],
+    [
+     "1K to 2.5K",
+     "63",
+     "22.2%",
+     "20.0%"
+    ],
+    [
+     "2.5K to 5K",
+     "31",
+     "38.7%",
+     "22.5%"
+    ],
+    [
+     "5K to 10K",
+     "20",
+     "40.0%",
+     "21.4%"
+    ],
+    [
+     "10K to 20K",
+     "23",
+     "60.9%",
+     "37.9%"
+    ],
+    [
+     "20K and up",
+     "11",
+     "45.5%",
+     "30.0%"
+    ]
+   ]
+  },
+  {
+   "header": [
+    "Followers",
+    "Live listings",
+    "Median asking price",
+    "Median sale price",
+    "Ask divided by sale"
+   ],
+   "rows": [
+    [
+     "Under 1K",
+     "70",
+     "$30",
+     "$15",
+     "2.0"
+    ],
+    [
+     "1K to 2.5K",
+     "49",
+     "$90",
+     "$60",
+     "1.5"
+    ],
+    [
+     "2.5K to 5K",
+     "27",
+     "$75",
+     "$67.50",
+     "1.1"
+    ],
+    [
+     "5K to 10K",
+     "30",
+     "$200",
+     "$86.50",
+     "2.3"
+    ],
+    [
+     "10K to 20K",
+     "32",
+     "$210",
+     "$120",
+     "1.8"
+    ],
+    [
+     "20K and up",
+     "90",
+     "$1,175",
+     "$220",
+     "5.3"
+    ]
+   ]
+  },
+  {
+   "header": [
+    "Asking price",
+    "Listings",
+    "Sold",
+    "Share sold"
+   ],
+   "rows": [
+    [
+     "Under $50",
+     "177",
+     "71",
+     "40.1%"
+    ],
+    [
+     "$50 to $99",
+     "105",
+     "29",
+     "27.6%"
+    ],
+    [
+     "$100 to $249",
+     "128",
+     "43",
+     "33.6%"
+    ],
+    [
+     "$250 to $499",
+     "51",
+     "9",
+     "17.6%"
+    ],
+    [
+     "$500 and up",
+     "114",
+     "7",
+     "6.1%"
+    ]
+   ]
+  },
+  {
+   "header": [
+    "Sale price",
+    "Sales",
+    "Share of sales"
+   ],
+   "rows": [
+    [
+     "Under $25",
+     "56",
+     "29.9%"
+    ],
+    [
+     "$25 to $49",
+     "27",
+     "14.4%"
+    ],
+    [
+     "$50 to $99",
+     "36",
+     "19.3%"
+    ],
+    [
+     "$100 to $249",
+     "52",
+     "27.8%"
+    ],
+    [
+     "$250 to $499",
+     "11",
+     "5.9%"
+    ],
+    [
+     "$500 and up",
+     "5",
+     "2.7%"
+    ]
+   ]
+  },
+  {
+   "header": [
+    "Followers",
+    "Verified sales",
+    "Verified median",
+    "Unverified sales",
+    "Unverified median"
+   ],
+   "rows": [
+    [
+     "1K to 2.5K",
+     "8",
+     "$87.50",
+     "35",
+     "$22"
+    ],
+    [
+     "2.5K to 5K",
+     "8",
+     "$60",
+     "17",
+     "$60"
+    ],
+    [
+     "5K to 10K",
+     "7",
+     "$88",
+     "11",
+     "$85"
+    ],
+    [
+     "10K to 20K",
+     "7",
+     "$125",
+     "16",
+     "$97.50"
+    ]
+   ]
+  },
+  {
+   "header": [
+    "Account age",
+    "Sales",
+    "Price against the typical sale for its size",
+    "Median sale"
+   ],
+   "rows": [
+    [
+     "Under 1 year",
+     "53",
+     "0.72",
+     "$17"
+    ],
+    [
+     "1 to 4 years",
+     "51",
+     "1.14",
+     "$55"
+    ],
+    [
+     "4 years or more",
+     "55",
+     "1.00",
+     "$60"
+    ]
+   ]
+  },
+  {
+   "header": [
+    "Source",
+    "What the page says",
+    "Completed PlayerSells sales"
+   ],
+   "rows": [
+    [
+     "Circleboom blog, July 8, 2024",
+     "\"My Twitter channel with 10,000 followers was worth $7,807.80!\"",
+     "10K to 20K followers: median $120, middle half $55 to $165 (23 sales)"
+    ],
+    [
+     "How Much is it Worth, updated October 2026",
+     "\"A 10,000-follower X account is typically worth $200-$2,000 depending on engagement rate, follower value, and niche.\"",
+     "10K to 20K followers: three quarters of sales at $165 or less"
+    ],
+    [
+     "AutoTweet, May 18, 2026",
+     "\"For 100K followers, that ranges $5K-$50K, with most transactions clearing in the $15K-$25K band.\"",
+     "50K followers and up: median $200 (5 sales); of all 187 sales, 2.7% reached $500 or more"
+    ],
+    [
+     "ClickToTweet blog, November 18, 2025",
+     "\"So if you've got 20,000 followers, your account might be worth anywhere from $40 to $200 using this model.\"",
+     "20K followers and up: median $220 (11 sales)"
+    ]
+   ]
+  }
+ ]
+}
