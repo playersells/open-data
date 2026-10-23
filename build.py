@@ -62,6 +62,7 @@ PAGES = {
     "x-engagement-benchmarks": "/insights/engagement-rate-benchmarks",
     "x-links": "/learn/does-x-still-penalize-links-we-measured-6-million-posts",
     "x-prices": "/learn/what-x-accounts-actually-sell-for-2026-escrow-data",
+    "youtube-view-count": "/learn/did-youtubes-new-view-count-inflate-views-3565-channels-measured",
 }
 X_INSIGHTS_JSON = "/insights/data.json"
 # Kaggle dataset ids are <owner>/<slug>; the owner is the Kaggle username or organisation.
@@ -627,6 +628,42 @@ def build_x_prices(d: Path) -> dict:
     return out
 
 
+def pct_range(text: str):
+    """'-9.5% to +46.8%' -> (-9.5, 46.8)."""
+    lo, hi = text.split(" to ")
+    return num(lo), num(hi)
+
+
+def build_youtube_views(d: Path) -> dict:
+    """Public YouTube view gains before and after first-frame counting began on 24 Aug 2026 (published 23 Oct 2026)."""
+    out = {}
+    t = table("youtube-view-count", "Comparison")
+    out["comparisons.csv"] = write_csv(
+        d / "comparisons.csv",
+        ["comparison", "windows_2026", "channels", "median_change_pct", "p25_change_pct", "p75_change_pct",
+         "channels_faster_pct", "total_change_pct"],
+        [[r[0], r[1], num(r[2]), num(r[3]), *pct_range(r[4]), num(r[5]), num(r[6])] for r in t["rows"]])
+    t = table("youtube-view-count", "Week starting (2026)")
+    out["weekly_index.csv"] = write_csv(
+        d / "weekly_index.csv",
+        ["week_start", "median_change_vs_pre_change_week_pct", "channels_above_pre_change_pace_pct",
+         "total_views_gained_billion"],
+        [[dt.datetime.strptime(r[0] + " 2026", "%B %d %Y").date().isoformat(), num(r[1]), num(r[2]), num(r[3])]
+         for r in t["rows"]])
+    t = table("youtube-view-count", "Subscribers on August 24, 2026")
+    out["change_by_subscribers.csv"] = write_csv(
+        d / "change_by_subscribers.csv",
+        ["subscribers_on_2026_08_24", "channels", "median_change_pct", "channels_faster_pct",
+         "channels_30pct_faster_pct", "total_change_pct"],
+        [[r[0], num(r[1]), num(r[2]), num(r[3]), num(r[4]), num(r[5])] for r in t["rows"]])
+    t = table("youtube-view-count", "Channel topic or language")
+    out["change_by_topic_and_language.csv"] = write_csv(
+        d / "change_by_topic_and_language.csv",
+        ["group", "channels", "median_change_pct", "channels_faster_pct", "total_change_pct"],
+        [[r[0], num(r[1]), num(r[2]), num(r[3]), num(r[4])] for r in t["rows"]])
+    return out
+
+
 BUILDERS = {
     "social-follower-percentiles-2026-10": build_follower_percentiles,
     "kick-twitch-category-viewing-2026-09-26": build_kick_twitch_viewing,
@@ -637,6 +674,7 @@ BUILDERS = {
     "x-engagement-benchmarks-2026-10": build_x_engagement,
     "x-link-post-reach-2026-10": build_x_links,
     "x-account-sale-prices-2026-10": build_x_prices,
+    "youtube-view-count-change-2026-10": build_youtube_views,
 }
 
 
@@ -735,6 +773,16 @@ def checks() -> list[str]:
     expect("X sales below ask, 10K to 20K", float(xd["10K to 20K"]["closed_below_ask_pct"]), 60.9, 0.001)
     xb2 = {r["sale_price"]: r for r in rows_of(OUT / "x-account-sale-prices-2026-10" / "sales_by_price_bracket.csv")}
     expect("X sales $500 and up", int(xb2["$500 and up"]["sales"]), 5)
+
+    yc = {r["comparison"]: r for r in rows_of(OUT / "youtube-view-count-change-2026-10" / "comparisons.csv")}
+    expect("YouTube views, channels", int(yc["Across the change"]["channels"]), 3565)
+    expect("YouTube views, median across the change", float(yc["Across the change"]["median_change_pct"]), 12.5, 0.001)
+    expect("YouTube views, total across the change", float(yc["Across the change"]["total_change_pct"]), -8.3, 0.001)
+    expect("YouTube views, before the change 14 days", float(yc["Before the change, 14 days"]["median_change_pct"]), -3.5, 0.001)
+    expect("YouTube views, before the change longer", float(yc["Before the change, longer"]["median_change_pct"]), 2.1, 0.001)
+    ys = {r["subscribers_on_2026_08_24"]: r for r in rows_of(OUT / "youtube-view-count-change-2026-10" / "change_by_subscribers.csv")}
+    expect("YouTube views, 10M and up", float(ys["10 million and up"]["median_change_pct"]), 6.7, 0.001)
+    expect("YouTube views, under 3M", float(ys["under 3 million"]["median_change_pct"]), 16.8, 0.001)
 
     xp = rows_of(OUT / "x-engagement-benchmarks-2026-10" / "engagement_rate_percentiles.csv")
     if int(xp[0]["accounts"]) != 152187:

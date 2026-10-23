@@ -1,0 +1,10 @@
+group,channels,median_change_pct,channels_faster_pct,total_change_pct
+Business,214,22.2,71.0,27.9
+Gaming,282,16.1,67.4,-1.8
+Movies,222,15.9,68.5,1.2
+Memes,116,13.4,62.1,2.2
+Unlabeled,1601,8.3,61.2,-11.9
+Education,268,5.9,58.2,-26.7
+Music,392,4.1,56.9,-22.5
+English,2316,14.8,65.8,-10.9
+Other or unknown,1249,8.0,60.4,-2.9

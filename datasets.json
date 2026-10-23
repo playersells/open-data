@@ -266,5 +266,34 @@
    "title": "Prices X (Twitter) accounts sold for in completed escrow deals, 2026",
    "url": "https://playersells.com/learn/what-x-accounts-actually-sell-for-2026-escrow-data"
   }
+ },
+ {
+  "slug": "youtube-view-count-change-2026-10",
+  "title": "YouTube public view gains before and after first-frame view counting, 2026",
+  "summary": "How fast 3,565 large YouTube channels gained public views in the 28 days after YouTube began counting views from the first frame of playback on 24 August 2026, against the 28 days before. The median channel gained views 12.5% faster, against -3.5% and +2.1% in comparisons made entirely before the change, and total views gained by the same channels fell 8.3%.",
+  "measured": "Daily public view counters, 6 July to 19 October 2026, read 23 October 2026",
+  "temporal_coverage": "2026-07-06/2026-10-19",
+  "keywords": [
+   "youtube",
+   "view count",
+   "engaged views",
+   "creator economy",
+   "video",
+   "social media",
+   "benchmarks"
+  ],
+  "files": {
+   "comparisons.csv": 7,
+   "weekly_index.csv": 12,
+   "change_by_subscribers.csv": 3,
+   "change_by_topic_and_language.csv": 9
+  },
+  "published_at": [
+   "https://playersells.com/learn/did-youtubes-new-view-count-inflate-views-3565-channels-measured"
+  ],
+  "cite": {
+   "title": "YouTube public view gains before and after first-frame view counting, 2026",
+   "url": "https://playersells.com/learn/did-youtubes-new-view-count-inflate-views-3565-channels-measured"
+  }
  }
 ]
