@@ -1,0 +1,4 @@
+comparison,median_change_oct13_19_pct,channels_oct13_19,median_change_oct20_26_pct,channels_oct20_26
+"Twitch viewers while also live on Kick, against Twitch-only hours",0.0,3143,0.0,3042
+"Kick viewers while also live on Twitch, against Kick-only hours",6.5,1619,7.7,1788
+"Combined viewers while simulcasting, against Twitch-only hours",28.5,3143,27.9,3042

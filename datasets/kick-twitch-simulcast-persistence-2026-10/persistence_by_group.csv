@@ -1,0 +1,11 @@
+group,simulcaster_weeks,simulcast_again_next_week_pct,fully_read_check_streamers,fully_read_check_seen_simulcasting_pct
+Simulcast under 2 hours in the week,4698,35.2,791,40.1
+Simulcast 2 to 10 hours in the week,7945,61.1,1819,65.7
+Simulcast 10 to 30 hours in the week,2089,88.3,595,90.3
+Simulcast 30 hours or more in the week,396,94.9,99,94.9
+Average combined viewers under 10,7506,46.5,1443,56.1
+Average combined viewers 10 to 99,4597,62.9,1072,64.5
+Average combined viewers 100 to 999,2516,76.8,652,81.1
+"Average combined viewers 1,000 or more",509,81.5,137,83.2
+Kick channel verified,3823,75.9,1011,77.3
+Kick channel not verified,11305,51.6,2293,59.4

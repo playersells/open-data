@@ -295,5 +295,37 @@
    "title": "YouTube public view gains before and after first-frame view counting, 2026",
    "url": "https://playersells.com/learn/did-youtubes-new-view-count-inflate-views-3565-channels-measured"
   }
+ },
+ {
+  "slug": "kick-twitch-simulcast-persistence-2026-10",
+  "title": "Do streamers keep simulcasting? Kick and Twitch simulcasters over four weeks, 2026",
+  "summary": "The same Kick and Twitch streamers followed for four weeks, 28 September to 26 October 2026. 10,328 streamers were live on both platforms at once, under the same name and in the same category, for at least an hour in at least one week. 49.3% did it in only one week and 15.4% in all four; from one week to the next, 42.3% stopped. The streamers who simulcast every week carried 71.8% of all simulcast viewing.",
+  "measured": "15-minute live samples, weeks of 28 September to 26 October 2026 (UTC), read 27 October 2026",
+  "temporal_coverage": "2026-09-28/2026-10-26",
+  "keywords": [
+   "kick",
+   "twitch",
+   "simulcasting",
+   "multistreaming",
+   "live streaming",
+   "creator economy",
+   "streamers"
+  ],
+  "files": {
+   "weekly_series.csv": 4,
+   "week_to_week.csv": 3,
+   "persistence_by_group.csv": 10,
+   "persistence_by_kick_share.csv": 4,
+   "weeks_simulcasting.csv": 4,
+   "after_stopping.csv": 4,
+   "same_streamer_test.csv": 3
+  },
+  "published_at": [
+   "https://playersells.com/learn/do-streamers-keep-simulcasting-kick-and-twitch-four-weeks-measured"
+  ],
+  "cite": {
+   "title": "Do streamers keep simulcasting? Kick and Twitch simulcasters over four weeks, 2026",
+   "url": "https://playersells.com/learn/do-streamers-keep-simulcasting-kick-and-twitch-four-weeks-measured"
+  }
  }
 ]

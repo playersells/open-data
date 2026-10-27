@@ -1,0 +1,323 @@
+{
+ "url": "https://playersells.com/learn/do-streamers-keep-simulcasting-kick-and-twitch-four-weeks-measured",
+ "retrieved_at": "2026-10-27T08:24:56Z",
+ "tables": [
+  {
+   "header": [
+    "Week (2026)",
+    "Simulcasters",
+    "Kick share of combined viewers",
+    "Median streamer's Kick share",
+    "Hours live on both, all simulcasters",
+    "Share of Kick channels live 2 h or more that simulcast"
+   ],
+   "rows": [
+    [
+     "Sep 28 to Oct 4",
+     "5,063",
+     "16.7%",
+     "21.7%",
+     "32,066",
+     "4.42%"
+    ],
+    [
+     "Oct 6 to Oct 12",
+     "4,995",
+     "15.9%",
+     "22.0%",
+     "30,873",
+     "4.39%"
+    ],
+    [
+     "Oct 13 to Oct 19",
+     "5,070",
+     "31.7%",
+     "22.2%",
+     "29,604",
+     "4.45%"
+    ],
+    [
+     "Oct 20 to Oct 26",
+     "5,055",
+     "15.3%",
+     "21.4%",
+     "29,202",
+     "4.36%"
+    ]
+   ]
+  },
+  {
+   "header": [
+    "Weeks (2026)",
+    "Simulcasters in the first week",
+    "Simulcast again",
+    "Stopped",
+    "New in the second week",
+    "Share of the first week's simulcast viewing that continued"
+   ],
+   "rows": [
+    [
+     "Sep 28 to Oct 4, then Oct 6 to Oct 12",
+     "5,063",
+     "56.0%",
+     "44.0%",
+     "2,159 (43.2%)",
+     "92.3%"
+    ],
+    [
+     "Oct 6 to Oct 12, then Oct 13 to Oct 19",
+     "4,995",
+     "59.7%",
+     "40.3%",
+     "2,090 (41.2%)",
+     "93.5%"
+    ],
+    [
+     "Oct 13 to Oct 19, then Oct 20 to Oct 26",
+     "5,070",
+     "57.5%",
+     "42.5%",
+     "2,138 (42.3%)",
+     "69.8%"
+    ]
+   ]
+  },
+  {
+   "header": [
+    "Group (in the first week)",
+    "Simulcaster weeks",
+    "Simulcast again next week",
+    "Fully read check, streamers",
+    "Fully read check, seen simulcasting"
+   ],
+   "rows": [
+    [
+     "Simulcast under 2 hours in the week",
+     "4,698",
+     "35.2%",
+     "791",
+     "40.1%"
+    ],
+    [
+     "Simulcast 2 to 10 hours in the week",
+     "7,945",
+     "61.1%",
+     "1,819",
+     "65.7%"
+    ],
+    [
+     "Simulcast 10 to 30 hours in the week",
+     "2,089",
+     "88.3%",
+     "595",
+     "90.3%"
+    ],
+    [
+     "Simulcast 30 hours or more in the week",
+     "396",
+     "94.9%",
+     "99",
+     "94.9%"
+    ],
+    [
+     "Average combined viewers under 10",
+     "7,506",
+     "46.5%",
+     "1,443",
+     "56.1%"
+    ],
+    [
+     "Average combined viewers 10 to 99",
+     "4,597",
+     "62.9%",
+     "1,072",
+     "64.5%"
+    ],
+    [
+     "Average combined viewers 100 to 999",
+     "2,516",
+     "76.8%",
+     "652",
+     "81.1%"
+    ],
+    [
+     "Average combined viewers 1,000 or more",
+     "509",
+     "81.5%",
+     "137",
+     "83.2%"
+    ],
+    [
+     "Kick channel verified",
+     "3,823",
+     "75.9%",
+     "1,011",
+     "77.3%"
+    ],
+    [
+     "Kick channel not verified",
+     "11,305",
+     "51.6%",
+     "2,293",
+     "59.4%"
+    ]
+   ]
+  },
+  {
+   "header": [
+    "Kick share of combined viewers",
+    "Simulcaster weeks",
+    "Simulcast again, all",
+    "Under 2 hours",
+    "2 to 10 hours",
+    "10 to 30 hours",
+    "30 hours or more",
+    "Fully read check"
+   ],
+   "rows": [
+    [
+     "under 10%",
+     "4,827",
+     "66.2%",
+     "39.5%",
+     "68.6%",
+     "90.6%",
+     "93.5%",
+     "74.8%"
+    ],
+    [
+     "10% to 25%",
+     "3,280",
+     "62.1%",
+     "38.2%",
+     "63.5%",
+     "90.3%",
+     "95.1%",
+     "65.4%"
+    ],
+    [
+     "25% to 50%",
+     "3,592",
+     "53.6%",
+     "34.0%",
+     "58.9%",
+     "86.4%",
+     "96.0%",
+     "57.1%"
+    ],
+    [
+     "50% or more",
+     "3,429",
+     "45.8%",
+     "30.4%",
+     "51.0%",
+     "78.4%",
+     "96.9%",
+     "57.2%"
+    ]
+   ]
+  },
+  {
+   "header": [
+    "Weeks simulcasting",
+    "Streamers",
+    "Share of streamers",
+    "Share of simulcast viewing",
+    "Median hours simulcast per week",
+    "Median Kick share of combined viewers"
+   ],
+   "rows": [
+    [
+     "1 of 4",
+     "5,090",
+     "49.3%",
+     "9.6%",
+     "1.75",
+     "33.3%"
+    ],
+    [
+     "2 of 4",
+     "2,214",
+     "21.4%",
+     "7.8%",
+     "2.25",
+     "28.0%"
+    ],
+    [
+     "3 of 4",
+     "1,431",
+     "13.9%",
+     "10.7%",
+     "3.25",
+     "21.1%"
+    ],
+    [
+     "4 of 4",
+     "1,593",
+     "15.4%",
+     "71.8%",
+     "6.5",
+     "13.0%"
+    ]
+   ]
+  },
+  {
+   "header": [
+    "The following week",
+    "Times",
+    "Share",
+    "Share of their earlier simulcast viewing"
+   ],
+   "rows": [
+    [
+     "Live on Kick, not seen on Twitch",
+     "2,423",
+     "37.9%",
+     "60.0%"
+    ],
+    [
+     "Live on both, but not together for an hour in the same category",
+     "2,406",
+     "37.6%",
+     "15.2%"
+    ],
+    [
+     "Not seen live on either platform",
+     "1,143",
+     "17.9%",
+     "11.5%"
+    ],
+    [
+     "Live on Twitch, no Kick stream at all",
+     "423",
+     "6.6%",
+     "13.3%"
+    ]
+   ]
+  },
+  {
+   "header": [
+    "Same streamer, simulcast hours against single-platform hours",
+    "Oct 13 to Oct 19",
+    "Oct 20 to Oct 26"
+   ],
+   "rows": [
+    [
+     "Twitch viewers while also live on Kick, against Twitch-only hours",
+     "0.0% (3,143 channels)",
+     "0.0% (3,042 channels)"
+    ],
+    [
+     "Kick viewers while also live on Twitch, against Kick-only hours",
+     "+6.5% (1,619 channels)",
+     "+7.7% (1,788 channels)"
+    ],
+    [
+     "Combined viewers while simulcasting, against Twitch-only hours",
+     "+28.5% (3,143 channels)",
+     "+27.9% (3,042 channels)"
+    ]
+   ]
+  }
+ ]
+}

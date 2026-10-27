@@ -63,6 +63,7 @@ PAGES = {
     "x-links": "/learn/does-x-still-penalize-links-we-measured-6-million-posts",
     "x-prices": "/learn/what-x-accounts-actually-sell-for-2026-escrow-data",
     "youtube-view-count": "/learn/did-youtubes-new-view-count-inflate-views-3565-channels-measured",
+    "simulcast-persistence": "/learn/do-streamers-keep-simulcasting-kick-and-twitch-four-weeks-measured",
 }
 X_INSIGHTS_JSON = "/insights/data.json"
 # Kaggle dataset ids are <owner>/<slug>; the owner is the Kaggle username or organisation.
@@ -664,6 +665,60 @@ def build_youtube_views(d: Path) -> dict:
     return out
 
 
+def num_and_paren(text: str):
+    """'2,159 (43.2%)' -> (2159, 43.2); '+6.5% (1,619 channels)' -> (6.5, 1619)."""
+    head, tail = text.split(" (", 1)
+    return num(head), num(tail.rstrip(")").replace(" channels", ""))
+
+
+def build_simulcast_persistence(d: Path) -> dict:
+    """The same Kick and Twitch simulcasters followed for four weeks, 28 Sep to 26 Oct 2026 (published 27 Oct 2026)."""
+    out = {}
+    k = "simulcast-persistence"
+    t = table(k, "Week (2026)")
+    out["weekly_series.csv"] = write_csv(
+        d / "weekly_series.csv",
+        ["week_2026", "simulcasters", "kick_share_of_combined_viewers_pct", "median_streamer_kick_share_pct",
+         "hours_live_on_both", "kick_channels_live_2h_that_simulcast_pct"],
+        [[r[0], num(r[1]), num(r[2]), num(r[3]), num(r[4]), num(r[5])] for r in t["rows"]])
+    t = table(k, "Weeks (2026)")
+    out["week_to_week.csv"] = write_csv(
+        d / "week_to_week.csv",
+        ["weeks_2026", "simulcasters_first_week", "simulcast_again_pct", "stopped_pct", "new_in_second_week",
+         "new_share_of_second_week_pct", "first_week_viewing_that_continued_pct"],
+        [[r[0], num(r[1]), num(r[2]), num(r[3]), *num_and_paren(r[4]), num(r[5])] for r in t["rows"]])
+    t = table(k, "Group (in the first week)")
+    out["persistence_by_group.csv"] = write_csv(
+        d / "persistence_by_group.csv",
+        ["group", "simulcaster_weeks", "simulcast_again_next_week_pct", "fully_read_check_streamers",
+         "fully_read_check_seen_simulcasting_pct"],
+        [[r[0], num(r[1]), num(r[2]), num(r[3]), num(r[4])] for r in t["rows"]])
+    t = table(k, "Kick share of combined viewers")
+    out["persistence_by_kick_share.csv"] = write_csv(
+        d / "persistence_by_kick_share.csv",
+        ["kick_share_of_combined_viewers", "simulcaster_weeks", "simulcast_again_all_pct",
+         "simulcast_again_under_2h_pct", "simulcast_again_2_to_10h_pct", "simulcast_again_10_to_30h_pct",
+         "simulcast_again_30h_plus_pct", "fully_read_check_seen_simulcasting_pct"],
+        [[r[0], num(r[1]), num(r[2]), num(r[3]), num(r[4]), num(r[5]), num(r[6]), num(r[7])] for r in t["rows"]])
+    t = table(k, "Weeks simulcasting")
+    out["weeks_simulcasting.csv"] = write_csv(
+        d / "weeks_simulcasting.csv",
+        ["weeks_simulcasting_of_4", "streamers", "share_of_streamers_pct", "share_of_simulcast_viewing_pct",
+         "median_hours_simulcast_per_week", "median_kick_share_pct"],
+        [[num(r[0].split(" of ")[0]), num(r[1]), num(r[2]), num(r[3]), num(r[4]), num(r[5])] for r in t["rows"]])
+    t = table(k, "The following week")
+    out["after_stopping.csv"] = write_csv(
+        d / "after_stopping.csv",
+        ["following_week", "times", "share_pct", "share_of_their_earlier_simulcast_viewing_pct"],
+        [[r[0], num(r[1]), num(r[2]), num(r[3])] for r in t["rows"]])
+    t = table(k, "Same streamer, simulcast hours against single-platform hours")
+    out["same_streamer_test.csv"] = write_csv(
+        d / "same_streamer_test.csv",
+        ["comparison", "median_change_oct13_19_pct", "channels_oct13_19", "median_change_oct20_26_pct", "channels_oct20_26"],
+        [[r[0], *num_and_paren(r[1]), *num_and_paren(r[2])] for r in t["rows"]])
+    return out
+
+
 BUILDERS = {
     "social-follower-percentiles-2026-10": build_follower_percentiles,
     "kick-twitch-category-viewing-2026-09-26": build_kick_twitch_viewing,
@@ -675,6 +730,7 @@ BUILDERS = {
     "x-link-post-reach-2026-10": build_x_links,
     "x-account-sale-prices-2026-10": build_x_prices,
     "youtube-view-count-change-2026-10": build_youtube_views,
+    "kick-twitch-simulcast-persistence-2026-10": build_simulcast_persistence,
 }
 
 
@@ -783,6 +839,15 @@ def checks() -> list[str]:
     ys = {r["subscribers_on_2026_08_24"]: r for r in rows_of(OUT / "youtube-view-count-change-2026-10" / "change_by_subscribers.csv")}
     expect("YouTube views, 10M and up", float(ys["10 million and up"]["median_change_pct"]), 6.7, 0.001)
     expect("YouTube views, under 3M", float(ys["under 3 million"]["median_change_pct"]), 16.8, 0.001)
+
+    sp_w = {r["weeks_simulcasting_of_4"]: r for r in rows_of(OUT / "kick-twitch-simulcast-persistence-2026-10" / "weeks_simulcasting.csv")}
+    expect("Simulcast persistence, one week only", float(sp_w["1"]["share_of_streamers_pct"]), 49.3, 0.001)
+    expect("Simulcast persistence, all four weeks", float(sp_w["4"]["share_of_streamers_pct"]), 15.4, 0.001)
+    expect("Simulcast persistence, all four weeks viewing", float(sp_w["4"]["share_of_simulcast_viewing_pct"]), 71.8, 0.001)
+    sp_s = rows_of(OUT / "kick-twitch-simulcast-persistence-2026-10" / "weekly_series.csv")
+    expect("Simulcast persistence, simulcasters Oct 20 to 26", int(sp_s[-1]["simulcasters"]), 5055)
+    sp_g = {r["group"]: r for r in rows_of(OUT / "kick-twitch-simulcast-persistence-2026-10" / "persistence_by_group.csv")}
+    expect("Simulcast persistence, under 2 hours", float(sp_g["Simulcast under 2 hours in the week"]["simulcast_again_next_week_pct"]), 35.2, 0.001)
 
     xp = rows_of(OUT / "x-engagement-benchmarks-2026-10" / "engagement_rate_percentiles.csv")
     if int(xp[0]["accounts"]) != 152187:
