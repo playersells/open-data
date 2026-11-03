@@ -19,6 +19,7 @@ Every number in this repository is also published on playersells.com, on the pag
 | [x-account-sale-prices-2026-10](datasets/x-account-sale-prices-2026-10) | Final prices X accounts sold for in 187 completed escrow deals, by follower count, against asking prices | 21 May to 19 Oct 2026 |
 | [youtube-view-count-change-2026-10](datasets/youtube-view-count-change-2026-10) | Public view gains of 3,565 large YouTube channels before and after first-frame view counting began on 24 Aug 2026 | 6 Jul to 19 Oct 2026 |
 | [kick-twitch-simulcast-persistence-2026-10](datasets/kick-twitch-simulcast-persistence-2026-10) | The same Kick and Twitch simulcasters over four weeks: who simulcasts again the next week, who stops, and what they do next | 28 Sep to 26 Oct 2026 |
+| [streamer-awards-2026-nominees-kick-twitch](datasets/streamer-awards-2026-nominees-kick-twitch) | Where the 2026 Streamer Awards nominees stream: Kick's share of their watch time against the most-watched English-language Kick and Twitch channels | 28 Sep to 2 Nov 2026 |
 
 Browse the catalogue, with download links and a citation line for every dataset, at [playersells.com/open-data](https://playersells.com/open-data).
 

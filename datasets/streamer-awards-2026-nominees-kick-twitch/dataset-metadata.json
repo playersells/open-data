@@ -1,0 +1,128 @@
+{
+ "title": "Streamer Awards 2026 Nominees on Kick and Twitch",
+ "subtitle": "Kick's share of the nominees' watch time against the most-watched English-language channels",
+ "id": "playersells/streamer-awards-2026-nominees-kick-twitch",
+ "licenses": [
+  {
+   "name": "CC-BY-4.0"
+  }
+ ],
+ "keywords": [
+  "kick",
+  "twitch",
+  "streamer awards",
+  "live streaming",
+  "creator economy",
+  "streamers"
+ ],
+ "description": "The 110 nominees of the 28 single-streamer categories of the 2026 Streamer Awards, the first edition open to Kick streamers, measured on Kick and Twitch from 28 September to 2 November 2026. 12 were live on Kick for at least an hour and 5 drew more viewing on Kick than on Twitch. Kick carried 4.5% of the nominees' combined Kick and Twitch watch time, against 21.9% for the 1,000 most-watched English-language channels on the two platforms.\n\nPanel: every unique nominee of the 28 categories of the 2026 Streamer Awards that name one streamer per nominee (nominee list on Wikipedia, 3 November 2026). Brand, game, group, duo, collab, marathon, event and series categories are left out.\n\nEach name was matched to a Twitch channel whose login or display name equals it and to a Kick channel whose name equals it and that carries Kick's verified badge; three Twitch matches use a handle variant.\n\nTwo PlayerSells samplers run every 15 minutes: Kick's whole live directory, and the top 30 live streams of every Twitch category. Hours watched = viewer count at each reading times a quarter hour. Weeks 28 Sep to 4 Oct, 6 to 12 Oct, 13 to 19 Oct, 20 to 26 Oct and 27 Oct to 2 Nov 2026 (UTC).\n\nBenchmark: every Kick and Twitch channel ranked by five-week watch time; language is the channel's language setting in each platform's directory. No channel name, handle or identifier is included. Aggregates only.\n\nLimitations:\n- Kick and Twitch only: YouTube and other platforms are not measured.\n- Twitch is read only for the top 30 streams of each category, so Twitch hours of small nominees are a lower bound.\n- Nominees using a different name on a platform are missed; unverified Kick channels are not used.\n- Five weeks only; 5 October 2026 is not covered. Displayed viewer counts are the platforms' own.\n- PlayerSells collects these numbers with its own crawlers. They describe what those crawlers read, not a census of any platform.\n- Counts shown by the platforms (followers, subscribers, views, viewers) are taken as displayed. PlayerSells cannot separate real people from bots, embedded players or inflated counts.\n\nPublished at https://playersells.com/learn/where-do-streamer-awards-2026-nominees-stream-kick-and-twitch-measured\n\nSource: PlayerSells (https://playersells.com). License CC BY 4.0.",
+ "resources": [
+  {
+   "path": "nominees_by_platform.csv",
+   "description": "Nominees by the platforms they were live on for at least an hour in the five weeks.",
+   "schema": {
+    "fields": [
+     {
+      "name": "where_streamed",
+      "type": "string",
+      "description": "Twitch only, both, Kick only, or neither"
+     },
+     {
+      "name": "nominees",
+      "type": "integer",
+      "description": "Nominees"
+     },
+     {
+      "name": "share_pct",
+      "type": "number",
+      "description": "Share of the 110 nominees"
+     }
+    ]
+   }
+  },
+  {
+   "path": "kick_share_benchmark.csv",
+   "description": "Kick's share of watch time among the most-watched Kick and Twitch channels (English-language and all languages) and among the nominees.",
+   "schema": {
+    "fields": [
+     {
+      "name": "group",
+      "type": "string",
+      "description": "Channel group"
+     },
+     {
+      "name": "kick_channels",
+      "type": "string",
+      "description": "Kick channels in the English-language group (for the nominees: nominees active on Kick)"
+     },
+     {
+      "name": "kick_share_of_watch_time_english_pct",
+      "type": "number",
+      "description": "Kick hours watched as a share of Kick plus Twitch hours watched, English-language channels"
+     },
+     {
+      "name": "kick_share_of_watch_time_all_languages_pct",
+      "type": "number",
+      "description": "The same without the language filter"
+     }
+    ]
+   }
+  },
+  {
+   "path": "categories.csv",
+   "description": "Award categories with any Kick viewing (categories at 0.0% omitted).",
+   "schema": {
+    "fields": [
+     {
+      "name": "category",
+      "type": "string",
+      "description": "Award category"
+     },
+     {
+      "name": "nominees",
+      "type": "integer",
+      "description": "Nominees in the category"
+     },
+     {
+      "name": "active_on_kick",
+      "type": "integer",
+      "description": "Nominees live on Kick for at least an hour"
+     },
+     {
+      "name": "mainly_on_kick",
+      "type": "integer",
+      "description": "Nominees with more Kick than Twitch watch time"
+     },
+     {
+      "name": "kick_share_of_watch_time_pct",
+      "type": "number",
+      "description": "Kick share of the category nominees' combined watch time"
+     }
+    ]
+   }
+  },
+  {
+   "path": "weekly.csv",
+   "description": "The nominee group week by week.",
+   "schema": {
+    "fields": [
+     {
+      "name": "week_2026",
+      "type": "string",
+      "description": "The 7-day week, UTC"
+     },
+     {
+      "name": "nominees_live_on_kick_1h_plus",
+      "type": "integer",
+      "description": "Nominees live on Kick for at least an hour that week"
+     },
+     {
+      "name": "kick_share_of_watch_time_pct",
+      "type": "number",
+      "description": "Kick share of the group's Kick plus Twitch watch time"
+     }
+    ]
+   }
+  }
+ ]
+}

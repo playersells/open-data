@@ -327,5 +327,33 @@
    "title": "Do streamers keep simulcasting? Kick and Twitch simulcasters over four weeks, 2026",
    "url": "https://playersells.com/learn/do-streamers-keep-simulcasting-kick-and-twitch-four-weeks-measured"
   }
+ },
+ {
+  "slug": "streamer-awards-2026-nominees-kick-twitch",
+  "title": "Where do the 2026 Streamer Awards nominees stream? Kick and Twitch watch time, 2026",
+  "summary": "The 110 nominees of the 28 single-streamer categories of the 2026 Streamer Awards, the first edition open to Kick streamers, measured on Kick and Twitch from 28 September to 2 November 2026. 12 were live on Kick for at least an hour and 5 drew more viewing on Kick than on Twitch. Kick carried 4.5% of the nominees' combined Kick and Twitch watch time, against 21.9% for the 1,000 most-watched English-language channels on the two platforms.",
+  "measured": "15-minute live samples, 28 September to 2 November 2026 (UTC), read 3 November 2026",
+  "temporal_coverage": "2026-09-28/2026-11-02",
+  "keywords": [
+   "kick",
+   "twitch",
+   "streamer awards",
+   "live streaming",
+   "creator economy",
+   "streamers"
+  ],
+  "files": {
+   "nominees_by_platform.csv": 4,
+   "kick_share_benchmark.csv": 4,
+   "categories.csv": 11,
+   "weekly.csv": 5
+  },
+  "published_at": [
+   "https://playersells.com/learn/where-do-streamer-awards-2026-nominees-stream-kick-and-twitch-measured"
+  ],
+  "cite": {
+   "title": "Where do the 2026 Streamer Awards nominees stream? Kick and Twitch watch time, 2026",
+   "url": "https://playersells.com/learn/where-do-streamer-awards-2026-nominees-stream-kick-and-twitch-measured"
+  }
  }
 ]

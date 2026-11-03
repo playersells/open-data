@@ -64,6 +64,7 @@ PAGES = {
     "x-prices": "/learn/what-x-accounts-actually-sell-for-2026-escrow-data",
     "youtube-view-count": "/learn/did-youtubes-new-view-count-inflate-views-3565-channels-measured",
     "simulcast-persistence": "/learn/do-streamers-keep-simulcasting-kick-and-twitch-four-weeks-measured",
+    "streamer-awards-2026": "/learn/where-do-streamer-awards-2026-nominees-stream-kick-and-twitch-measured",
 }
 X_INSIGHTS_JSON = "/insights/data.json"
 # Kaggle dataset ids are <owner>/<slug>; the owner is the Kaggle username or organisation.
@@ -719,6 +720,31 @@ def build_simulcast_persistence(d: Path) -> dict:
     return out
 
 
+def build_streamer_awards(d: Path) -> dict:
+    """Where the 2026 Streamer Awards nominees stream: Kick and Twitch, 28 Sep to 2 Nov 2026 (published 3 Nov 2026)."""
+    out = {}
+    k = "streamer-awards-2026"
+    t = table(k, "Where the nominee streamed")
+    out["nominees_by_platform.csv"] = write_csv(
+        d / "nominees_by_platform.csv", ["where_streamed", "nominees", "share_pct"],
+        [[r[0], num(r[1]), num(r[2])] for r in t["rows"]])
+    t = table(k, "Group, September 28 to November 2, 2026")
+    out["kick_share_benchmark.csv"] = write_csv(
+        d / "kick_share_benchmark.csv",
+        ["group", "kick_channels", "kick_share_of_watch_time_english_pct", "kick_share_of_watch_time_all_languages_pct"],
+        [[r[0], r[1], num(r[2]), num(r[3])] for r in t["rows"]])
+    t = table(k, "Category")
+    out["categories.csv"] = write_csv(
+        d / "categories.csv",
+        ["category", "nominees", "active_on_kick", "mainly_on_kick", "kick_share_of_watch_time_pct"],
+        [[r[0], num(r[1]), num(r[2]), num(r[3]), num(r[4])] for r in t["rows"]])
+    t = table(k, "Week (2026)")
+    out["weekly.csv"] = write_csv(
+        d / "weekly.csv", ["week_2026", "nominees_live_on_kick_1h_plus", "kick_share_of_watch_time_pct"],
+        [[r[0], num(r[1]), num(r[2])] for r in t["rows"]])
+    return out
+
+
 BUILDERS = {
     "social-follower-percentiles-2026-10": build_follower_percentiles,
     "kick-twitch-category-viewing-2026-09-26": build_kick_twitch_viewing,
@@ -731,6 +757,7 @@ BUILDERS = {
     "x-account-sale-prices-2026-10": build_x_prices,
     "youtube-view-count-change-2026-10": build_youtube_views,
     "kick-twitch-simulcast-persistence-2026-10": build_simulcast_persistence,
+    "streamer-awards-2026-nominees-kick-twitch": build_streamer_awards,
 }
 
 
@@ -848,6 +875,12 @@ def checks() -> list[str]:
     expect("Simulcast persistence, simulcasters Oct 20 to 26", int(sp_s[-1]["simulcasters"]), 5055)
     sp_g = {r["group"]: r for r in rows_of(OUT / "kick-twitch-simulcast-persistence-2026-10" / "persistence_by_group.csv")}
     expect("Simulcast persistence, under 2 hours", float(sp_g["Simulcast under 2 hours in the week"]["simulcast_again_next_week_pct"]), 35.2, 0.001)
+
+    sa_p = {r["where_streamed"]: r for r in rows_of(OUT / "streamer-awards-2026-nominees-kick-twitch" / "nominees_by_platform.csv")}
+    expect("Streamer Awards, Twitch only nominees", int(sa_p["Twitch only"]["nominees"]), 88)
+    sa_b = rows_of(OUT / "streamer-awards-2026-nominees-kick-twitch" / "kick_share_benchmark.csv")
+    expect("Streamer Awards, nominees Kick share", float(sa_b[-1]["kick_share_of_watch_time_english_pct"]), 4.5, 0.001)
+    expect("Streamer Awards, top 1,000 English Kick share", float(sa_b[2]["kick_share_of_watch_time_english_pct"]), 21.9, 0.001)
 
     xp = rows_of(OUT / "x-engagement-benchmarks-2026-10" / "engagement_rate_percentiles.csv")
     if int(xp[0]["accounts"]) != 152187:

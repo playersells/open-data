@@ -1,0 +1,191 @@
+{
+ "url": "https://playersells.com/learn/where-do-streamer-awards-2026-nominees-stream-kick-and-twitch-measured",
+ "retrieved_at": "2026-11-03T08:33:38Z",
+ "tables": [
+  {
+   "header": [
+    "Where the nominee streamed",
+    "Nominees",
+    "Share"
+   ],
+   "rows": [
+    [
+     "Twitch only",
+     "88",
+     "80.0%"
+    ],
+    [
+     "Both Kick and Twitch",
+     "8",
+     "7.3%"
+    ],
+    [
+     "Kick only",
+     "4",
+     "3.6%"
+    ],
+    [
+     "Neither (not observed on either)",
+     "10",
+     "9.1%"
+    ]
+   ]
+  },
+  {
+   "header": [
+    "Group, September 28 to November 2, 2026",
+    "Kick channels (English)",
+    "Kick share of watch time, English channels",
+    "Kick share, all languages"
+   ],
+   "rows": [
+    [
+     "100 most-watched channels",
+     "25 of 100",
+     "21.3%",
+     "40.9%"
+    ],
+    [
+     "500 most-watched channels",
+     "116 of 500",
+     "21.9%",
+     "39.7%"
+    ],
+    [
+     "1,000 most-watched channels",
+     "223 of 1,000",
+     "21.9%",
+     "38.9%"
+    ],
+    [
+     "Streamer Awards 2026 nominees (110)",
+     "12 active on Kick",
+     "4.5%",
+     "4.5%"
+    ]
+   ]
+  },
+  {
+   "header": [
+    "Category",
+    "Nominees",
+    "Active on Kick",
+    "Mainly on Kick",
+    "Kick share of watch time"
+   ],
+   "rows": [
+    [
+     "Best Reality Streamer",
+     "5",
+     "2",
+     "2",
+     "32.4%"
+    ],
+    [
+     "Best Role-Play Streamer",
+     "4",
+     "2",
+     "1",
+     "23.4%"
+    ],
+    [
+     "Best MMORPG Streamer",
+     "4",
+     "1",
+     "1",
+     "17.4%"
+    ],
+    [
+     "Best International Streamer",
+     "5",
+     "2",
+     "1",
+     "7.5%"
+    ],
+    [
+     "Best VTuber",
+     "5",
+     "1",
+     "0",
+     "6.1%"
+    ],
+    [
+     "Best FPS Streamer",
+     "5",
+     "1",
+     "0",
+     "4.3%"
+    ],
+    [
+     "Best Music Streamer",
+     "4",
+     "1",
+     "0",
+     "3.3%"
+    ],
+    [
+     "Gamer of the Year",
+     "5",
+     "1",
+     "0",
+     "3.3%"
+    ],
+    [
+     "Best IRL Streamer",
+     "5",
+     "1",
+     "0",
+     "2.8%"
+    ],
+    [
+     "Best Sports Streamer",
+     "4",
+     "1",
+     "0",
+     "2.1%"
+    ],
+    [
+     "Hidden Gem Award",
+     "5",
+     "1",
+     "0",
+     "0.8%"
+    ]
+   ]
+  },
+  {
+   "header": [
+    "Week (2026)",
+    "Nominees live on Kick 1 hour or more",
+    "Kick share of nominee watch time"
+   ],
+   "rows": [
+    [
+     "Sep 28 to Oct 4",
+     "10",
+     "4.7%"
+    ],
+    [
+     "Oct 6 to Oct 12",
+     "9",
+     "2.1%"
+    ],
+    [
+     "Oct 13 to Oct 19",
+     "11",
+     "4.8%"
+    ],
+    [
+     "Oct 20 to Oct 26",
+     "9",
+     "6.8%"
+    ],
+    [
+     "Oct 27 to Nov 2",
+     "9",
+     "4.0%"
+    ]
+   ]
+  }
+ ]
+}
