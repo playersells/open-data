@@ -65,6 +65,7 @@ PAGES = {
     "youtube-view-count": "/learn/did-youtubes-new-view-count-inflate-views-3565-channels-measured",
     "simulcast-persistence": "/learn/do-streamers-keep-simulcasting-kick-and-twitch-four-weeks-measured",
     "streamer-awards-2026": "/learn/where-do-streamer-awards-2026-nominees-stream-kick-and-twitch-measured",
+    "bluesky-election-night-2026": "/learn/how-long-did-blueskys-election-night-spike-last-34033-accounts-measured",
 }
 X_INSIGHTS_JSON = "/insights/data.json"
 # Kaggle dataset ids are <owner>/<slug>; the owner is the Kaggle username or organisation.
@@ -745,6 +746,55 @@ def build_streamer_awards(d: Path) -> dict:
     return out
 
 
+def build_bluesky_election_night(d: Path) -> dict:
+    """Bluesky's 2026 US midterm election night spike among accounts with 10,000+ followers (published 13 Nov 2026)."""
+    out = {}
+    k = "bluesky-election-night-2026"
+    mon = {"Oct": 10, "Nov": 11}
+
+    def iso(label):
+        m, day = label.split(", ")[1].split(" ")
+        return f"2026-{mon[m]:02d}-{int(day):02d}"
+
+    t = table(k, "Day (UTC)")
+    out["daily_posts.csv"] = write_csv(
+        d / "daily_posts.csv", ["day_utc", "weekday", "posts", "baseline_same_weekday", "difference_pct"],
+        [[iso(r[0]), r[0].split(",")[0], num(r[1]), num(r[2]), num(r[3])] for r in t["rows"]])
+    t = table(k, "Account group")
+    out["by_topic_group.csv"] = write_csv(
+        d / "by_topic_group.csv",
+        ["account_group", "accounts", "baseline_posts_per_account_per_day", "peak_day_pct", "election_week_pct",
+         "nov_10_11_pct", "share_of_extra_posts_pct"],
+        [[r[0], num(r[1]), num(r[2]), num(r[3]), num(r[4]), num(r[5]), num(r[6])] for r in t["rows"]])
+    t = table(k, "Topic label")
+    out["by_topic_label.csv"] = write_csv(
+        d / "by_topic_label.csv", ["topic_label", "accounts", "peak_day_pct", "election_week_pct"],
+        [[r[0], num(r[1]), num(r[2]), num(r[3])] for r in t["rows"]])
+    t = table(k, "Profile language")
+    out["by_language.csv"] = write_csv(
+        d / "by_language.csv", ["profile_language", "accounts", "peak_day_pct", "election_week_pct"],
+        [[r[0], num(r[1]), num(r[2]), num(r[3])] for r in t["rows"]])
+    t = table(k, "Followers on October 6")
+    out["by_follower_band.csv"] = write_csv(
+        d / "by_follower_band.csv",
+        ["followers_on_oct_6", "accounts", "baseline_posts_per_account_per_day", "peak_day_pct", "election_week_pct"],
+        [[r[0], num(r[1]), num(r[2]), num(r[3]), num(r[4])] for r in t["rows"]])
+    t = table(k, "Account created")
+    out["by_join_date.csv"] = write_csv(
+        d / "by_join_date.csv",
+        ["account_created", "accounts", "silent_28_days_before_pct", "peak_day_pct", "election_week_pct"],
+        [[r[0], num(r[1]), num(r[2]), num(r[3]), num(r[4])] for r in t["rows"]])
+    t = table(k, "Week")
+    out["weekly_net_new_followers.csv"] = write_csv(
+        d / "weekly_net_new_followers.csv", ["week_2026", "net_new_followers", "change_on_previous_week_pct"],
+        [[r[0], num(r[1]), num(r[2])] for r in t["rows"]])
+    t = table(k, "X accounts")
+    out["x_very_large_accounts.csv"] = write_csv(
+        d / "x_very_large_accounts.csv", ["x_account_group", "accounts", "peak_day_pct", "election_week_pct"],
+        [[r[0], num(r[1]), num(r[2]), num(r[3])] for r in t["rows"]])
+    return out
+
+
 BUILDERS = {
     "social-follower-percentiles-2026-10": build_follower_percentiles,
     "kick-twitch-category-viewing-2026-09-26": build_kick_twitch_viewing,
@@ -758,6 +808,7 @@ BUILDERS = {
     "youtube-view-count-change-2026-10": build_youtube_views,
     "kick-twitch-simulcast-persistence-2026-10": build_simulcast_persistence,
     "streamer-awards-2026-nominees-kick-twitch": build_streamer_awards,
+    "bluesky-election-night-2026-large-accounts": build_bluesky_election_night,
 }
 
 
@@ -881,6 +932,13 @@ def checks() -> list[str]:
     sa_b = rows_of(OUT / "streamer-awards-2026-nominees-kick-twitch" / "kick_share_benchmark.csv")
     expect("Streamer Awards, nominees Kick share", float(sa_b[-1]["kick_share_of_watch_time_english_pct"]), 4.5, 0.001)
     expect("Streamer Awards, top 1,000 English Kick share", float(sa_b[2]["kick_share_of_watch_time_english_pct"]), 21.9, 0.001)
+
+    be_d = {r["day_utc"]: r for r in rows_of(OUT / "bluesky-election-night-2026-large-accounts" / "daily_posts.csv")}
+    expect("Bluesky election night, peak day posts", int(be_d["2026-11-04"]["posts"]), 266963)
+    expect("Bluesky election night, peak day rise", float(be_d["2026-11-04"]["difference_pct"]), 59.5, 0.001)
+    expect("Bluesky election night, Nov 8 rise", float(be_d["2026-11-08"]["difference_pct"]), 5.4, 0.001)
+    be_l = {r["profile_language"]: r for r in rows_of(OUT / "bluesky-election-night-2026-large-accounts" / "by_language.csv")}
+    expect("Bluesky election night, English peak day rise", float(be_l["English"]["peak_day_pct"]), 63.6, 0.001)
 
     xp = rows_of(OUT / "x-engagement-benchmarks-2026-10" / "engagement_rate_percentiles.csv")
     if int(xp[0]["accounts"]) != 152187:

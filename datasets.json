@@ -355,5 +355,37 @@
    "title": "Where do the 2026 Streamer Awards nominees stream? Kick and Twitch watch time, 2026",
    "url": "https://playersells.com/learn/where-do-streamer-awards-2026-nominees-stream-kick-and-twitch-measured"
   }
+ },
+ {
+  "slug": "bluesky-election-night-2026-large-accounts",
+  "title": "Bluesky's 2026 US midterm election night spike among accounts with 10,000+ followers",
+  "summary": "Daily posting by a fixed panel of 34,033 Bluesky accounts with 10,000 or more followers, from 6 October to 11 November 2026. On 4 November 2026 (UTC), the night the US midterm results came in, the panel posted 59.5% more than on the same weekday in the four weeks before; four days later the excess was 5.4%. Over election week the panel wrote 23.5% more than in a normal week. Breakdowns by topic label, profile language, follower band and account creation date, plus weekly net new followers.",
+  "measured": "Daily readings of public profile counters, 6 October to 11 November 2026 (UTC), read 13 November 2026",
+  "temporal_coverage": "2026-10-06/2026-11-11",
+  "keywords": [
+   "bluesky",
+   "social media",
+   "elections",
+   "us midterms 2026",
+   "posting activity",
+   "at protocol"
+  ],
+  "files": {
+   "daily_posts.csv": 11,
+   "by_topic_group.csv": 4,
+   "by_topic_label.csv": 14,
+   "by_language.csv": 8,
+   "by_follower_band.csv": 4,
+   "by_join_date.csv": 4,
+   "weekly_net_new_followers.csv": 5,
+   "x_very_large_accounts.csv": 4
+  },
+  "published_at": [
+   "https://playersells.com/learn/how-long-did-blueskys-election-night-spike-last-34033-accounts-measured"
+  ],
+  "cite": {
+   "title": "Bluesky's 2026 US midterm election night spike among accounts with 10,000+ followers",
+   "url": "https://playersells.com/learn/how-long-did-blueskys-election-night-spike-last-34033-accounts-measured"
+  }
  }
 ]

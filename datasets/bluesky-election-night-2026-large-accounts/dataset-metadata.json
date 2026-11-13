@@ -1,0 +1,270 @@
+{
+ "title": "Bluesky Election Night 2026, Large Accounts",
+ "subtitle": "Daily posts of 34,033 large Bluesky accounts before, during and after the 2026 US midterms",
+ "id": "playersells/bluesky-election-night-2026-large-accounts",
+ "licenses": [
+  {
+   "name": "CC-BY-4.0"
+  }
+ ],
+ "keywords": [
+  "bluesky",
+  "social media",
+  "elections",
+  "us midterms 2026",
+  "posting activity",
+  "at protocol"
+ ],
+ "description": "Daily posting by a fixed panel of 34,033 Bluesky accounts with 10,000 or more followers, from 6 October to 11 November 2026. On 4 November 2026 (UTC), the night the US midterm results came in, the panel posted 59.5% more than on the same weekday in the four weeks before; four days later the excess was 5.4%. Over election week the panel wrote 23.5% more than in a normal week. Breakdowns by topic label, profile language, follower band and account creation date, plus weekly net new followers.\n\nSource: the PlayerSells Bluesky directory reads the public profile counters (followers, posts) of every account above 10,000 followers about once a day (median 24.4 hours between readings).\n\nFor each account the post counter at every midnight UTC was estimated by linear interpolation between the readings on either side; a day's posts are the difference between consecutive midnights.\n\nPanel: accounts with 10,000+ followers on 6 October 2026 and a reading on both sides of every midnight with no gap above 50 hours (34,290 accounts), minus 257 accounts that averaged more than 100 posts a day in the baseline or whose counter fell by 100 or more between two readings: 34,033 accounts.\n\nBaseline: the four Tuesday to Monday weeks from 6 October to 2 November 2026; each day is compared with the average of the same weekday. Election week is 3 to 9 November 2026.\n\nTopic labels come from keywords in the profile bio; language is detected from the profile text. No account name, handle or identifier is included. Aggregates only.\n\nLimitations:\n- Accounts with 10,000+ followers only: smaller accounts and people who joined during the election are not covered.\n- One reading a day: day boundaries are blurred, which lowers the peak day and raises its neighbours.\n- The post counter is net of deletions and counts posts and replies, not reposts or likes.\n- The look a week later covers two days (10 and 11 November 2026).\n- The X file describes much larger accounts and a counter that includes reposts; it is context, not a comparison.\n- PlayerSells collects these numbers with its own crawlers. They describe what those crawlers read, not a census of any platform.\n- Counts shown by the platforms (followers, subscribers, views, viewers) are taken as displayed. PlayerSells cannot separate real people from bots, embedded players or inflated counts.\n\nPublished at https://playersells.com/learn/how-long-did-blueskys-election-night-spike-last-34033-accounts-measured\n\nSource: PlayerSells (https://playersells.com). License CC BY 4.0.",
+ "resources": [
+  {
+   "path": "daily_posts.csv",
+   "description": "Posts and replies written by the panel on each UTC day from 1 to 11 November 2026, against the same weekday average of the four baseline weeks.",
+   "schema": {
+    "fields": [
+     {
+      "name": "day_utc",
+      "type": "datetime",
+      "description": "UTC day"
+     },
+     {
+      "name": "weekday",
+      "type": "string",
+      "description": "Day of the week"
+     },
+     {
+      "name": "posts",
+      "type": "integer",
+      "description": "Posts and replies by the 34,033 accounts (reposts are not counted)"
+     },
+     {
+      "name": "baseline_same_weekday",
+      "type": "integer",
+      "description": "Average of the same weekday, 6 October to 2 November 2026"
+     },
+     {
+      "name": "difference_pct",
+      "type": "number",
+      "description": "Posts against the baseline, percent"
+     }
+    ]
+   }
+  },
+  {
+   "path": "by_topic_group.csv",
+   "description": "Politics, news, other labelled topics and unlabelled accounts.",
+   "schema": {
+    "fields": [
+     {
+      "name": "account_group",
+      "type": "string",
+      "description": "Topic group (label from keywords in the profile bio)"
+     },
+     {
+      "name": "accounts",
+      "type": "integer",
+      "description": "Accounts in the group"
+     },
+     {
+      "name": "baseline_posts_per_account_per_day",
+      "type": "number",
+      "description": "Posts per account per day in the baseline"
+     },
+     {
+      "name": "peak_day_pct",
+      "type": "number",
+      "description": "4 November against the group's own baseline, percent"
+     },
+     {
+      "name": "election_week_pct",
+      "type": "number",
+      "description": "3 to 9 November against the group's average baseline week, percent"
+     },
+     {
+      "name": "nov_10_11_pct",
+      "type": "number",
+      "description": "10 and 11 November against the same weekdays of the baseline, percent"
+     },
+     {
+      "name": "share_of_extra_posts_pct",
+      "type": "number",
+      "description": "Share of the panel's net extra posts of election week"
+     }
+    ]
+   }
+  },
+  {
+   "path": "by_topic_label.csv",
+   "description": "Single topic labels with at least 300 accounts in the panel.",
+   "schema": {
+    "fields": [
+     {
+      "name": "topic_label",
+      "type": "string",
+      "description": "Topic label"
+     },
+     {
+      "name": "accounts",
+      "type": "integer",
+      "description": "Accounts with the label"
+     },
+     {
+      "name": "peak_day_pct",
+      "type": "number",
+      "description": "4 November against the group's own baseline, percent"
+     },
+     {
+      "name": "election_week_pct",
+      "type": "number",
+      "description": "3 to 9 November against the group's average baseline week, percent"
+     }
+    ]
+   }
+  },
+  {
+   "path": "by_language.csv",
+   "description": "English against all other detected profile languages, and single languages with at least 300 accounts.",
+   "schema": {
+    "fields": [
+     {
+      "name": "profile_language",
+      "type": "string",
+      "description": "Language detected from the profile text"
+     },
+     {
+      "name": "accounts",
+      "type": "integer",
+      "description": "Accounts"
+     },
+     {
+      "name": "peak_day_pct",
+      "type": "number",
+      "description": "4 November against the group's own baseline, percent"
+     },
+     {
+      "name": "election_week_pct",
+      "type": "number",
+      "description": "3 to 9 November against the group's average baseline week, percent"
+     }
+    ]
+   }
+  },
+  {
+   "path": "by_follower_band.csv",
+   "description": "The panel split by follower count on 6 October 2026.",
+   "schema": {
+    "fields": [
+     {
+      "name": "followers_on_oct_6",
+      "type": "string",
+      "description": "Follower band"
+     },
+     {
+      "name": "accounts",
+      "type": "integer",
+      "description": "Accounts"
+     },
+     {
+      "name": "baseline_posts_per_account_per_day",
+      "type": "number",
+      "description": "Posts per account per day in the baseline"
+     },
+     {
+      "name": "peak_day_pct",
+      "type": "number",
+      "description": "4 November against the band's own baseline, percent"
+     },
+     {
+      "name": "election_week_pct",
+      "type": "number",
+      "description": "3 to 9 November against the band's average baseline week, percent"
+     }
+    ]
+   }
+  },
+  {
+   "path": "by_join_date.csv",
+   "description": "The panel split by account creation date, with the share that did not post in the 28 baseline days.",
+   "schema": {
+    "fields": [
+     {
+      "name": "account_created",
+      "type": "string",
+      "description": "Creation period"
+     },
+     {
+      "name": "accounts",
+      "type": "integer",
+      "description": "Accounts"
+     },
+     {
+      "name": "silent_28_days_before_pct",
+      "type": "number",
+      "description": "Share whose post counter did not change from 6 October to 2 November 2026"
+     },
+     {
+      "name": "peak_day_pct",
+      "type": "number",
+      "description": "4 November against the group's own baseline, percent"
+     },
+     {
+      "name": "election_week_pct",
+      "type": "number",
+      "description": "3 to 9 November against the group's average baseline week, percent"
+     }
+    ]
+   }
+  },
+  {
+   "path": "weekly_net_new_followers.csv",
+   "description": "Net change in the panel's combined follower count, Tuesday to Monday weeks.",
+   "schema": {
+    "fields": [
+     {
+      "name": "week_2026",
+      "type": "string",
+      "description": "Week (UTC)"
+     },
+     {
+      "name": "net_new_followers",
+      "type": "integer",
+      "description": "Net new followers across the panel"
+     },
+     {
+      "name": "change_on_previous_week_pct",
+      "type": "number",
+      "description": "Change on the previous week, percent (empty for the first week)"
+     }
+    ]
+   }
+  },
+  {
+   "path": "x_very_large_accounts.csv",
+   "description": "Context only: the same test on a separate sample of very large X accounts (median 3,813,048 followers). Not a platform comparison.",
+   "schema": {
+    "fields": [
+     {
+      "name": "x_account_group",
+      "type": "string",
+      "description": "Group of X accounts"
+     },
+     {
+      "name": "accounts",
+      "type": "integer",
+      "description": "Accounts"
+     },
+     {
+      "name": "peak_day_pct",
+      "type": "number",
+      "description": "4 November against the group's own baseline, percent"
+     },
+     {
+      "name": "election_week_pct",
+      "type": "number",
+      "description": "3 to 9 November against the group's average baseline week, percent"
+     }
+    ]
+   }
+  }
+ ]
+}
