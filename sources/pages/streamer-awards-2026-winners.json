@@ -1,0 +1,281 @@
+{
+ "url": "https://playersells.com/learn/did-the-most-watched-nominee-win-streamer-awards-2026-measured",
+ "retrieved_at": "2026-11-17T08:38:44Z",
+ "tables": [
+  {
+   "header": [
+    "Category",
+    "Winner's hours watched",
+    "Winner's rank",
+    "Their hours watched",
+    "Most-watched won?"
+   ],
+   "rows": [
+    [
+     "Best Music Streamer",
+     "0",
+     "3 of 4",
+     "360,962",
+     "no"
+    ],
+    [
+     "Best Creative Arts Streamer",
+     "11,002",
+     "2 of 4",
+     "73,098",
+     "no"
+    ],
+    [
+     "Best Role-Play Streamer",
+     "61,981",
+     "4 of 4",
+     "572,819",
+     "no"
+    ],
+    [
+     "Best MOBA Streamer",
+     "243,963",
+     "2 of 4",
+     "16,169,524",
+     "no"
+    ],
+    [
+     "Hidden Gem Award",
+     "1,843",
+     "3 of 5",
+     "2,921",
+     "no"
+    ],
+    [
+     "Best Fortnite Streamer",
+     "727,313",
+     "2 of 4",
+     "826,026",
+     "no"
+    ],
+    [
+     "Best Battle Royale Streamer",
+     "743,116",
+     "1 of 4",
+     "743,116",
+     "yes"
+    ],
+    [
+     "Best Fighting Game Streamer",
+     "26,750",
+     "4 of 4",
+     "378,247",
+     "no"
+    ],
+    [
+     "Best MMORPG Streamer",
+     "226,795",
+     "4 of 4",
+     "1,433,758",
+     "no"
+    ],
+    [
+     "Best Cozy Game Streamer",
+     "1,016",
+     "4 of 4",
+     "37,792",
+     "no"
+    ],
+    [
+     "Best Speedrun Streamer",
+     "237,702",
+     "1 of 4",
+     "237,702",
+     "yes"
+    ],
+    [
+     "Best Sports Streamer",
+     "113,288",
+     "4 of 4",
+     "924,443",
+     "no"
+    ],
+    [
+     "Best Minecraft Streamer",
+     "67,056",
+     "2 of 4",
+     "237,702",
+     "no"
+    ],
+    [
+     "Best FPS Streamer",
+     "743,976",
+     "2 of 5",
+     "4,126,736",
+     "no"
+    ],
+    [
+     "Best Strategy Game Streamer",
+     "3,508",
+     "4 of 4",
+     "358,715",
+     "no"
+    ],
+    [
+     "League of their Own",
+     "621,554",
+     "2 of 5",
+     "2,719,722",
+     "no"
+    ],
+    [
+     "Best Reality Streamer",
+     "1,186,409",
+     "1 of 5",
+     "1,186,409",
+     "yes"
+    ],
+    [
+     "Best IRL Streamer",
+     "158,516",
+     "2 of 5",
+     "193,474",
+     "no"
+    ],
+    [
+     "Best Vertical Live Streamer",
+     "0",
+     "3 of 4",
+     "53,871",
+     "no"
+    ],
+    [
+     "Best International Streamer",
+     "24,460",
+     "4 of 5",
+     "101,203",
+     "no"
+    ],
+    [
+     "Best VTuber",
+     "299,594",
+     "2 of 5",
+     "4,126,736",
+     "no"
+    ],
+    [
+     "Best Variety Streamer",
+     "2,080,191",
+     "1 of 5",
+     "2,080,191",
+     "yes"
+    ],
+    [
+     "President of Chat",
+     "518,196",
+     "1 of 5",
+     "518,196",
+     "yes"
+    ],
+    [
+     "Rising Star Award",
+     "266,945",
+     "1 of 5",
+     "266,945",
+     "yes"
+    ],
+    [
+     "Best Breakout Streamer",
+     "67,056",
+     "5 of 5",
+     "518,196",
+     "no"
+    ],
+    [
+     "The Sapphire Award",
+     "209,630",
+     "2 of 5",
+     "284,506",
+     "no"
+    ],
+    [
+     "Gamer of the Year",
+     "3,947,214",
+     "2 of 5",
+     "4,126,736",
+     "no"
+    ],
+    [
+     "Streamer of the Year",
+     "158,516",
+     "5 of 5",
+     "3,947,214",
+     "no"
+    ]
+   ]
+  },
+  {
+   "header": [
+    "Ranking nominees by",
+    "Top-ranked nominee won",
+    "Lowest-ranked nominee won",
+    "Winner's average percentile"
+   ],
+   "rows": [
+    [
+     "Hours watched, voting window (main measure)",
+     "6 of 28",
+     "8",
+     "50.9"
+    ],
+    [
+     "Hours watched, September 1 to October 31",
+     "7 of 28",
+     "7",
+     "51.5"
+    ],
+    [
+     "Average viewers while live, voting window",
+     "11 of 28",
+     "6",
+     "58.6"
+    ],
+    [
+     "Followers on October 31",
+     "11 of 28",
+     "4",
+     "63.4"
+    ],
+    [
+     "Hours live, voting window",
+     "3 of 28",
+     "6",
+     "44.6"
+    ]
+   ]
+  },
+  {
+   "header": [
+    "Group",
+    "Twitch channels",
+    "Nov 4 to 8",
+    "Nov 8 to 12",
+    "Nov 12 to 16",
+    "Grew faster after"
+   ],
+   "rows": [
+    [
+     "Won an award",
+     "19",
+     "0.14%",
+     "0.14%",
+     "0.24%",
+     "16 of 19"
+    ],
+    [
+     "Nominated, won nothing",
+     "42",
+     "0.06%",
+     "0.05%",
+     "0.07%",
+     "20 of 42"
+    ]
+   ]
+  }
+ ]
+}

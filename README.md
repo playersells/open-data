@@ -21,6 +21,7 @@ Every number in this repository is also published on playersells.com, on the pag
 | [kick-twitch-simulcast-persistence-2026-10](datasets/kick-twitch-simulcast-persistence-2026-10) | The same Kick and Twitch simulcasters over four weeks: who simulcasts again the next week, who stops, and what they do next | 28 Sep to 26 Oct 2026 |
 | [streamer-awards-2026-nominees-kick-twitch](datasets/streamer-awards-2026-nominees-kick-twitch) | Where the 2026 Streamer Awards nominees stream: Kick's share of their watch time against the most-watched English-language Kick and Twitch channels | 28 Sep to 2 Nov 2026 |
 | [bluesky-election-night-2026-large-accounts](datasets/bluesky-election-night-2026-large-accounts) | Daily posts of 34,033 Bluesky accounts with 10,000+ followers around the 2026 US midterm election night, by topic, language, size and join date | 6 Oct to 11 Nov 2026 |
+| [streamer-awards-2026-winners-watch-time](datasets/streamer-awards-2026-winners-watch-time) | 2026 Streamer Awards: winners against Kick and Twitch watch time in 28 categories, and Twitch follower growth around the ceremony | 1 Sep to 16 Nov 2026 |
 
 Browse the catalogue, with download links and a citation line for every dataset, at [playersells.com/open-data](https://playersells.com/open-data).
 

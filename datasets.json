@@ -387,5 +387,33 @@
    "title": "Bluesky's 2026 US midterm election night spike among accounts with 10,000+ followers",
    "url": "https://playersells.com/learn/how-long-did-blueskys-election-night-spike-last-34033-accounts-measured"
   }
+ },
+ {
+  "slug": "streamer-awards-2026-winners-watch-time",
+  "title": "Streamer Awards 2026 winners against Kick and Twitch watch time and follower growth",
+  "summary": "For the 28 categories of the 2026 Streamer Awards that put single streamers against each other (110 nominees), the Kick and Twitch watch time of every nominee while fan voting was open (16 to 31 October 2026), the rank of each category's winner, and how often the top-ranked nominee won under five ranking measures. The most-watched nominee won 6 of 28 categories, against 6.3 expected from a random draw; ranking by followers or average viewers picked 11. Also: median Twitch follower growth of award winners and other nominees in the four days before and after the ceremony of 12 November 2026.",
+  "measured": "Kick and Twitch live samples every 15 minutes, 1 September to 16 November 2026 (UTC), read 17 November 2026",
+  "temporal_coverage": "2026-09-01/2026-11-16",
+  "keywords": [
+   "streamer awards",
+   "twitch",
+   "kick",
+   "live streaming",
+   "awards",
+   "watch time",
+   "followers"
+  ],
+  "files": {
+   "category_results.csv": 28,
+   "ranking_measures.csv": 5,
+   "follower_growth.csv": 2
+  },
+  "published_at": [
+   "https://playersells.com/learn/did-the-most-watched-nominee-win-streamer-awards-2026-measured"
+  ],
+  "cite": {
+   "title": "Streamer Awards 2026 winners against Kick and Twitch watch time and follower growth",
+   "url": "https://playersells.com/learn/did-the-most-watched-nominee-win-streamer-awards-2026-measured"
+  }
  }
 ]

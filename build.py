@@ -66,6 +66,7 @@ PAGES = {
     "simulcast-persistence": "/learn/do-streamers-keep-simulcasting-kick-and-twitch-four-weeks-measured",
     "streamer-awards-2026": "/learn/where-do-streamer-awards-2026-nominees-stream-kick-and-twitch-measured",
     "bluesky-election-night-2026": "/learn/how-long-did-blueskys-election-night-spike-last-34033-accounts-measured",
+    "streamer-awards-2026-winners": "/learn/did-the-most-watched-nominee-win-streamer-awards-2026-measured",
 }
 X_INSIGHTS_JSON = "/insights/data.json"
 # Kaggle dataset ids are <owner>/<slug>; the owner is the Kaggle username or organisation.
@@ -795,6 +796,38 @@ def build_bluesky_election_night(d: Path) -> dict:
     return out
 
 
+def build_streamer_awards_winners(d: Path) -> dict:
+    """Streamer Awards 2026 winners against Kick and Twitch watch time and follower growth (published 17 Nov 2026)."""
+    out = {}
+    k = "streamer-awards-2026-winners"
+    t = table(k, "Category")
+    h = t["header"]
+    ix = {name: h.index(name) for name in ("Category", "Winner's hours watched", "Winner's rank", "Their hours watched",
+                                             "Most-watched won?")}
+    rows = []
+    for r in t["rows"]:
+        rank, _, n = r[ix["Winner's rank"]].partition(" of ")
+        rows.append([r[ix["Category"]], int(n), int(rank), num(r[ix["Winner's hours watched"]]),
+                     num(r[ix["Their hours watched"]]), r[ix["Most-watched won?"]]])
+    out["category_results.csv"] = write_csv(
+        d / "category_results.csv",
+        ["category", "nominees", "winner_rank_by_hours_watched", "winner_hours_watched", "most_watched_nominee_hours_watched",
+         "most_watched_nominee_won"], rows)
+    t = table(k, "Ranking nominees by")
+    out["ranking_measures.csv"] = write_csv(
+        d / "ranking_measures.csv",
+        ["ranking_measure", "categories_won_by_top_ranked", "categories", "categories_won_by_lowest_ranked",
+         "winner_average_percentile"],
+        [[r[0], int(r[1].split(" of ")[0]), int(r[1].split(" of ")[1]), num(r[2]), num(r[3])] for r in t["rows"]])
+    t = table(k, "Group")
+    out["follower_growth.csv"] = write_csv(
+        d / "follower_growth.csv",
+        ["group", "twitch_channels", "median_growth_nov_4_to_8_pct", "median_growth_nov_8_to_12_pct",
+         "median_growth_nov_12_to_16_pct", "channels_faster_after_ceremony"],
+        [[r[0], num(r[1]), num(r[2]), num(r[3]), num(r[4]), int(r[5].split(" of ")[0])] for r in t["rows"]])
+    return out
+
+
 BUILDERS = {
     "social-follower-percentiles-2026-10": build_follower_percentiles,
     "kick-twitch-category-viewing-2026-09-26": build_kick_twitch_viewing,
@@ -809,6 +842,7 @@ BUILDERS = {
     "kick-twitch-simulcast-persistence-2026-10": build_simulcast_persistence,
     "streamer-awards-2026-nominees-kick-twitch": build_streamer_awards,
     "bluesky-election-night-2026-large-accounts": build_bluesky_election_night,
+    "streamer-awards-2026-winners-watch-time": build_streamer_awards_winners,
 }
 
 
@@ -939,6 +973,13 @@ def checks() -> list[str]:
     expect("Bluesky election night, Nov 8 rise", float(be_d["2026-11-08"]["difference_pct"]), 5.4, 0.001)
     be_l = {r["profile_language"]: r for r in rows_of(OUT / "bluesky-election-night-2026-large-accounts" / "by_language.csv")}
     expect("Bluesky election night, English peak day rise", float(be_l["English"]["peak_day_pct"]), 63.6, 0.001)
+
+    sw_r = rows_of(OUT / "streamer-awards-2026-winners-watch-time" / "ranking_measures.csv")
+    expect("Streamer Awards winners, top-watched nominee won", int(sw_r[0]["categories_won_by_top_ranked"]), 6)
+    expect("Streamer Awards winners, categories", int(sw_r[0]["categories"]), 28)
+    sw_f = {r["group"]: r for r in rows_of(OUT / "streamer-awards-2026-winners-watch-time" / "follower_growth.csv")}
+    expect("Streamer Awards winners, winners' follower growth after", float(sw_f["Won an award"]["median_growth_nov_12_to_16_pct"]), 0.24, 0.001)
+    expect("Streamer Awards winners, category rows", len(rows_of(OUT / "streamer-awards-2026-winners-watch-time" / "category_results.csv")), 28)
 
     xp = rows_of(OUT / "x-engagement-benchmarks-2026-10" / "engagement_rate_percentiles.csv")
     if int(xp[0]["accounts"]) != 152187:
